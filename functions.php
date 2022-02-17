@@ -31,4 +31,28 @@ function simple_styles() {
 add_action( 'wp_enqueue_scripts', 'simple_styles' );
 
 
+
+
+/*Registriamo una nuova categoria x i blocchi Carbon in Gutemberg
+--------------------------------------------------------------*/
+function NC_block_categories( $categories, $post ) {
+	return array_merge(
+		$categories,
+		array(
+			array(
+				'slug' => 'customCarbon',
+				'title' => __( 'Custom Carbon Blocks', 'NC' ),
+				'icon' => 'star-filled'
+			),
+		)
+	);
+}
+add_filter( 'block_categories', 'NC_block_categories', 10, 2 );
+
+/*Carbon Fields
+------------------------*/
+require dirname(__FILE__).'/carbon-fields.php';
+
+
+
 ?>
