@@ -134,6 +134,11 @@ h5.mission-prashe{
     border-radius: 0 0 0 300px;
 }
 
+.hero-image img{
+    border-radius: 0 0 0 20vw;
+    max-width: 100%;
+}
+
 
 /* ! About__section*/
 

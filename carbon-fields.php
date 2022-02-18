@@ -18,17 +18,27 @@
     function crb_attach_theme_options() {
 
 
-        Container::make( 'theme_options', __( 'Theme Options' ) )
+        Container::make( 'theme_options', __( 'Contatti' ) )
+            ->set_icon( 'dashicons-carrot' )
             ->add_fields( array(
-                Field::make( 'text', 'crb_text', 'Text Field' ),
+                Field::make( 'image', 'crb_icon_address')
+                    ->set_type( array( 'image' ) )
+                    ->set_value_type( 'url' )
+                    ,
+                Field::make( 'text', 'crb_text_address')
+                ,
+                Field::make( 'image', 'crb_icon_email')
+                    ->set_type( array( 'image' ) )
+                    ->set_value_type( 'url' )
+                    ,
+                Field::make( 'text', 'crb_text_email')
+                ,
+                Field::make( 'image', 'crb_icon_phone')
+                    ->set_type( array( 'image' ) )
+                    ->set_value_type( 'url' )
+                    ,
+                Field::make( 'text', 'crb_text_phone')
             ) );
-
-
-        Container::make( 'theme_options', __( 'Theme Options 2' ) )
-            ->add_fields( array(
-                Field::make( 'text', 'crb_text', 'Text Field' ),
-            ) );
-
 
     }
 
