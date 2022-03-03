@@ -137,7 +137,41 @@
 
                 <?php
             } ); //render callback
-    }
+            
+            
+            //Txt on two col = STATIC BLOCK + SINGLE GB BLOCK
+            Block::make( __( 'Title and Text on two columns' ) )
+                ->add_fields( array(
+                    Field::make( 'text', 'heading', __( 'Title' ) ),
+                    Field::make( 'rich_text', 'txt-left', __( 'Text on the left' ) ),
+                    Field::make( 'rich_text', 'txt-right', __( 'Text on the right' ) ),
+                ) )
+                ->set_description( __( 'A simple for display h2 title and text paragraph on two columns' ) )
+                ->set_category( 'customCarbon' )
+                ->set_icon( 'editor-table' )
+                ->set_mode( 'both' )
+                ->set_render_callback( function ( $fields) {
+                    ?>
 
+                        <section class="crb-two-col-txt">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <h2 class="mb-48-r"><?php echo esc_html( $fields['heading'] ); ?></h2>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 col-lg-5 offset-lg-1 mb-48-r">
+                                        <?php echo apply_filters( 'the_content', $fields['txt-left'] ); ?>
+                                    </div>
+                                    <div class="col-12 col-lg-5 offset-lg-1 mb-48-r">
+                                        <?php echo apply_filters( 'the_content', $fields['txt-right'] ); ?>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
 
+                    <?php
+                } ); //render callback
+        }
 ?>

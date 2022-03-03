@@ -1,61 +1,25 @@
-/* ! About__section*/
+.two-col-txt, .crb-two-col-txt{
 
-.about{    margin-top: 10%;}
+    /*overwrite Rich Text*/ 
+    p{
+        text-align: left !important;
 
-.about__title{ 
-    margin-left: 0;
-    padding-left: 0;
-}
+        a{
+            color: $color-primary;
+            &:hover{
+                opacity: .7;
+            }
+        }
 
-.underline{
-    background-color: #417BC7;
-    width: 50%;
-    height: 5px;
-    transition: 0.6s;
-}
+        span{
+            color: $color-txt-secondary !important;
+        }
 
-.underline:hover{width: 100%;}
-
-.text{
-    margin-top: 5%;
-    margin-bottom: 2%;
-}
-
-.caption{
-    text-align: right;
-    margin-top: 5%;
-    margin-bottom: 2%;
-    padding: 0;
-}
-
-.single-image1{
-    width: 100%;
-    height: 40vh;
-    background: url(http://testcarbon.local/wp-content/uploads/2022/02/wether_03-scaled.jpg);
-    background-repeat: no-repeat;
-    background-position: bottom;
-    background-size: cover;
-    border-radius: 0 0 0 180px;
-}
-
-.single-image2{
-    width: 100%;
-    height: 40vh;
-    background: url(http://testcarbon.local/wp-content/uploads/2022/02/water-scaled.jpg);
-    background-repeat: no-repeat;
-    background-position: bottom;
-    background-size: cover;
-}
-
-.single-image3{
-    width: 100%;
-    height: 40vh;
-    background: url(http://testcarbon.local/wp-content/uploads/2022/02/sand_05-scaled.jpg);
-    background-repeat: no-repeat;
-    background-position: bottom;
-    background-size: cover;
-}
-
-.image-about{
-    margin-bottom: 10%;
+    }
+    
+    hr{
+        background: $color-primary;
+        height: 3px;
+        border: none;
+    }
 }

@@ -3,9 +3,9 @@
 <main>
 
     <!--Hero-->
-    <section class="hero">
+    <section class="hero mb-240-r">
         <div class="container">
-            <div class="row align-items-end mb-64">
+            <div class="row align-items-end mb-80-r">
                 <div class="col-12 col-lg-9">
                     <h1>Innovative <span class="blue">Environmental</span> <br>Modelling</h1>
                 </div>
@@ -22,59 +22,42 @@
     </section>
 
 
-        <!--About us-->
-        <section class="about">
-
-            <div class="row about__title">
-                <div class="about__title col-4">
-                    <a href="about.html">
-                    <h2>About us</h2>
-                    <div class="underline"></div>
-                    </a>
+    <!--Who we are-->
+    <section class="two-col-txt">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="mb-48-r"><span class="blue">Who</span> we are</h2>
                 </div>
             </div>
-
-            <div class="text row">
-
-                <div class="col-5 offset-1">
-
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                    Impedit repellat ipsa ducimus architecto? 
-                    Esse, nihil officia eaque ab earum,
-                    <br><br>
-                    dolores minima quo vel fugiat a itaque voluptate deleniti! Soluta, inventore.
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                    Impedit repellat ipsa ducimus architecto? 
-                    Esse, nihil officia eaque ab earum,
-                    <br><br>
-                    dolores minima quo vel fugiat a itaque voluptate deleniti! Soluta, inventore.
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                    Impedit repellat ipsa ducimus architecto? 
-                    Esse, nihil officia eaque ab earum,
-                    dolores minima quo vel fugiat a itaque voluptate deleniti! Soluta, inventore.
-
+            <div class="row">
+                <div class="col-12 col-lg-5 offset-lg-1">
+                    <p class="mb-48-r">
+                        Weather Water Sand (WWS) is an innovative start-up company founded in 2021 as a Spin-Off from the University of Genova by a group of professionals with 
+                        several years of environmental modelling experience in academia and industry.
+                    </p>
                 </div>
-
-                <div class="col-5 offset-1">
-
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                    Impedit repellat ipsa ducimus architecto? 
-                    Esse, nihil officia eaque ab earum,
-                    <br><br>
-                    dolores minima quo vel fugiat a itaque voluptate deleniti! Soluta, inventore.
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                    Impedit repellat ipsa ducimus architecto? 
-                    Esse, nihil officia eaque ab earum,
-                    <br><br>
-                    dolores minima quo vel fugiat a itaque voluptate deleniti! Soluta, inventore.
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                    Impedit repellat ipsa ducimus architecto? 
-                    Esse, nihil officia eaque ab earum,
-                    dolores minima quo vel fugiat a itaque voluptate deleniti! Soluta, inventore.
-
+                <div class="col-12 col-lg-5 offset-lg-1">
+                    <p class="mb-48-r">
+                        WWS provides innovative numerical modelling services for the entire spectrum of natural flows, including winds, waves, littoral and tidal currents, 
+                        rivers and submarine gravity flows with applications to renewable energy projects, oil and gas developments and environmental projects on land and offshore. 
+                    </p>
                 </div>
-
             </div>
+        </div>
+    </section>
+    <section class="txt-highlight">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-11 offset-lg-1">
+                    <p class="mb-80-r">
+                        Our experts use advanced atmospheric, hydraulic and sediment transport models with applications to
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
 
             <div class="image-about">
 
@@ -95,8 +78,8 @@
                 </div>
 
             </div>
-
-        </section>
+        </div> <!--.container-->
+    </section>
 
         <!--Latest News-->
         <section class="last">
