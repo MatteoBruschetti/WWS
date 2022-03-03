@@ -1,0 +1,129 @@
+/*--------------------------------------------------
+    MARGIN
+--------------------------------------------------*/
+.mb-240{
+    margin-bottom: 24rem;
+}
+    .mb-240-r{ //between section
+        margin-bottom: 12rem;
+        @media #{$large}{
+            margin-bottom: 24rem;
+        }
+    }
+.mb-200{
+    margin-bottom: 20rem;
+}
+    .mb-200-r{
+        margin-bottom: 10rem;
+        @media #{$large}{
+            margin-bottom: 20rem;
+        }
+    }
+.mb-160{
+    margin-bottom: 16rem;
+}
+    .mb-160-r{
+        margin-bottom: 8rem;
+        @media #{$large}{
+            margin-bottom: 16rem;
+        }
+    }
+.mb-120{
+    margin-bottom: 12rem;
+}
+    .mb-120-r{
+        margin-bottom: 6rem;
+        @media #{$large}{
+            margin-bottom: 12rem;
+        }
+    }
+.mb-96{
+    margin-bottom: 9.6rem;
+}
+    .mb-96-r{
+        margin-bottom: 4.8rem;
+        @media #{$large}{
+            margin-bottom: 9.6rem;
+        }
+    }
+.mb-80{
+    margin-bottom: 8rem;
+}
+    .mb-80-r{
+        margin-bottom: 4rem;
+        @media #{$large}{
+            margin-bottom: 8rem;
+        }
+    }
+.mb-64{
+    margin-bottom: 6.4rem;
+}
+    .mb-64-r{
+        margin-bottom: 3.2rem;
+        @media #{$large}{
+            margin-bottom: 6.4rem;
+        }
+    }
+.mb-48{
+    margin-bottom: 4.8rem;
+}
+    .mb-48-r{
+        margin-bottom: 2.4rem;
+        @media #{$large}{
+            margin-bottom: 4.8rem;
+        }
+    }
+.mb-40{
+    margin-bottom: 4rem;
+}
+    .mb-40-r{
+        margin-bottom: 2rem;
+        @media #{$large}{
+            margin-bottom: 4rem;
+        }
+    }
+.mb-32{
+    margin-bottom: 3.2rem;
+}
+    .mb-32-r{ //under title
+        margin-bottom: 1.6rem;
+        @media #{$large}{
+            margin-bottom: 3.2rem;
+        }
+    }
+.mb-24{
+    margin-bottom: 2.4rem;
+}
+    .mb-24-r{
+        margin-bottom: 1.2rem;
+        @media #{$large}{
+            margin-bottom: 2.4rem;
+        }
+    }
+.mb-16{
+    margin-bottom: 1.6rem;
+}
+    .mb-16-r{ //between p
+        margin-bottom: 0.8rem;
+        @media #{$large}{
+            margin-bottom: 1.6rem;
+        }
+    }
+.mb-8{
+    margin-bottom: 0.8rem;
+}
+    .mb-8-r{ //under overtitle
+        margin-bottom: 0.4rem;
+        @media #{$large}{
+            margin-bottom: 0.8rem;
+        }
+    }
+
+
+
+/*--------------------------------------------------
+PADDING
+--------------------------------------------------*/
+.no-p{padding: 0 !important;}
+.no-pl{padding-left: 0 !important;}
+.no-pr{padding-right: 0 !important;}

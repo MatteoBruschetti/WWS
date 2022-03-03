@@ -1,6 +1,6 @@
 <?php
 
-function simple_setup() {
+function WWS_setup() {
 
     // Enable title in header
     add_theme_support( "title-tag" );
@@ -13,41 +13,41 @@ function simple_setup() {
 
 }
 
-add_action( 'after_setup_theme','simple_setup');
+add_action( 'after_setup_theme','WWS_setup');
 
 
 /* CSS
 /*-----------------------*/
 
-function simple_styles() {
+function WWS_styles() {
 
     /* Bootstrap */
-    wp_enqueue_style("simple-grid", get_template_directory_uri().'/bootstrap-grid.css');
+    wp_enqueue_style("WWS-grid", get_template_directory_uri().'/css-parts/bootstrap-grid.min.css');
   
     /*My CSS */
-    wp_enqueue_style( "simple-styles", get_template_directory_uri( ).'/style.css');
+    wp_enqueue_style( "WWS-styles", get_template_directory_uri( ).'/style.min.css');
 }
 
-add_action( 'wp_enqueue_scripts', 'simple_styles' );
+add_action( 'wp_enqueue_scripts', 'WWS_styles' );
 
 
 
 
 /*Registriamo una nuova categoria x i blocchi Carbon in Gutemberg
 --------------------------------------------------------------*/
-function NC_block_categories( $categories, $post ) {
+function WWS_block_categories( $categories, $post ) {
 	return array_merge(
 		$categories,
 		array(
 			array(
 				'slug' => 'customCarbon',
-				'title' => __( 'Custom Carbon Blocks', 'NC' ),
+				'title' => __( 'Custom Carbon Blocks', 'WWS' ),
 				'icon' => 'star-filled'
 			),
 		)
 	);
 }
-add_filter( 'block_categories', 'NC_block_categories', 10, 2 );
+add_filter( 'block_categories', 'WWS_block_categories', 10, 2 );
 
 /*Carbon Fields
 ------------------------*/

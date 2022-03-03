@@ -2,24 +2,25 @@
 
 <main>
 
-    <div class="container">
-
-        <!--Hero-->
-        <section class="hero">
-            <div class="row">
-                <h1 class="catchprhase col-9">Innovative <span class="blu">Environmental</span> <br> Modelling</h1>
-                <div class="col-3 align-items-end mission-prashe">
-                    <a href="#" class="mission-prashe"> <h5 class="mission-prashe"> Our Mission </h5> </a>
-                    <p class="mission-prhase"> Weather Water Sand is an innovative start-up company founded in 2021 as a Spin-Off from the University of Genova... </p>
+    <!--Hero-->
+    <section class="hero">
+        <div class="container">
+            <div class="row align-items-end mb-64">
+                <div class="col-12 col-lg-9">
+                    <h1>Innovative <span class="blue">Environmental</span> <br>Modelling</h1>
+                </div>
+                <div class="col-12 col-lg-3 hero__col-mission">
+                    <p>Innovative Environmental Modelling for Submarine Geohazards, Geological Modelling and Renewable Energies.</p>
                 </div>
             </div>
-
             <div class="row">
-                <div class="col-11 offset-1 hero-image">
+                <div class="col-12 col-lg-11 offset-lg-1 hero__col-image">
                     <img src="<?php echo get_template_directory_uri(); ?>/img/hero.png" alt="">
                 </div>
             </div>
-        </section>
+        </div> <!--.container-->
+    </section>
+
 
         <!--About us-->
         <section class="about">
@@ -139,7 +140,7 @@
         ?>
 
 
-    </div> <!--.container-->
+    
 
         <?php if ( have_posts() ) {
             while ( have_posts() ) {

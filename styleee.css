@@ -1,0 +1,285 @@
+/*
+Theme Name: WWS
+Theme URI: http://bang
+Author: Federico Toldo, Matteo Bruschetti
+Author URI: http://federicotoldo.it
+Description:Super test di carbon fields
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: black, brown, orange, tan, white, yellow, light, one-column, two-columns, right-sidebar, flexible-width, custom-header, custom-menu, editor-style, featured-images, microformats, post-formats, rtl-language-support, sticky-post, translation-ready
+Text Domain: test
+Version: beta v1.0
+*/
+
+body,
+html{
+    font-size: 16px;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h1 ,h2, h3, h4, h5, h6, p, ol, ul{
+    margin: 0;
+    padding: 0;
+}
+
+ol, ul{
+    list-style-type: none;
+}
+
+img{
+    height: auto;
+}
+
+h1 ,h2, h3, h4, h5, h6, p, ol, ul{
+    color: #333;
+}
+
+h1{font-size: 64px;color: #121212;}
+h2{font-size: 48px;text-transform: uppercase;font-weight: 700;margin-bottom: 2%;}
+h3{font-size: 40px;font-weight: 700;margin-bottom: 5%;}
+h5{font-size: 20px;text-transform: uppercase;font-weight: 500;letter-spacing: 0.4rem;}
+
+
+a{
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    h1{font-size: 40px;}
+    h2{font-size: 36;}
+    h3{font-size: 28;}    
+}
+
+
+/* ! Base */
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.footer{
+    margin-top: 50px;
+    padding: 25px 0 25px 0;
+}
+
+/* ! Header */
+
+.header{
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+
+.logo{
+    margin: auto;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 700;
+    color: #333;
+}
+
+.menu ul{
+    text-align: right;
+
+}
+
+.menu li{
+    display: inline-block;
+    margin: 15px;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1.5;
+}
+
+.menu li a{
+    color: #333;
+    transition: ease-in-out 0.6;
+}
+
+.menu li a:hover{
+    color: #417BC7;
+}
+
+/* ! Hero */
+
+.blu{
+    color: #417BC7;
+    margin: 0;
+    padding: 0;
+}
+
+.mission-prashe{
+    margin-top: 4%;
+    margin-bottom: 2%;
+}
+
+h5.mission-prashe{
+    text-transform: uppercase;
+    color: #417BC7;
+    font-weight: 600;
+}
+
+.hero-image{
+    margin-top: 5%;
+    max-width: 100%;
+    height: 70vh;
+    background-image: url(http://testcarbon.local/wp-content/uploads/2022/02/sand_03-scaled.jpg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+    border-radius: 0 0 0 300px;
+}
+
+.hero-image img{
+    border-radius: 0 0 0 20vw;
+    max-width: 100%;
+}
+
+
+/* ! About__section*/
+
+.about{    margin-top: 10%;}
+
+.about__title{ 
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.underline{
+    background-color: #417BC7;
+    width: 50%;
+    height: 5px;
+    transition: 0.6s;
+}
+
+.underline:hover{width: 100%;}
+
+.text{
+    margin-top: 5%;
+    margin-bottom: 2%;
+}
+
+.caption{
+    text-align: right;
+    margin-top: 5%;
+    margin-bottom: 2%;
+    padding: 0;
+}
+
+.single-image1{
+    width: 100%;
+    height: 40vh;
+    background: url(http://testcarbon.local/wp-content/uploads/2022/02/wether_03-scaled.jpg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+    border-radius: 0 0 0 180px;
+}
+
+.single-image2{
+    width: 100%;
+    height: 40vh;
+    background: url(http://testcarbon.local/wp-content/uploads/2022/02/water-scaled.jpg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+}
+
+.single-image3{
+    width: 100%;
+    height: 40vh;
+    background: url(http://testcarbon.local/wp-content/uploads/2022/02/sand_05-scaled.jpg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+}
+
+.image-about{
+    margin-bottom: 10%;
+}
+
+/* ! Last__section*/
+
+.last{margin-top: 12%;}
+
+.last__title{ 
+    margin-left: 0;
+    padding-left: 0;
+    margin-bottom: 5%;
+}
+
+article{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    border-bottom: #121212 solid 1px;
+    padding-bottom: 2%;
+}
+
+
+
+/* ! Single */
+
+.title{
+    margin: 15px;
+    margin-bottom: 50px;
+}
+
+
+
+/* ! Page */
+
+
+
+/* ! Underline animation */
+
+/*
+
+.last__title a {
+    overflow: hidden;
+  }
+  
+.last__title a::after {
+    opacity 1;
+    transform: translate3d(-100%, 0, 0);
+  }
+  
+.last__title a:hover::after,
+.last__title a:focus::after{
+    transform: translate3d(0, 0, 0);
+  } 
+  
+  */
+
+
+
+
+
+
+/* ! Carbon */
+
+.block{
+    margin-top: 25px;
+    margin-bottom: 25px;
+    padding: 25px 0 25px 0;
+    border-bottom: #333 solid 2px;
+}
+
+.block__heading{
+    vertical-align: bottom;
+    margin-bottom: 25px;
+}
+
+.block__image{
+    width: 100%;
+}
+
+
+
+
+
+
+*,*:before,*:after {
+    box-sizing: border-box;
+}
