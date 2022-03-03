@@ -80,7 +80,8 @@
 
                 <?php
             } ); //render callback
-            
+        
+
 
         // Test 2
         Block::make( __( 'MyBlockDue' ) )
@@ -108,6 +109,31 @@
                         <?php echo apply_filters( 'the_content', $fields['content'] ); ?>
                     </div><!-- /.block__content -->
                 </div><!-- /.block -->
+
+                <?php
+            } ); //render callback
+
+
+
+        //STATIC BLOCK - Contact us CTA
+        Block::make( __( 'Contact us CTA' ) )
+            ->set_description( __( 'A simple block consisting of a contact us call to action' ) )
+            ->set_category( 'customCarbon' )
+            ->set_icon( 'email' )
+            ->set_mode( 'both' )
+            ->set_render_callback( function ( $fields) {
+                ?>
+
+                <section class="crb_contact-us-cta">
+                    <div class="row">
+                        <div class="col-12 col-lg-8">
+                            <h2>CONFUSED? CURIOUS? NEED MORE INFO?</h2>
+                        </div>
+                        <div class="col-12 col-lg-4">
+                            <a href="<?php echo get_permalink( get_page_by_path( 'contact' ) ); ?>" class="button">Contact us</a>
+                        </div>
+                    </div>
+                </section>
 
                 <?php
             } ); //render callback
