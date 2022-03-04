@@ -1,6 +1,10 @@
 $img-left-border-radius: clamp(4.8rem, 20vw, 30rem);
 $img-border-radius: 0 0 0 $img-left-border-radius;
 
+$square-img-left-border-radius: 50%;
+$square-img-border-radius: 0 0 0 $square-img-left-border-radius;
+
+
 
 span.blue{
     color: $color-primary;

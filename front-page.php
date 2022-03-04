@@ -15,15 +15,16 @@
             </div>
             <div class="row">
                 <div class="col-12 col-lg-11 offset-lg-1 hero__col-image">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/hero.png" alt="">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/home/sand-hero.png" alt="">
                 </div>
             </div>
         </div> <!--.container-->
     </section>
 
 
+
     <!--Who we are-->
-    <section class="two-col-txt">
+    <section class="two-col-txt mb-24-r">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -50,88 +51,110 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 col-lg-11 offset-lg-1">
-                    <p class="mb-80-r">
+                    <p class="mb-96-r">
                         Our experts use advanced atmospheric, hydraulic and sediment transport models with applications to
                     </p>
                 </div>
             </div>
         </div>
     </section>
-
-
-            <div class="image-about">
-
-                <div class="row">
-
-                    <h5 class="caption col-2 offset-2 justify-content-end">wether</h5>
-                    <h5 class="caption col-2 offset-2 justify-content-end">water</h5>
-                    <h5 class="caption col-2 offset-2 justify-content-end">Sand</h5>
-
+    <section class="images-row">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-11 offset-lg-1">
+                    <div class="row mb-240-r">
+                        <div class="col-12 col-lg-4 images-row__col">
+                            <p class="images-row__caption mb-16-r">Risk quantification associated with geologic hazards</p>
+                            <img class="images-row__img" src="<?php echo get_template_directory_uri(); ?>/img/home/wind-grain.png" alt="">
+                        </div>
+                        <div class="col-12 col-lg-4 images-row__col">
+                            <p class="images-row__caption mb-16-r">High resolution geologic models for oil and gas and carbon sequestration reservoirs</p>
+                            <img class="images-row__img" src="<?php echo get_template_directory_uri(); ?>/img/home/water-sunset-ocean.png" alt="">
+                        </div>
+                        <div class="col-12 col-lg-4 images-row__col">
+                            <p class="images-row__caption mb-16-r">Advanced weather forecasts for renewable energy projects</p>
+                            <img class="images-row__img" src="<?php echo get_template_directory_uri(); ?>/img/home/sand-desert.png" alt="">
+                        </div>
+                    </div>
                 </div>
-
-                <div class="row image-about-single">
-
-                    <div class="single-image1 col-3 offset-1"></div>
-                    <div class="single-image2 col-3 offset-1"></div>
-                    <div class="single-image3 col-3 offset-1"></div>
-
-                </div>
-
             </div>
-        </div> <!--.container-->
+        </div>
     </section>
 
-        <!--Latest News-->
-        <section class="last">
 
-            <div class="row last__title">
-                <div class="last__title col-5">
-                    <a href="news.html">
-                    <h2>Latest news</h2>
-                    <div class="underline"></div>
-                    </a>
+
+    <!-- Our Services -->
+    <section class="bullet-list mb-240-r">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="mb-48-r"><span class="blue">Our</span> services</h2>
+                </div>
+                <div class="col-12 col-lg-11 offset-lg-1">
+                    <p class="mb-48-r">
+                        The services we offer have in common the application of physics-based, advanced numerical computation techniques that describe the motion of the air and 
+                        water masses and the associated sediment transport.  We aim to provide high-quality numerical modelling solutions of natural processes for:
+                    </p>
+                    <ul>
+                        <li>Predicting the forces associated with the flow of fluids and their potential impact on engineering structures and the natural environment.</li>
+                        <li>Providing the best deterministic/statistical predictions for the natural flows used as renewable energy sources in all areas of the world, with applications to economic evaluations for new and existing renewable energy projects, including wind, tidal, hydro-electric and solar.</li>
+                        <li>Predicting the transport of sediment associated with natural flows, the spatial distribution of sediment removal by erosion, and the spatial patterns of sedimentary deposits.</li>
+                        <li>Evaluating the triggering processes of submarine flow events (e.g., turbidity currents, landslides) and the likelihood of occurrence over short to long time scales (10’s to 1000’s of years).</li>
+                        <li>Predicting the physical characteristics of modern and ancient deposits using numerical simulation techniques.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- LOOP Last news -->
+    <section class="loop mb-160-r">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="mb-48-r"><span class="blue">Latest</span> news</h2>
                 </div>
             </div>
 
-        </section>
-
-
-        <!--Latest news-->
-        <?php 
-            $loop = new WP_Query( array( 'post_type' => 'post') );
-            if ($loop->have_posts()) :?><?php while($loop->have_posts()) : $loop->the_post();
-            ?>
-
-            <article>
-                <a href="<?php the_permalink();?>"> 
-                    <div class="row">
-                        <div class="col-8">
-                            <h3> <?php the_title( ); ?> </h3>
-                            <?php the_excerpt( ); ?>
-                        </div>
-                        <div class="col-3 offset-1">
-                            <?php the_post_thumbnail( 'medium', array('class' => 'img-res', 'alt' => get_the_title())); ?>
-                        </div>          
-                    </div>
-                </a> 
-            </article>
-
-            <?php endwhile; ?>
-            <?php else : ?>
-                <p> <?php esc_html_e( 'Sorry ma non ci sono post che corrispondono a questo criterio', 'slug-theme' ); ?> </p>
-            <?php endif;
-        ?>
-
-
-    
-
-        <?php if ( have_posts() ) {
-            while ( have_posts() ) {
-                the_post(); ?>
-                    <?php the_content(); ?>
-                <?php
-            }
-        }?>
+            <?php 
+                $loop = new WP_Query( array( 
+                    'post_type'         => 'post',
+                    'post_status'       => 'publish',
+                    'orderby'           => 'count',
+                    'order'             => 'DESC',
+                    'posts_per_page'    => 3,
+                    'categoria_tag'     =>  $categoria
+                ) );
+                if ($loop->have_posts()) : while($loop->have_posts()) : $loop->the_post(); ?>
+                    <article>
+                        
+                            <div class="row">
+                                <div class="col-12 order-lg-2 col-lg-4">
+                                    <img src="<?php echo get_the_post_thumbnail_url();?>" alt="<?php echo $thumbnail_alt ?>">
+                                </div>
+                                <div class="col-12 col-lg-8">
+                                    <div class="loop__content-container">
+                                        <div class="loop__over-content">
+                                            <p class="mb-8-r"><?php echo get_the_date(); ?></p>
+                                        </div>
+                                        <div class="loop__content">                                 
+                                            <h3 class="mb-16-r"><?php the_title(); ?></h3>
+                                            <p class="mb-16-r"><?php echo get_the_excerpt(); ?></p>
+                                            <a href="<?php the_permalink();?>">Read more</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </article>
+                    <?php endwhile; ?>
+                <?php else : ?>
+                    <p> <?php esc_html_e( 'Sorry ma non ci sono post che corrispondono a questo criterio', 'slug-theme' ); ?> </p>
+                <?php endif; ?>
+        </div>
+    </section>
 
 </main>
 

@@ -1,34 +1,37 @@
-<html lang="en">
+<!DOCTYPE html>
+<html <?php language_attributes(); ?>>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta <?php bloginfo('charset'); ?>>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <?php wp_head(); ?> 
-
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="theme-color" content="#417BC7">
+    <meta name="description" content="<?php bloginfo('description'); ?>">
+    <?php wp_head(); ?>
 </head>
+
 <body <?php body_class(); ?>>
 
-<header class="container header">
+    <header class="container header">
 
-    <div class="row justify-content-between">
+        <div class="row justify-content-between">
 
-            <a href="<?php echo home_url();?>" class="logo col-2"> logo </a>
+                <a href="<?php echo home_url();?>" class="logo col-2"> logo </a>
 
-        <nav class="menu col-9 offset-1">
+            <nav class="menu col-9 offset-1">
 
-            <?php 
+                <?php 
 
-            wp_nav_menu( array(
-                'theme_location' => 'header',
-                'container' => false,
-                'items_wrap' => '<ul>%3$s</ul>'
-            ));
+                wp_nav_menu( array(
+                    'theme_location' => 'header',
+                    'container' => false,
+                    'items_wrap' => '<ul>%3$s</ul>'
+                ));
 
-            ?>
+                ?>
 
-        </nav>
+            </nav>
 
-    </div>
+        </div>
 
-</header>
+    </header>

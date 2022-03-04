@@ -24,12 +24,11 @@ h2{
     text-transform: uppercase;
 }
 
-// h3{
-//     font-size: 3rem; font-weight: 600;
-//     line-height: 120%;
-//     text-align: left;
-//     color: $color-primary;
-// }
+h3{
+    font-size: clamp(2.6rem, 3vw, 3.8rem);
+    line-height: 130%;
+    color: $color-txt-primary;
+}
 
 // h4{
 //     font-size: 2.8rem;
@@ -68,30 +67,19 @@ p{
     font-size: 1.8rem;
     line-height: $maintext-lineheight;
     word-wrap:break-word;
-
-    // &.h1{
-    //     font-family: $font-family-secondary;
-    //     font-size: clamp(3.6rem, 5vw, 5.6rem);
-    //     font-weight: 700;
-    //     letter-spacing: -1.5px; line-height: 130%;
-    //     color: $color-primary;
-    // }
 }
+
 ol, ul{ li{
+    font-size: 1.8rem;
     color: $color-txt-secondary;
     line-height: $maintext-lineheight;
 }}
 
 
-.wysiwyg{
-    p, li{
-        margin-bottom:.8rem;
-        @media #{$large}{
-            margin-bottom:1.6rem;
-        }
+h2{
+    b{
+        color: $color-primary;
     }
-
-    li{line-height: $maintext-lineheight;}
 }
 
 
