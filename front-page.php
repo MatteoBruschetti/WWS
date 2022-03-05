@@ -133,7 +133,9 @@
                         
                             <div class="row">
                                 <div class="col-12 order-lg-2 col-lg-4">
-                                    <img src="<?php echo get_the_post_thumbnail_url();?>" alt="<?php echo $thumbnail_alt ?>">
+                                    <a href="<?php the_permalink();?>" class="loop__img-permalink">
+                                        <img src="<?php echo get_the_post_thumbnail_url();?>" alt="<?php echo $thumbnail_alt ?>">
+                                    </a>
                                 </div>
                                 <div class="col-12 col-lg-8">
                                     <div class="loop__content-container">

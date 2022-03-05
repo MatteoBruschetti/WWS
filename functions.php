@@ -55,7 +55,7 @@ add_action('init', function () {
 });
 
 //Remove emoji
-function NC_disable_emojis() {
+function WWS_disable_emojis() {
     remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
     remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
     remove_action( 'wp_print_styles', 'print_emoji_styles' );
@@ -66,7 +66,7 @@ function NC_disable_emojis() {
     add_filter( 'tiny_mce_plugins', 'disable_emojis_tinymce' );
     add_filter( 'wp_resource_hints', 'disable_emojis_remove_dns_prefetch', 10, 2 );
 }
-add_action( 'init', 'NC_disable_emojis' );
+add_action( 'init', 'WWS_disable_emojis' );
     function disable_emojis_tinymce( $plugins ) {
         if ( is_array( $plugins ) ) {
         return array_diff( $plugins, array( 'wpemoji' ) );
@@ -82,20 +82,6 @@ add_action( 'init', 'NC_disable_emojis' );
         return $urls;
     }
 
-//Remove some GB Settings
-function NC_disable_gutenberg_sidebar_settings() {
-    //remove core patterns
-    remove_theme_support("core-block-patterns");
-    //hide Color
-	add_theme_support( 'disable-custom-colors' );
-	add_theme_support( 'disable-custom-colors' );
-	add_theme_support( 'editor-color-palette' );
-	add_theme_support( 'editor-gradient-presets', [] );
-	add_theme_support( 'disable-custom-gradients' );
-} 
-add_action( 'after_setup_theme', 'NC_disable_gutenberg_sidebar_settings' );
-
-
 
 
 /*Registriamo una nuova categoria x i blocchi Carbon in Gutemberg
@@ -106,7 +92,7 @@ function WWS_block_categories( $categories, $post ) {
 		array(
 			array(
 				'slug' => 'customCarbon',
-				'title' => __( 'Custom Carbon Blocks', 'WWS' ),
+				'title' => __( 'Custom WWS Blocks', 'WWS' ),
 				'icon' => 'star-filled'
 			),
 		)
@@ -117,6 +103,12 @@ add_filter( 'block_categories', 'WWS_block_categories', 10, 2 );
 /*Carbon Fields
 ------------------------*/
 require dirname(__FILE__).'/carbon-fields.php';
+
+
+/*Functions Parts
+------------------------*/
+require dirname(__FILE__).'/functions-parts/customize-backend.php';
+require dirname(__FILE__).'/functions-parts/customize-gb.php';
 
 
 

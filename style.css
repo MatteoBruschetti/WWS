@@ -112,6 +112,26 @@ h3 {
   color: #121212;
 }
 
+h4 {
+  font-size: clamp(2.2rem, 2.6vw, 3.2rem);
+  line-height: 140%;
+  color: #121212;
+}
+
+h5 {
+  font-size: clamp(1.8rem, 2.2vw, 2.8rem);
+  line-height: 140%;
+  color: #121212;
+}
+
+h6 {
+  font-size: 1.6rem;
+  line-height: 150%;
+  color: #417BC7;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
 p {
   color: #414141;
   font-size: 1.8rem;
@@ -725,19 +745,31 @@ footer .footer__col-txt p {
   padding: 4rem 0;
 }
 
-.loop article img {
+.loop article .loop__img-permalink {
+  display: block;
+  background: #417BC7;
+}
+
+.loop article .loop__img-permalink img {
   width: 100%;
+  display: block;
   -o-object-fit: cover;
      object-fit: cover;
   aspect-ratio: 2/1.2;
   margin-bottom: 2.4rem;
+  -webkit-transition: opacity .3s ease-in-out;
+  transition: opacity .3s ease-in-out;
 }
 
 @media (min-width: 992px) {
-  .loop article img {
+  .loop article .loop__img-permalink img {
     margin-bottom: 0;
     aspect-ratio: 1/1;
   }
+}
+
+.loop article .loop__img-permalink:hover img {
+  opacity: .4;
 }
 
 .loop article .loop__content-container {
@@ -802,14 +834,238 @@ footer .footer__col-txt p {
   -webkit-text-fill-color: transparent;
 }
 
-.loop article:last-of-type img {
+.loop article:last-of-type .loop__img-permalink, .loop article:last-of-type img {
   border-radius: 0 0 0 clamp(4.8rem, 20vw, 30rem);
 }
 
 @media (min-width: 992px) {
-  .loop article:last-of-type img {
+  .loop article:last-of-type .loop__img-permalink, .loop article:last-of-type img {
     border-radius: 0 0 0 50%;
   }
+}
+
+.single h1 strong, .single h2 strong, .single h3 strong, .single h4 strong, .single h5 strong {
+  color: #417BC7;
+}
+
+.single h1 a, .single h2 a, .single h3 a, .single h4 a, .single h5 a {
+  color: #417BC7;
+}
+
+.single h1 a:hover, .single h2 a:hover, .single h3 a:hover, .single h4 a:hover, .single h5 a:hover {
+  opacity: .8;
+}
+
+.single p {
+  max-width: 80ch;
+  margin-bottom: .8rem;
+}
+
+@media (min-width: 992px) {
+  .single p {
+    margin-bottom: 1.6rem;
+  }
+}
+
+.single p a {
+  color: #417BC7;
+}
+
+.single p a:hover {
+  opacity: .8;
+}
+
+.single sup {
+  vertical-align: super;
+}
+
+.single sub {
+  vertical-align: sub;
+}
+
+.single ol, .single ul {
+  list-style-position: outside;
+  margin-left: 1.5rem;
+  margin-bottom: 0.8rem;
+}
+
+@media (min-width: 992px) {
+  .single ol, .single ul {
+    margin-bottom: 1.6rem;
+  }
+}
+
+.single ol li, .single ul li {
+  line-height: 180%;
+  max-width: 78ch;
+  margin-bottom: .4rem;
+}
+
+@media (min-width: 992px) {
+  .single ol li, .single ul li {
+    margin-bottom: .8rem;
+  }
+}
+
+.single ol li::marker, .single ul li::marker {
+  color: #417BC7;
+}
+
+.single ol li a, .single ul li a {
+  color: #417BC7;
+}
+
+.single ol li a:hover, .single ul li a:hover {
+  opacity: .8;
+}
+
+.single .wp-block-gallery .wp-block-image figcaption {
+  padding-top: 8px !important;
+  background: -webkit-gradient(linear, left bottom, left top, from(#417bc7), color-stop(70%, rgba(65, 123, 199, 0.5)), to(transparent)) !important;
+  background: linear-gradient(0deg, #417bc7, rgba(65, 123, 199, 0.5) 70%, transparent) !important;
+}
+
+.single .wp-block-gallery .wp-block-image figcaption a {
+  color: #FEFEFE;
+}
+
+.single .wp-block-file a:first-of-type {
+  font-family: "Catamaran", sans-serif;
+  font-weight: 700;
+  color: #F3F3F3;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 2px;
+  line-height: 100%;
+  white-space: nowrap;
+  font-size: 1.6rem;
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  padding: 1.6rem 2.4rem;
+  background-color: #417BC7;
+  margin-top: -4px;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.single .wp-block-file a:first-of-type:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+  -webkit-transform-origin: center top;
+          transform-origin: center top;
+  background: -webkit-gradient(linear, left top, right top, from(#009ee2), to(#e6cd00));
+  background: linear-gradient(90deg, #009ee2 0%, #e6cd00 100%);
+  -webkit-transition: -webkit-transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: -webkit-transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.single .wp-block-file a:first-of-type:hover {
+  color: #FEFEFE;
+}
+
+.single .wp-block-file a:first-of-type:hover:before {
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
+  -webkit-transform-origin: center bottom;
+          transform-origin: center bottom;
+}
+
+.single .wp-block-file a.wp-block-file__button {
+  font-family: "Catamaran", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #417BC7;
+  font-size: 1.6rem;
+  background: none;
+  border-radius: 0;
+  -webkit-transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.single .wp-block-file a.wp-block-file__button:hover {
+  opacity: .8;
+  text-decoration: underline;
+}
+
+.single .wp-block-buttons .wp-block-button:first-of-type a {
+  font-family: "Catamaran", sans-serif;
+  font-weight: 700;
+  color: #F3F3F3;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 2px;
+  line-height: 100%;
+  white-space: nowrap;
+  font-size: 1.6rem;
+  border-radius: 0;
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  padding: 1.6rem 2.4rem;
+  background-color: #417BC7;
+  margin-top: -4px;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.single .wp-block-buttons .wp-block-button:first-of-type a:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+  -webkit-transform-origin: center top;
+          transform-origin: center top;
+  background: -webkit-gradient(linear, left top, right top, from(#009ee2), to(#e6cd00));
+  background: linear-gradient(90deg, #009ee2 0%, #e6cd00 100%);
+  -webkit-transition: -webkit-transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: -webkit-transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.single .wp-block-buttons .wp-block-button:first-of-type a:hover {
+  color: #FEFEFE;
+  text-decoration: none;
+}
+
+.single .wp-block-buttons .wp-block-button:first-of-type a:hover:before {
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
+  -webkit-transform-origin: center bottom;
+          transform-origin: center bottom;
+}
+
+.single .wp-block-buttons .wp-block-button a {
+  font-family: "Catamaran", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #417BC7;
+  font-size: 1.6rem;
+  background: none;
+  border-radius: 0;
+  -webkit-transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.single .wp-block-buttons .wp-block-button a:hover {
+  opacity: .8;
+  text-decoration: underline;
+}
+
+.single hr.wp-block-separator {
+  margin: 10rem 0;
+  opacity: .2;
 }
 
 /* ! Hero */
@@ -933,4 +1189,6 @@ footer .footer__col-txt p {
   margin-bottom: 3.2rem;
   padding-left: 1.6rem;
   border-left: solid 4px #417BC7;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }

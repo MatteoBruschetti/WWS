@@ -1,0 +1,186 @@
+.single{
+
+    h1, h2, h3, h4, h5{
+        strong{color: $color-primary;}
+        a{
+            color: $color-primary;
+            &:hover{opacity: .8;}
+        }
+    }
+
+    p{
+        max-width: 80ch;
+        margin-bottom: .8rem;
+        @media #{$large}{
+            margin-bottom: 1.6rem;
+        }
+
+        a{
+            color: $color-primary;
+            &:hover{opacity: .8;}
+        }
+    }
+    
+    sup{vertical-align: super;}
+    sub{vertical-align: sub;}
+
+    ol, ul{
+        list-style-position: outside;
+        margin-left: 1.5rem;
+        margin-bottom: 0.8rem;
+        @media #{$large}{
+            margin-bottom: 1.6rem;
+        }
+
+        li{
+            line-height: 180%;
+            max-width: 78ch;
+            margin-bottom: .4rem;
+            @media #{$large}{
+                margin-bottom: .8rem;
+            }
+            &::marker{color: $color-primary;}
+            a{
+                color: $color-primary;
+                &:hover{opacity: .8;}
+            }
+        }
+    }
+
+    .wp-block-gallery{
+        .wp-block-image{
+            figcaption{
+                padding-top: 8px !important;
+                background: linear-gradient(0deg,rgba($color-primary,1),rgba($color-primary,.5) 70%,transparent) !important;
+                a{color: $color-white;}
+            }
+        }
+    }
+
+    .wp-block-file{
+        a{
+            &:first-of-type{
+                font-family: $font-family-secondary;
+                font-weight: 700;
+                color: $color-white-on-primary;
+                text-transform: uppercase; text-decoration: none;
+                letter-spacing: 2px; line-height: 100%; white-space: nowrap;
+                font-size: 1.6rem;
+                position: relative; z-index: 1;
+                display: inline-block;
+                padding: 1.6rem 2.4rem;
+                background-color: $color-primary;
+                margin-top: -4px;
+                transition: all .3s ease-in-out;
+
+                &:before{
+                    content: "";
+                    position: absolute;
+                    inset: 0;
+                    z-index: -1;
+                    transform: scaleY(0);
+                    transform-origin: center top;
+                    background: linear-gradient(90deg, rgba(0,158,226,1) 0%, rgba(230,205,0,1) 100%);
+                    transition: transform .2s cubic-bezier(.215,.61,.355,1);
+                }
+
+                &:hover{
+                    color: $color-white;
+
+                    &:before{
+                        transform: scaleY(1);
+                        transform-origin: center bottom;
+                    }
+                }
+            }
+
+            &.wp-block-file__button{
+                font-family: $font-family-secondary;
+                font-weight: 700;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                color: $color-primary;
+                font-size: 1.6rem;
+                background: none;
+                border-radius: 0;
+                transition: all 0.4s cubic-bezier(.25,.8,.25,1);
+    
+                &:hover{
+                    opacity: .8;
+                    text-decoration: underline;
+                }
+            }
+            
+        }
+    }
+
+    .wp-block-buttons{
+        .wp-block-button:first-of-type{
+            a{
+                font-family: $font-family-secondary;
+                font-weight: 700;
+                color: $color-white-on-primary;
+                text-transform: uppercase; text-decoration: none;
+                letter-spacing: 2px; line-height: 100%; white-space: nowrap;
+                font-size: 1.6rem;
+                border-radius: 0;
+                position: relative; z-index: 1;
+                display: inline-block;
+                padding: 1.6rem 2.4rem;
+                background-color: $color-primary;
+                margin-top: -4px;
+                transition: all .3s ease-in-out;
+    
+                &:before{
+                    content: "";
+                    position: absolute;
+                    inset: 0;
+                    z-index: -1;
+                    transform: scaleY(0);
+                    transform-origin: center top;
+                    background: linear-gradient(90deg, rgba(0,158,226,1) 0%, rgba(230,205,0,1) 100%);
+                    transition: transform .2s cubic-bezier(.215,.61,.355,1);
+                }
+    
+                &:hover{
+                    color: $color-white;
+                    text-decoration: none;
+    
+                    &:before{
+                        transform: scaleY(1);
+                        transform-origin: center bottom;
+                    }
+                }
+            }
+        }
+        .wp-block-button{
+            a{
+                font-family: $font-family-secondary;
+                font-weight: 700;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                color: $color-primary;
+                font-size: 1.6rem;
+                background: none;
+                border-radius: 0;
+                transition: all 0.4s cubic-bezier(.25,.8,.25,1);
+    
+                &:hover{
+                    opacity: .8;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+
+
+
+    hr.wp-block-separator{
+        margin: 10rem 0;
+        opacity: .2;
+    }
+
+
+
+}

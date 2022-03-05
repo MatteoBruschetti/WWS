@@ -67,7 +67,6 @@
                     ?>
 
                         <section class="crb-two-col-txt">
-                            <div class="container">
                                 <div class="row">
                                     <div class="col-12">
                                         <h2 class="mb-48-r"><?php echo $fields['heading']; ?></h2>
@@ -81,7 +80,6 @@
                                         <?php echo apply_filters( 'the_content', $fields['txt-right'] ); ?>
                                     </div>
                                 </div>
-                            </div>
                         </section>
 
                     <?php
@@ -101,13 +99,11 @@
                     ?>
 
                         <section class="crb-txt-highlight">
-                            <div class="container">
                                 <div class="row">
                                     <div class="col-12 col-lg-11 offset-lg-1 mb-80-r">
                                         <?php echo apply_filters( 'the_content', $fields['txt'] ); ?>
                                     </div>
                                 </div>
-                            </div>
                         </section>
 
                     <?php
@@ -132,7 +128,6 @@
                     ?>
 
                         <section class="crb-bullet-list">
-                            <div class="container">
                                 <div class="row">
                                     <div class="col-12">
                                         <h2 class="mb-48-r"><?php echo $fields['heading']; ?></h2>
@@ -152,7 +147,6 @@
                                         </ul>
                                     </div>
                                 </div>
-                            </div>
                         </section>
 
                     <?php

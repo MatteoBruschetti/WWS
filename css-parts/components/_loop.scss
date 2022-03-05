@@ -2,16 +2,31 @@
 
     article{
 
-        img{
-            width: 100%;
-            object-fit: cover;
-            aspect-ratio: 2/1.2;
-            margin-bottom: 2.4rem;
-    
-            @media #{$large}{
-                margin-bottom: 0;
-                aspect-ratio: 1/1;
-            
+        
+        .loop__img-permalink{
+            display: block;
+            background: $color-primary;
+
+
+            img{
+                width: 100%;
+                display: block;
+                object-fit: cover;
+                aspect-ratio: 2/1.2;
+                margin-bottom: 2.4rem;
+                transition: opacity .3s ease-in-out;
+        
+                @media #{$large}{
+                    margin-bottom: 0;
+                    aspect-ratio: 1/1;
+                
+                }
+            }
+
+            &:hover{
+                img{
+                    opacity: .4;
+                }
             }
         }
 
@@ -77,7 +92,7 @@
         padding: 4rem 0;
 
         &:last-of-type{
-            img{
+            .loop__img-permalink, img{
                 border-radius: $img-border-radius;
 
                 @media #{$large}{
@@ -86,8 +101,6 @@
             }
         }
     }
-
-    
 
 
 }
