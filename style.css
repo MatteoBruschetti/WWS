@@ -1275,21 +1275,21 @@ footer .footer__col-txt p {
   transition: all .8s ease-out 2s;
 }
 
-.crb-logo-animation.in-viewport .svg-g__pittogram {
+.crb-logo-animation.in-viewport-once .svg-g__pittogram {
   -webkit-transform: translateX(0);
           transform: translateX(0);
 }
 
-.crb-logo-animation.in-viewport .svg-g__pittogram .pittogram__square {
+.crb-logo-animation.in-viewport-once .svg-g__pittogram .pittogram__square {
   -webkit-animation: dash 1.6s ease-in-out forwards .4s;
           animation: dash 1.6s ease-in-out forwards .4s;
 }
 
-.crb-logo-animation.in-viewport .svg-g__pittogram .pittogram__txt {
+.crb-logo-animation.in-viewport-once .svg-g__pittogram .pittogram__txt {
   opacity: 1;
 }
 
-.crb-logo-animation.in-viewport .svg-g__logogram .logogram__txt {
+.crb-logo-animation.in-viewport-once .svg-g__logogram .logogram__txt {
   opacity: 1;
   -webkit-transform: translateY(0);
           transform: translateY(0);
@@ -1335,4 +1335,24 @@ footer .footer__col-txt p {
   to {
     stroke-dashoffset: 0;
   }
+}
+
+.crb-youtube .embed-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.crb-youtube .embed-container iframe, .crb-youtube .embed-container object, .crb-youtube .embed-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.crb-youtube iframe {
+  border-left: solid 8px #417BC7;
 }

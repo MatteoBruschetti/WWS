@@ -164,7 +164,7 @@
                     ->set_description( __( 'A WWS block for display animated logo' ) )
                     ->set_category( 'customCarbon' )
                     ->set_icon( 'superhero-alt' )
-                    ->set_mode( 'both' )
+                    ->set_mode( 'edit' )
                     ->set_render_callback( function ( $fields) {
                         ?>
 
@@ -194,6 +194,68 @@
                                 </div>
                             </section>
 
+
+                        <?php
+                    } ); //render callback
+
+
+                //Custom Spacers = SINGLE GB BLOCK
+                Block::make( __( 'Spacers' ) )
+                    ->add_fields( array(
+                        Field::make( 'select', 'h', __( 'Spacer height' ) )
+                        ->add_options( array(
+                            'mb-8-r' => __( '8px' ),
+                            'mb-16-r' => __( '16px' ),
+                            'mb-24-r' => __( '24px' ),
+                            'mb-32-r' => __( '32px' ),
+                            'mb-40-r' => __( '40px' ),
+                            'mb-48-r' => __( '48px' ),
+                            'mb-64-r' => __( '64px' ),
+                            'mb-80-r' => __( '80px' ),
+                            'mb-96-r' => __( '96px' ),
+                            'mb-120-r' => __( '120px' ),
+                            'mb-160-r' => __( '160px' ),
+                            'mb-200-r' => __( '200px' ),
+                            'mb-240-r' => __( '240px' ),
+                        ) )
+                    ) )
+                    ->set_description( __( 'A WWS block for add white space to the layout' ) )
+                    ->set_category( 'customCarbon' )
+                    ->set_icon( 'editor-expand' )
+                    ->set_mode( 'edit' )
+                    ->set_render_callback( function ( $fields) {
+                        ?>
+
+                            <div class="crb-spacer <?php echo $fields['h']; ?>"></div>
+
+                        <?php
+                    } ); //render callback
+
+
+                //Youtube video = SINGLE GB BLOCK
+                Block::make( __( 'Youtube video' ) )
+                    ->add_fields( array(
+                        Field::make( 'html', 'crb_description', __( 'Section Description' ) )
+	                        ->set_html( sprintf( 'To get the <b>Youtube video iframe</b> click Share > Incorporate > Copy.' ) )
+                            ,
+                        Field::make( 'text', 'yt', __( 'Then, paste <iframe> here 👇' ) )
+                    ) )
+                    ->set_description( __( 'Insert a Youtube video' ) )
+                    ->set_category( 'customCarbon' )
+                    ->set_icon( 'video-alt3' )
+                    ->set_mode( 'edit' )
+                    ->set_render_callback( function ( $fields) {
+                        ?>
+
+                            <section class="crb-youtube">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="embed-container">
+                                            <?php echo $fields['yt'];  ?>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
 
                         <?php
                     } ); //render callback

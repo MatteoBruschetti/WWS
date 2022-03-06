@@ -38,5 +38,16 @@
         </style>';
     }
     add_action('login_enqueue_scripts', 'WWS_custom_login_logo');
+
+    //custom color scheme
+    function WWScolorscheme_admin_color_scheme() {
+        $theme_dir = get_stylesheet_directory_uri();
+        wp_admin_css_color( 'wws-color-scheme', __( 'WWS Color Scheme' ),
+          $theme_dir . '/css-parts/wws-color-scheme.css',
+          array( '#23282d', '#fff', '#e6cd00' , '#417bc7')
+        );
+      }
+      add_action('admin_init', 'WWScolorscheme_admin_color_scheme');
+      
       
 ?>
