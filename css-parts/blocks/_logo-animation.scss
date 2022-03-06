@@ -1,0 +1,111 @@
+.crb-logo-animation{
+    padding: 8rem 0;
+
+    @media #{$large}{
+        padding: 16rem 0;
+    }
+
+    .svg-wrapper{
+        display: flex;
+        justify-content: center;
+
+            .svg-g__pittogram{
+                transform: translateX(32%);
+                transition: transform .6s ease-out 1.4s;
+
+                .pittogram__square{
+                    fill: $color-white;
+                    stroke-dasharray: 1000;
+                    stroke-dashoffset: 1000;
+                }
+                .pittogram__txt{
+                    fill: $color-black;
+                    opacity: 0;
+                    transition: opacity .6s ease-out .2s;
+                }
+            }
+            
+            .svg-g__logogram{
+                .logogram__square{
+                    fill: $color-white;
+                }
+                .logogram__txt{
+                    fill: $color-black;
+                    transform: translateY(15%);
+                    opacity: 0;
+
+                    @media #{$medium}{
+                        transform: translateY(30%);
+                    }
+                    @media #{$large}{
+                        transform: translateY(50%);
+                    }
+
+                    &:nth-of-type(1){
+                        transition: all .6s ease-out 1.6s;
+                    }
+                    &:nth-of-type(2){
+                        transition: all .7s ease-out 1.8s;
+                    }
+                    &:nth-of-type(3){
+                        transition: all .8s ease-out 2s;
+                    }
+                }
+            }
+
+    }
+
+
+    &.in-viewport{
+
+        .svg-g__pittogram{
+            transform: translateX(0);
+
+            .pittogram__square{
+                animation: dash 1.6s ease-in-out forwards .4s;
+            }
+            .pittogram__txt{
+                opacity: 1;
+            }
+        }
+
+        .svg-g__logogram{
+            .logogram__txt{
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+    }
+
+
+    &.bg-blue{
+        position: relative;
+
+        &:before{
+            content: '';
+            position: absolute;
+            inset: 0;
+            left: -80vw; right: -80vw;
+            background-color: $color-primary;
+            z-index: -1;
+        }
+
+        .svg-wrapper{
+            .svg-g__pittogram{
+                .pittogram__square{fill: $color-primary;}
+                .pittogram__txt{fill: $color-white;}
+            }
+            .svg-g__logogram{
+                .logogram__square{fill: $color-primary}
+                .logogram__txt{fill: $color-white;}
+            }
+        }
+    }
+}
+
+@keyframes dash {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }

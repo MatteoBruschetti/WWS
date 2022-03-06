@@ -13,8 +13,7 @@ function WWS_setup() {
 add_action( 'after_setup_theme','WWS_setup');
 
 
-/* CSS
-/*-----------------------*/
+//add CSS
 function WWS_styles() {
     /* Bootstrap */
     wp_enqueue_style("WWS-grid", get_template_directory_uri().'/css-parts/bootstrap-grid.min.css');
@@ -22,6 +21,13 @@ function WWS_styles() {
     wp_enqueue_style( "WWS-styles", get_template_directory_uri( ).'/style.min.css');
 }
 add_action( 'wp_enqueue_scripts', 'WWS_styles' );
+
+//add JS
+function WWS_scripts() {
+    wp_enqueue_script("WWS-script-in-view", get_template_directory_uri().'/js/jquery.in-viewport-class.min.js', array("jquery"), null, true);
+    wp_enqueue_script("WWS-scriptjs", get_template_directory_uri().'/js/script.js', array("jquery"), null, true);
+}
+add_action("wp_enqueue_scripts", "WWS_scripts");
 
 
 /*REMOVE

@@ -484,6 +484,7 @@ body {
   font-size: 1.6rem;
   /*= 10px * 1.6 = 16px*/
   background: #FEFEFE;
+  overflow-x: hidden;
 }
 
 ::-moz-selection {
@@ -1191,4 +1192,147 @@ footer .footer__col-txt p {
   border-left: solid 4px #417BC7;
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
+}
+
+.crb-logo-animation {
+  padding: 8rem 0;
+}
+
+@media (min-width: 992px) {
+  .crb-logo-animation {
+    padding: 16rem 0;
+  }
+}
+
+.crb-logo-animation .svg-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.crb-logo-animation .svg-wrapper .svg-g__pittogram {
+  -webkit-transform: translateX(32%);
+          transform: translateX(32%);
+  -webkit-transition: -webkit-transform .6s ease-out 1.4s;
+  transition: -webkit-transform .6s ease-out 1.4s;
+  transition: transform .6s ease-out 1.4s;
+  transition: transform .6s ease-out 1.4s, -webkit-transform .6s ease-out 1.4s;
+}
+
+.crb-logo-animation .svg-wrapper .svg-g__pittogram .pittogram__square {
+  fill: #FEFEFE;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+}
+
+.crb-logo-animation .svg-wrapper .svg-g__pittogram .pittogram__txt {
+  fill: #121212;
+  opacity: 0;
+  -webkit-transition: opacity .6s ease-out .2s;
+  transition: opacity .6s ease-out .2s;
+}
+
+.crb-logo-animation .svg-wrapper .svg-g__logogram .logogram__square {
+  fill: #FEFEFE;
+}
+
+.crb-logo-animation .svg-wrapper .svg-g__logogram .logogram__txt {
+  fill: #121212;
+  -webkit-transform: translateY(15%);
+          transform: translateY(15%);
+  opacity: 0;
+}
+
+@media (min-width: 768px) {
+  .crb-logo-animation .svg-wrapper .svg-g__logogram .logogram__txt {
+    -webkit-transform: translateY(30%);
+            transform: translateY(30%);
+  }
+}
+
+@media (min-width: 992px) {
+  .crb-logo-animation .svg-wrapper .svg-g__logogram .logogram__txt {
+    -webkit-transform: translateY(50%);
+            transform: translateY(50%);
+  }
+}
+
+.crb-logo-animation .svg-wrapper .svg-g__logogram .logogram__txt:nth-of-type(1) {
+  -webkit-transition: all .6s ease-out 1.6s;
+  transition: all .6s ease-out 1.6s;
+}
+
+.crb-logo-animation .svg-wrapper .svg-g__logogram .logogram__txt:nth-of-type(2) {
+  -webkit-transition: all .7s ease-out 1.8s;
+  transition: all .7s ease-out 1.8s;
+}
+
+.crb-logo-animation .svg-wrapper .svg-g__logogram .logogram__txt:nth-of-type(3) {
+  -webkit-transition: all .8s ease-out 2s;
+  transition: all .8s ease-out 2s;
+}
+
+.crb-logo-animation.in-viewport .svg-g__pittogram {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.crb-logo-animation.in-viewport .svg-g__pittogram .pittogram__square {
+  -webkit-animation: dash 1.6s ease-in-out forwards .4s;
+          animation: dash 1.6s ease-in-out forwards .4s;
+}
+
+.crb-logo-animation.in-viewport .svg-g__pittogram .pittogram__txt {
+  opacity: 1;
+}
+
+.crb-logo-animation.in-viewport .svg-g__logogram .logogram__txt {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.crb-logo-animation.bg-blue {
+  position: relative;
+}
+
+.crb-logo-animation.bg-blue:before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  left: -80vw;
+  right: -80vw;
+  background-color: #417BC7;
+  z-index: -1;
+}
+
+.crb-logo-animation.bg-blue .svg-wrapper .svg-g__pittogram .pittogram__square {
+  fill: #417BC7;
+}
+
+.crb-logo-animation.bg-blue .svg-wrapper .svg-g__pittogram .pittogram__txt {
+  fill: #FEFEFE;
+}
+
+.crb-logo-animation.bg-blue .svg-wrapper .svg-g__logogram .logogram__square {
+  fill: #417BC7;
+}
+
+.crb-logo-animation.bg-blue .svg-wrapper .svg-g__logogram .logogram__txt {
+  fill: #FEFEFE;
+}
+
+@-webkit-keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
 }
