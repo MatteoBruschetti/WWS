@@ -1,5 +1,11 @@
 .images-row{
 
+    .images-row__col{
+        display: flex; flex-direction: column;
+        justify-content: space-between;
+        min-height: 100%;
+    }
+
     .images-row__img{
         width: 100%;
         object-fit: cover;
@@ -9,7 +15,6 @@
         @media #{$large}{
             margin-bottom: 0;
             aspect-ratio: 1/1;
-        
         }
     }
 
@@ -19,16 +24,10 @@
 
     @media #{$large}{
         .images-row__col:first-of-type{
-            .images-row__img{border-radius: $square-img-border-radius;}
+            .images-row__img{border-radius: $img-border-radius;}
         }
         .images-row__col:last-of-type{
             .images-row__img{border-radius: 0;}
-        }
-
-        .images-row__col:nth-of-type(2){
-            display: flex;
-            flex-direction: column-reverse;
-            .images-row__img{margin-bottom: 1.6rem;}
         }
     }
 

@@ -1,15 +1,24 @@
 .cta{
-    background-color: $color-primary;
-    padding: 12rem 0;
+    .container{
+        padding: 12rem 0;
+        border: 4px solid;
+        border-image-slice: 1;
+        border-width: 4px;
+        border-image-source: linear-gradient(45deg, rgba(0,158,226,1) 10%, rgba(230,205,0,1) 99%);
+
+    }
 
     .cta__text{
         font-family: $font-family-secondary;
-        font-weight: 600;
-        color: $color-white-on-primary;
-        font-size: clamp(2.6rem, 3vw, 3.8rem);
+        font-size: clamp(3.2rem, 5vw, 4.8rem);
         line-height: 130%;
+        color: $color-txt-primary;
+        font-weight: 600;
+        text-transform: uppercase;
         text-align: center;
         margin-bottom: 4.8rem;
+
+        b{color: $color-grey;font-weight: 600;}
         
         @media #{$large}{
             text-align: left;
@@ -25,15 +34,15 @@
 
     .cta__btn{
         font-family: $font-family-secondary;
-        font-weight: 700;
-        color: $color-primary;
+        font-weight: 600;
+        color: $color-white;
         text-transform: uppercase; text-decoration: none;
         letter-spacing: 2px; line-height: 100%; white-space: nowrap;
 
         position: relative; z-index: 1;
         display: inline-block;
         padding: 1.6rem 2.4rem;
-        background-color: $color-white-on-primary;
+        background-color: $color-black;
         margin-top: -4px;
         transition: all .3s ease-in-out;
 
@@ -55,6 +64,10 @@
                 transform: scaleY(1);
                 transform-origin: center bottom;
               }
+        }
+
+        @media #{$large}{
+            margin-top: .4rem;
         }
     }
 } //.cta
@@ -86,44 +99,36 @@
         }
 
         &:hover{
-            color: $color-primary;
+            color: $color-grey;
             svg{
-                path{fill:$color-primary}
+                path{fill:$color-grey}
             }
         }
     }
 
     .partners__img-col{
-        
-        figure{
-            position: relative;
-            display: inline-block;
-            margin: 10%;
+        text-align: center;
 
-            @media #{$large}{
-                margin: 20%;
-            }
+        a{display: inline-block;}
 
-            &:before{
-                content: " ";
-                position: absolute;
-                inset: 0;
-                z-index: 0;
-                background: $color-primary;
-            }
+        img{
+            max-height: 4rem;
+            display: block;
+            filter: grayscale(1);
+            transition: 0.3s all cubic-bezier(0.4, 0, 0.2, 1);
             
-            img{
-                max-height: 100px;
-                display: block;
-                filter: grayscale(1); mix-blend-mode: hard-light;
-                background: $color-white;
-                transition: 0.3s all cubic-bezier(0.4, 0, 0.2, 1);
+            &:hover{
+                filter: grayscale(0); mix-blend-mode: normal;
             }
 
-            &:hover{
-                img{
-                    filter: grayscale(0); mix-blend-mode: normal;
-                }
+            @media #{$xsmall}{
+                max-height: 6rem;
+            }
+            @media #{$medium}{
+                max-height: 8rem;
+            }
+            @media #{$large}{
+                max-height: 9rem;
             }
         }
     }
@@ -133,13 +138,18 @@
 
 
 footer{
-    background-color: $color-primary;
-    padding: 5.6rem 0;
+
+    .container{
+        border-top: 2px solid rgba(0,0,0,.08);
+        padding: 5.6rem 0;
+    }
 
     .footer__col-img{
         margin-bottom: 2.4rem;
 
-        @media #{$large}{
+        img{opacity: .88;}
+
+        @media #{$xlarge}{
             margin-bottom: 0;
         }
     }
@@ -148,18 +158,25 @@ footer{
         display: flex; justify-content: space-between;
         flex-direction: column;
         
-        @media #{$large}{
+        @media #{$xlarge}{
             flex-direction: row;
             align-items: center;
         }
 
         p{
-            color: $color-white-on-primary;
+            font-size: 1.5rem;
+            color: $color-txt-secondary;
             margin-bottom: 1.6rem;
 
-            @media #{$large}{
+            @media #{$xlarge}{
                 margin-bottom: 0;
             }
+
+            &:first-of-type{
+                color: $color-txt-primary;
+            }
         }
+
+
     }
 }

@@ -39,6 +39,8 @@
                     ,
                 Field::make( 'text', 'crb_text_phone')
                 ,
+                Field::make( 'text', 'crb_ragione_sociale'),
+                Field::make( 'text', 'crb_address_sede_legale'),
                 Field::make( 'text', 'crb_partita_iva')
             ) );
 
@@ -115,9 +117,13 @@
                 ->add_fields( array(
                     Field::make( 'text', 'heading', __( 'Title' ) ),
                     Field::make( 'textarea', 'txt', __( 'Text' ) ),
-                    Field::make( 'complex', 'list', __( 'List' ) )
+                    Field::make( 'complex', 'list_left', __( 'List on the left' ) )
                         ->add_fields( array(
-                            Field::make( 'textarea', 'li', __( 'List Item' ) ),
+                            Field::make( 'textarea', 'li_left', __( 'List Item' ) ),
+                        ) ),
+                    Field::make( 'complex', 'list_right', __( 'List on the right' ) )
+                        ->add_fields( array(
+                            Field::make( 'textarea', 'li_right', __( 'List Item' ) ),
                         ) )
                 ) )
                 ->set_description( __( 'A WWS block for display a list of keypoints' ) )
@@ -128,25 +134,40 @@
                     ?>
 
                         <section class="crb-bullet-list">
-                                <div class="row">
-                                    <div class="col-12">
-                                        <h2 class="mb-48-r"><?php echo $fields['heading']; ?></h2>
-                                    </div>
-                                    <div class="col-12 col-lg-11 offset-lg-1">
-                                        <p class="mb-48-r"><?php echo $fields['txt']; ?> </p>
-                                        <ul>
-                                            <!-- Complex field -->
-                                            <?php 
-                                                $lists = $fields['list'];
-                                                foreach ($lists as $list) {
-                                                    ?>
-                                                        <li><?php echo $list['li']; ?></li>
-                                                    <?php
-                                                }
-                                            ?>
-                                        </ul>
-                                    </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <h2 class="mb-48-r"><?php echo $fields['heading']; ?></h2>
                                 </div>
+                                <div class="col-12 col-lg-11 offset-lg-1">
+                                    <p class="mb-48-r"><?php echo $fields['txt']; ?> </p>
+                                </div>
+                                <div class="col-12 col-lg-5 offset-lg-1">
+                                    <ul>
+                                        <!-- Complex field -->
+                                        <?php 
+                                            $listsl = $fields['list_left'];
+                                            foreach ($listsl as $listl) {
+                                                ?>
+                                                    <li><?php echo $listl['li_left']; ?></li>
+                                                <?php
+                                            }
+                                        ?>
+                                    </ul>
+                                </div>
+                                <div class="col-12 col-lg-5 offset-lg-1">
+                                    <ul>
+                                        <!-- Complex field -->
+                                        <?php 
+                                            $listsr = $fields['list_right'];
+                                            foreach ($listsr as $listr) {
+                                                ?>
+                                                    <li><?php echo $listr['li_right']; ?></li>
+                                                <?php
+                                            }
+                                        ?>
+                                    </ul>
+                                </div>
+                            </div>
                         </section>
 
                     <?php

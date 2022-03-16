@@ -2,10 +2,10 @@
     <section class="cta mb-160-r">
         <div class="container">
             <div class="row">
-                <div class="col-12 col-lg-9">
-                    <p class="cta__text">CURIOUS? NEED MORE INFO?</p> 
+                <div class="col-10 offset-1 col-lg-8">
+                    <p class="cta__text"><b>CURIOUS?</b> NEED MORE INFO?</p> 
                 </div>
-                <div class="col-12 col-lg-3 t-center">
+                <div class="col-10 offset-1 col-lg-2 offset-lg-0 t-center">
                     <a class="cta__btn" href="<?php echo get_permalink( get_page_by_path( 'contact' ) ); ?>">Contact us</a> 
                 </div>
             </div>
@@ -15,11 +15,13 @@
     <!--Partners-->
     <section class="partners mb-160-r">
         <div class="container">
-            <div class="row mb-80-r">
+            <div class="row align-items-end mb-80-r">
                 <div class="col-12 col-lg-8 mb-48-r">
-                    <h2><span class="blue">Partners</span> & Clients</h2>
+                    <h2 class="gradient-on-left i-v">
+                        Partners & Clients
+                    </h2>
                 </div>
-                <div class="col-12 col-lg-4 t-left">
+                <div class="d-none d-lg-block col-lg-4 mb-48-r t-left">
                     <a class="partners__linkedin" href="" target="_blank">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M19 0H5C2.239 0 0 2.239 0 5V19C0 21.761 2.239 24 5 24H19C21.762 24 24 21.761 24 19V5C24 2.239 21.762 0 19 0ZM8 19H5V8H8V19ZM6.5 6.732C5.534 6.732 4.75 5.942 4.75 4.968C4.75 3.994 5.534 3.204 6.5 3.204C7.466 3.204 8.25 3.994 8.25 4.968C8.25 5.942 7.467 6.732 6.5 6.732ZM20 19H17V13.396C17 10.028 13 10.283 13 13.396V19H10V8H13V9.765C14.396 7.179 20 6.988 20 12.241V19Z"/>
@@ -29,32 +31,19 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-6 col-lg-3 partners__img-col">
+                <div class="col-4 partners__img-col">
                     <a href="" target="_blank">
-                        <figure>
-                            <img src="<?php echo get_template_directory_uri(); ?>/img/footer/pm_ten.png" alt="">
-                        </figure>
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/footer/pm_ten.png" alt="">
                     </a>
                 </div>
-                <div class="col-6 col-lg-3 partners__img-col">
+                <div class="col-4 partners__img-col">
                     <a href="" target="_blank">
-                        <figure>
-                            <img src="<?php echo get_template_directory_uri(); ?>/img/footer/rina.png" alt="">
-                        </figure>
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/footer/wolfdynamics.png" alt="">
                     </a>
                 </div>
-                <div class="col-6 col-lg-3 partners__img-col">
+                <div class="col-4 partners__img-col">
                     <a href="" target="_blank">
-                        <figure>
-                            <img src="<?php echo get_template_directory_uri(); ?>/img/footer/wolfdynamics.png" alt="">
-                        </figure>
-                    </a>
-                </div>
-                <div class="col-6 col-lg-3 partners__img-col">
-                    <a href="" target="_blank">
-                        <figure>
-                            <img src="<?php echo get_template_directory_uri(); ?>/img/footer/spinoff.png" alt="Spinoff - Università degli studi di Genova">
-                        </figure>
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/footer/rina.png" alt="">
                     </a>
                 </div>
             </div>
@@ -66,13 +55,14 @@
     <footer>
         <div class="container">
             <div class="row">
-                <div class="col-12 col-lg-2 col-xl-3 order-lg-4 footer__col-img t-center">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/footer/spinoff-white.png" alt="Spinoff - Università degli studi di Genova">
+                <div class="col-12 col-xl-2 order-xl-4 footer__col-img t-center">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/footer/spinoff.png" alt="Spinoff - Università degli studi di Genova">
                 </div>
-                <div class="col-12 col-lg-10 col-xl-9 footer__col-txt t-center">
-                    <p><strong>Weather Water Sand S.R.L.</strong></p>
-                    <p><?php echo carbon_get_theme_option( 'crb_text_address' ); ?></p>
+                <div class="col-12 col-xl-10 footer__col-txt t-center">
+                    <p><strong><?php echo carbon_get_theme_option( 'crb_ragione_sociale' ); ?></strong></p>
+                    <p><?php echo carbon_get_theme_option( 'crb_address_sede_legale' ); ?></p>
                     <p><?php echo carbon_get_theme_option( 'crb_partita_iva' ); ?></p>
+                    <p>Privacy & Cookies Policy</p>
                 </div>
             </div>
         </div>

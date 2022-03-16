@@ -5,7 +5,7 @@
         
         .loop__img-permalink{
             display: block;
-            background: $color-primary;
+            background: $bg-gradient;
 
 
             img{
@@ -14,7 +14,7 @@
                 object-fit: cover;
                 aspect-ratio: 2/1.2;
                 margin-bottom: 2.4rem;
-                transition: opacity .3s ease-in-out;
+                transition: all .35s ease-in-out;
         
                 @media #{$large}{
                     margin-bottom: 0;
@@ -25,7 +25,8 @@
 
             &:hover{
                 img{
-                    opacity: .4;
+                    filter: saturate(0);
+                    opacity: .5;
                 }
             }
         }
@@ -40,7 +41,7 @@
             @media #{$large}{
                 margin-right: 1.2rem;
                 border-right: 2px solid rgba(0,0,0,.08);
-                padding-right: calc(32px + 1.2rem - 2px); //bootstrap + margin - border
+                padding-right: calc(32px + (1.2rem*2) - 2px); //bootstrap + margin*2 - border
             }
     
             .loop__over-content{
@@ -58,6 +59,10 @@
                     display: -webkit-box;
                             -webkit-line-clamp: 2;
                             -webkit-box-orient: vertical;
+                    a{
+                        text-decoration: none;
+                        color: $color-txt-primary;
+                    }
                 }
     
                 p{
@@ -69,19 +74,20 @@
                             -webkit-box-orient: vertical;
                 }
     
-                a{
+                .read-more{
                     font-size: 2rem;
                     font-family: $font-family-secondary;
-                    color: $color-primary;
-                    font-weight: 700;
+                    font-weight: 800;
                     text-decoration: none;
                     text-transform: uppercase;
                     letter-spacing: 2px;
-
+                    background: $bg-gradient;
+                        -webkit-background-clip: text; background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        -webkit-box-decoration-break: clone; box-decoration-break: clone;
+                    
                     &:hover{
-                        background: linear-gradient(90deg, rgba(0,158,226,1) 0%, rgba(230,205,0,1) 100%);
-                            -webkit-background-clip: text;
-                            -webkit-text-fill-color: transparent;
+                        display: block;
                     }
                 }
             }
@@ -94,10 +100,6 @@
         &:last-of-type{
             .loop__img-permalink, img{
                 border-radius: $img-border-radius;
-
-                @media #{$large}{
-                    border-radius: $square-img-border-radius;
-                }
             }
         }
     }

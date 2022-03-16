@@ -4,46 +4,97 @@ $font-family-secondary: 'Catamaran', sans-serif;
 body{font-family: $font-family-primary;}
 h1, h2, h3{font-family: $font-family-secondary;}
 
-$maintext-lineheight: 180%;
+$maintext-lineheight: 150%;
 
 /*--------------------------------------------------
 Type scale
 --------------------------------------------------*/
 h1, h2{
-    font-weight: 700;
-    font-size: clamp(4.8rem, 6vw, 8rem);
-    letter-spacing: -1.5px; line-height: 130%;
+    font-weight: 600;
+    font-size: clamp(3.2rem, 6vw, 4.8rem);
+    letter-spacing: -.5px; line-height: 120%;
     color: $color-txt-primary;
+    b{
+        font-weight: 600;
+        color: $color-grey;
+    }
 }
 
 h2{
-    font-weight: 600;
-    font-size: clamp(3.6rem, 5vw, 5.6rem);
     line-height: 130%;
-    color: $color-txt-primary;
     text-transform: uppercase;
+
+    &.gradient-on-left{
+        position: relative;
+        padding-top: 12rem; padding-left: 1.6rem;
+
+        &:before{
+            content: '';
+            position: absolute;
+            top: 0; bottom: 0; left: 0;
+            height:0; width: 4px;
+            background: linear-gradient(180deg, rgba(0,158,226,1) 10%, rgba(230,205,0,1) 90%);
+            transition: height .6s ease-in-out .4s;
+        }
+
+        &.in-viewport-once{
+            &:before{
+                height: 100%;
+            }
+        }
+    }
+
+    a{
+        text-decoration: none;
+        color: $color-txt-primary;
+        transition: color .35s ease-in-out;
+
+        svg{
+            max-width:3.2rem;
+            padding-top: .4rem;
+            transition: all .35s ease-in-out;
+            path{fill: $color-grey;}
+            
+            @media #{$large}{
+                max-width: none;
+                margin-left: .4rem;
+            }
+        }
+
+        &:hover{
+            color: $color-grey;
+            svg{
+                margin-left: 1.6rem;
+                path{fill: $color-black;}
+            }
+        }
+    }
 }
 
 h3{
     font-size: clamp(2.6rem, 3vw, 3.8rem);
+    font-weight: 600;
     line-height: 130%;
     color: $color-txt-primary;
 }
 
 h4{
     font-size: clamp(2.2rem, 2.6vw, 3.2rem);
+    font-weight: 600;
     line-height: 140%;
     color: $color-txt-primary;
 }
 
 h5{
     font-size: clamp(1.8rem, 2.2vw, 2.8rem);
+    font-weight: 600;
     line-height: 140%;
     color: $color-txt-primary;
 }
 
 h6{
     font-size: 1.6rem;
+    font-weight: 600;
     line-height: 150%;
     color: $color-primary;
     text-transform: uppercase;
@@ -64,20 +115,11 @@ ol, ul{ li{
 }}
 
 
-h2{
-    b{
-        color: $color-primary;
-    }
-}
-
 
 
 /*--------------------------------------------------
 CORRECTIONS
 --------------------------------------------------*/
-span.blue{
-    color: $color-primary;
-}
 .t-left{
     text-align: left;
 }

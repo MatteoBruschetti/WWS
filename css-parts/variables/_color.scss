@@ -1,10 +1,13 @@
-$color-primary: #417BC7;
-
 $color-white: #FEFEFE;
-$color-white-on-primary: #F3F3F3;
 $color-black: #121212; 
-
+$color-grey: #86868B; 
 
 $color-txt-primary: $color-black;
-$color-txt-secondary: #414141;
+$color-txt-secondary: #4F4F4F;
 
+$bg-gradient: linear-gradient(87deg, rgba(0,158,226,1) 10%, rgba(230,205,0,1) 90%);
+
+
+/*da cancellare*/
+$color-primary: #417BC7;
+$color-white-on-primary: #F3F3F3;

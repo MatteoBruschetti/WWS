@@ -1,7 +1,8 @@
 .txt-highlight, .crb-txt-highlight{
     p{
-        color: $color-primary;
-        font-size: clamp(2rem, 3vw, 3rem);
+        color: $color-grey;
+        font-size: clamp(2rem, 3vw, 3.2rem);
+        font-family: $font-family-secondary;
         font-weight: 600;
         line-height: 150%;
     }
