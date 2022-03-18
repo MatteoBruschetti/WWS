@@ -454,10 +454,6 @@ PADDING
   padding-right: 0 !important;
 }
 
-span.blue {
-  color: #417BC7;
-}
-
 @-webkit-keyframes fix-render {
   0% {
     -webkit-clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
@@ -544,41 +540,309 @@ img {
 /*--------------------------------------------------
 BOOTSTRAP MEDIA-QUERIES 2021
 ----------------------------------------------------*/
-/* ! Header */
-.header {
-  margin-top: 15px;
-  margin-bottom: 25px;
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  -webkit-transition: 0.4s all cubic-bezier(0.4, 0, 0.2, 1);
+  transition: 0.4s all cubic-bezier(0.4, 0, 0.2, 1);
+  /*!
+        * Hamburgers
+        * @description Tasty CSS-animated hamburgers
+        * @author Jonathan Suh @jonsuh
+        * @site https://jonsuh.com/hamburgers
+        * @link https://github.com/jonsuh/hamburgers
+    */
+  /*
+    * Spin
+    */
 }
 
-.logo {
-  margin: auto;
-  text-transform: uppercase;
-  font-size: 20px;
-  font-weight: 700;
-  color: #333;
+header .container {
+  background-color: #FEFEFE;
+  padding-top: 1.6rem;
+  padding-bottom: 1.6rem;
+  -webkit-transition: 0.6s all cubic-bezier(0.4, 0, 0.2, 1);
+  transition: 0.6s all cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.menu ul {
-  text-align: right;
+header.scrolled .container {
+  border-bottom: 2px solid rgba(0, 0, 0, 0.08);
 }
 
-.menu li {
+header .header__hamburger {
+  display: none;
+}
+
+@media (max-width: 991px) {
+  header .header__hamburger {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+}
+
+header .hamburger {
+  padding: 15px 15px;
   display: inline-block;
-  margin: 15px;
-  text-transform: uppercase;
-  font-size: 18px;
-  font-weight: 600;
-  letter-spacing: 1.5;
+  cursor: pointer;
+  -webkit-transition-property: opacity, -webkit-filter;
+  transition-property: opacity, -webkit-filter;
+  transition-property: opacity, filter;
+  transition-property: opacity, filter, -webkit-filter;
+  -webkit-transition-duration: 0.15s;
+          transition-duration: 0.15s;
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
+  font: inherit;
+  color: inherit;
+  text-transform: none;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  overflow: visible;
 }
 
-.menu li a {
-  color: #333;
-  -webkit-transition: ease-in-out 0.6;
-  transition: ease-in-out 0.6;
+header .hamburger:hover {
+  opacity: 0.7;
 }
 
-.menu li a:hover {
+header .hamburger.is-active:hover {
+  opacity: 0.7;
+}
+
+header .hamburger.is-active .hamburger-inner,
+header .hamburger.is-active .hamburger-inner::before,
+header .hamburger.is-active .hamburger-inner::after {
+  background-color: #86868B;
+}
+
+header .hamburger-box {
+  width: 40px;
+  height: 24px;
+  display: inline-block;
+  position: relative;
+}
+
+header .hamburger-inner {
+  display: block;
+  top: 50%;
+  margin-top: -2px;
+}
+
+header .hamburger-inner, header .hamburger-inner::before, header .hamburger-inner::after {
+  width: 40px;
+  height: 4px;
+  background-color: #121212;
+  position: absolute;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-duration: 0.15s;
+          transition-duration: 0.15s;
+  -webkit-transition-timing-function: ease;
+          transition-timing-function: ease;
+}
+
+header .hamburger-inner::before, header .hamburger-inner::after {
+  content: "";
+  display: block;
+}
+
+header .hamburger-inner::before {
+  top: -10px;
+}
+
+header .hamburger-inner::after {
+  bottom: -10px;
+}
+
+header .hamburger--spin .hamburger-inner {
+  -webkit-transition-duration: 0.22s;
+          transition-duration: 0.22s;
+  -webkit-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+          transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+header .hamburger--spin .hamburger-inner::before {
+  -webkit-transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
+  transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
+}
+
+header .hamburger--spin .hamburger-inner::after {
+  -webkit-transition: bottom 0.1s 0.25s ease-in, -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: bottom 0.1s 0.25s ease-in, -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: bottom 0.1s 0.25s ease-in, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: bottom 0.1s 0.25s ease-in, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19), -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+header .hamburger--spin.is-active .hamburger-inner {
+  -webkit-transform: rotate(225deg);
+          transform: rotate(225deg);
+  -webkit-transition-delay: 0.12s;
+          transition-delay: 0.12s;
+  -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+          transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+header .hamburger--spin.is-active .hamburger-inner::before {
+  top: 0;
+  opacity: 0;
+  -webkit-transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
+  transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
+}
+
+header .hamburger--spin.is-active .hamburger-inner::after {
+  bottom: 0;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  -webkit-transition: bottom 0.1s ease-out, -webkit-transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: bottom 0.1s ease-out, -webkit-transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: bottom 0.1s ease-out, transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: bottom 0.1s ease-out, transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+header .header__logo .header__logo--title {
+  font-family: "Catamaran", sans-serif;
+  font-size: 2rem;
   color: #417BC7;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+header .header__logo .header__logo--img {
+  display: inline-block;
+}
+
+header .header__logo .header__logo--img img {
+  max-height: 7rem;
+  width: auto;
+}
+
+header .header__logo .header__logo--img:hover {
+  opacity: .56;
+}
+
+header .header__menu .main-menu {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  line-height: 1;
+}
+
+header .header__menu .main-menu li {
+  position: relative;
+  margin-right: 6.4rem;
+  padding-top: 1.2rem;
+  padding-bottom: 1.2rem;
+}
+
+header .header__menu .main-menu li a {
+  font-family: "Catamaran", sans-serif;
+  color: #121212;
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+header .header__menu .main-menu li a:hover {
+  color: #86868B;
+}
+
+header .header__menu .main-menu li.current-menu-item a {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+}
+
+@media (max-width: 991px) {
+  header .header__menu {
+    overflow: hidden;
+    height: 0;
+    -webkit-transition: 0.6s all cubic-bezier(0.4, 0, 0.2, 1);
+    transition: 0.6s all cubic-bezier(0.4, 0, 0.2, 1);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  header .header__menu .main-menu {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  header .header__menu .main-menu li {
+    padding-bottom: 4.8rem;
+    margin: 0;
+    font-size: 3.2rem;
+  }
+  header .header__menu .main-menu li a:focus-visible,
+  header .header__menu .main-menu li button:focus-visible {
+    outline: #417BC7 2px solid;
+  }
+  header .header__menu .main-menu li:nth-child(1):before {
+    content: '01';
+  }
+  header .header__menu .main-menu li:nth-child(2):before {
+    content: '02';
+  }
+  header .header__menu .main-menu li:nth-child(3):before {
+    content: '03';
+  }
+  header .header__menu .main-menu li:nth-child(4):before {
+    content: '04';
+  }
+  header .header__menu .main-menu li:nth-child(5):before {
+    content: '05';
+  }
+  header .header__menu .main-menu li:nth-child(6):before {
+    content: '06';
+  }
+  header .header__menu .main-menu li:before {
+    color: #86868B;
+    font-size: 1.4rem;
+    letter-spacing: 2px;
+    display: block;
+    line-height: 80%;
+  }
+}
+
+header .container.open {
+  border: 0;
+  border-radius: 0 0 0 8rem;
+  -webkit-box-shadow: 0px 28vh 50px 0px rgba(0, 0, 0, 0.12);
+          box-shadow: 0px 28vh 50px 0px rgba(0, 0, 0, 0.12);
+}
+
+header .container.open .header__menu {
+  height: 72vh;
+}
+
+.fix-fixed {
+  margin-top: calc( 9.6rem + 4rem);
 }
 
 .cta .container {
@@ -906,14 +1170,16 @@ footer .footer__col-txt p:first-of-type {
   -webkit-text-fill-color: transparent;
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
+  -webkit-transition: opacity .35s ease-in-out;
+  transition: opacity .35s ease-in-out;
 }
 
 .loop article .loop__content-container .loop__content .read-more:hover {
-  display: block;
+  opacity: .56;
 }
 
 .loop article:last-of-type .loop__img-permalink, .loop article:last-of-type img {
-  border-radius: 0 0 0 10rem;
+  border-radius: 0 0 0 8rem;
 }
 
 .single h1 strong, .single h2 strong, .single h3 strong, .single h4 strong, .single h5 strong {
@@ -1189,7 +1455,7 @@ footer .footer__col-txt p:first-of-type {
 }
 
 .hero .hero__col-image img {
-  border-radius: 0 0 0 10rem;
+  border-radius: 0 0 0 8rem;
 }
 
 .hero-image {
@@ -1272,12 +1538,12 @@ footer .footer__col-txt p:first-of-type {
 }
 
 .images-row .images-row__col:last-of-type .images-row__img {
-  border-radius: 0 0 0 10rem;
+  border-radius: 0 0 0 8rem;
 }
 
 @media (min-width: 992px) {
   .images-row .images-row__col:first-of-type .images-row__img {
-    border-radius: 0 0 0 10rem;
+    border-radius: 0 0 0 8rem;
   }
   .images-row .images-row__col:last-of-type .images-row__img {
     border-radius: 0;
@@ -1296,7 +1562,7 @@ footer .footer__col-txt p:first-of-type {
   list-style: none;
   margin-bottom: 3.2rem;
   padding-left: 1.6rem;
-  border-left: solid 4px #86868B;
+  border-left: solid 4px rgba(134, 134, 139, 0.56);
 }
 
 .crb-logo-animation {

@@ -40,7 +40,7 @@
     
             @media #{$large}{
                 margin-right: 1.2rem;
-                border-right: 2px solid rgba(0,0,0,.08);
+                border-right: $border-light-grey;
                 padding-right: calc(32px + (1.2rem*2) - 2px); //bootstrap + margin*2 - border
             }
     
@@ -85,16 +85,17 @@
                         -webkit-background-clip: text; background-clip: text;
                         -webkit-text-fill-color: transparent;
                         -webkit-box-decoration-break: clone; box-decoration-break: clone;
+                    transition: opacity .35s ease-in-out;
                     
                     &:hover{
-                        display: block;
+                        opacity: .56;
                     }
                 }
             }
     
         }
 
-        border-bottom: 2px solid rgba(0,0,0,.08);
+        border-bottom: $border-light-grey;
         padding: 4rem 0;
 
         &:last-of-type{

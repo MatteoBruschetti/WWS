@@ -1,37 +1,254 @@
-/* ! Header */
+// body{
+//     &.single-course{
+//         #menu-item-353 { //local=menu-item-160 //sergio=menu-item-353
+//             a{color: $color-grey;}
+//         }
+//     }
+//     &.single-post{
+//         #menu-item-350 { //local=menu-item-157 //sergio=menu-item-350
+//             a{color: $color-grey;}
+//         }
+//     }
+//     &.single-teacher{
+//         #menu-item-349 { //local=menu-item-156 //sergio=menu-item-349
+//             a{color: $color-grey;}
+//         }
+//     }
+// }
 
-.header{
-    margin-top: 15px;
-    margin-bottom: 25px;
+header {
+    position: fixed;
+    top: 0; left: 0; 
+    width: 100%;
+    z-index: 999;
+    transition: 0.4s all cubic-bezier(0.4, 0.0, 0.2, 1);
+
+    .container{
+        background-color: $color-white;
+        padding-top: 1.6rem;
+        padding-bottom: 1.6rem;
+        transition: 0.6s all cubic-bezier(0.4, 0.0, 0.2, 1);
+    }
+
+    &.scrolled{
+        .container{
+            border-bottom: $border-light-grey;
+        }
+    }
+    
+    .header__hamburger {
+        display: none;
+
+        @media #{$underlarge} { 
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+    }
+    /*!
+        * Hamburgers
+        * @description Tasty CSS-animated hamburgers
+        * @author Jonathan Suh @jonsuh
+        * @site https://jonsuh.com/hamburgers
+        * @link https://github.com/jonsuh/hamburgers
+    */
+    .hamburger {
+        padding: 15px 15px;
+        display: inline-block;
+        cursor: pointer;
+        transition-property: opacity, filter;
+        transition-duration: 0.15s;
+        transition-timing-function: linear;
+        font: inherit;
+        color: inherit;
+        text-transform: none;
+        background-color: transparent;
+        border: 0;
+        margin: 0;
+        overflow: visible; }
+        .hamburger:hover {
+        opacity: 0.7; }
+        .hamburger.is-active:hover {
+        opacity: 0.7; }
+        .hamburger.is-active .hamburger-inner,
+        .hamburger.is-active .hamburger-inner::before,
+        .hamburger.is-active .hamburger-inner::after {
+        background-color: $color-grey; }
+    
+    .hamburger-box {
+        width: 40px;
+        height: 24px;
+        display: inline-block;
+        position: relative; }
+    
+    .hamburger-inner {
+        display: block;
+        top: 50%;
+        margin-top: -2px; }
+        .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+        width: 40px;
+        height: 4px;
+        background-color: $color-txt-primary;
+        position: absolute;
+        transition-property: transform;
+        transition-duration: 0.15s;
+        transition-timing-function: ease; }
+        .hamburger-inner::before, .hamburger-inner::after {
+        content: "";
+        display: block; }
+        .hamburger-inner::before {
+        top: -10px; }
+        .hamburger-inner::after {
+        bottom: -10px; }
+    /*
+    * Spin
+    */
+    .hamburger--spin .hamburger-inner {
+        transition-duration: 0.22s;
+        transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+        .hamburger--spin .hamburger-inner::before {
+        transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in; }
+        .hamburger--spin .hamburger-inner::after {
+        transition: bottom 0.1s 0.25s ease-in, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+    
+    .hamburger--spin.is-active .hamburger-inner {
+        transform: rotate(225deg);
+        transition-delay: 0.12s;
+        transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
+        .hamburger--spin.is-active .hamburger-inner::before {
+        top: 0;
+        opacity: 0;
+        transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out; }
+        .hamburger--spin.is-active .hamburger-inner::after {
+        bottom: 0;
+        transform: rotate(-90deg);
+        transition: bottom 0.1s ease-out, transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1); }
+
+    .header__logo {
+        .header__logo--title {
+            font-family: $font-family-secondary;
+            font-size: 2rem;
+            color: $color-primary;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        .header__logo--img{
+            display: inline-block;
+            
+            img {
+                max-height: 7rem;
+                width: auto;
+            }
+
+            &:hover{
+                opacity: .56;
+            }
+        }
+    }
+
+    .header__menu {
+
+        .main-menu {
+            list-style: none;
+            display: flex;
+            justify-content: flex-end; align-items: center;
+            line-height: 1;
+ 
+            li {
+                position: relative;
+                margin-right: 6.4rem;
+                padding-top: 1.2rem;
+                padding-bottom: 1.2rem;
+
+                a {
+                    font-family: $font-family-secondary;
+                    color: $color-txt-primary;
+                    font-weight: 600;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    white-space: nowrap;
+
+                    &:hover {
+                        color: $color-grey;
+                    }
+                }
+
+                &.current-menu-item{
+                    a{
+                        text-decoration: underline;
+                        text-decoration-thickness: 2px;
+                    }
+                }
+                
+            }
+        }
+
+        @media #{$underlarge} {
+            overflow: hidden;
+            height: 0;
+            transition: 0.6s all cubic-bezier(0.4, 0.0, 0.2, 1);
+            display: flex;
+            align-items: center;
+
+            .main-menu {
+                flex-direction: column; 
+                align-items: flex-start;
+
+                li {
+                    padding-bottom: 4.8rem;
+                    margin: 0;
+                    font-size: 3.2rem;
+
+                    a,
+                    button {
+                        &:focus-visible {
+                            outline: $color-primary 2px solid;
+                        }
+                    }
+
+                    &:nth-child(1):before{
+                        content: '01';
+                    }
+                    &:nth-child(2):before{
+                        content: '02';
+                    }
+                    &:nth-child(3):before{
+                        content: '03';
+                    }
+                    &:nth-child(4):before{
+                        content: '04';
+                    }
+                    &:nth-child(5):before{
+                        content: '05';
+                    }
+                    &:nth-child(6):before{
+                        content: '06';
+                    }
+
+                    &:before{
+                        color: $color-grey;
+                        font-size: 1.4rem; letter-spacing: 2px;
+                        display: block; line-height: 80%;
+
+                    }
+                }
+            }
+        }
+    }
+
+    .container.open {
+        border: 0;
+        border-radius: $img-border-radius;
+        box-shadow: 0px 28vh 50px 0px rgba(0,0,0,0.12);
+        
+        .header__menu {
+            height: 72vh;
+        }
+    }
 }
 
-.logo{
-    margin: auto;
-    text-transform: uppercase;
-    font-size: 20px;
-    font-weight: 700;
-    color: #333;
-}
-
-.menu ul{
-    text-align: right;
-
-}
-
-.menu li{
-    display: inline-block;
-    margin: 15px;
-    text-transform: uppercase;
-    font-size: 18px;     
-    font-weight: 600;    
-    letter-spacing: 1.5;
-}
-
-.menu li a{
-    color: #333;
-    transition: ease-in-out 0.6;
-}
-
-.menu li a:hover{
-    color: #417BC7;
+.fix-fixed{
+    margin-top: calc( 9.6rem + 4rem );
 }

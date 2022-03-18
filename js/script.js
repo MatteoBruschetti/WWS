@@ -7,12 +7,12 @@ jQuery(document).ready(function () {
         } else {
            jQuery("#navigation").removeClass("scrolled");
         }
-        //add single course fixed bar
-        if(jQuery(this).scrollTop() > 350) {
-            jQuery(".fixed-bar").addClass("scrolled");
-        } else {
-           jQuery(".fixed-bar").removeClass("scrolled");
-        }
+    });
+
+    //Hamburger menu
+    jQuery('.hamburger').click(function () {
+        jQuery('.hamburger').toggleClass('is-active');
+        jQuery(this).parent().parent().parent('.container').toggleClass('open');
     });
 
 });
