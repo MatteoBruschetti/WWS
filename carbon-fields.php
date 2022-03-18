@@ -12,12 +12,12 @@
 
 
 
-    /*Theme options
-    -------------------------------------*/
     add_action( 'carbon_fields_register_fields', 'crb_attach_theme_options' );
     function crb_attach_theme_options() {
-
-
+        
+        
+        /*Theme options
+        -------------------------------------*/
         Container::make( 'theme_options', __( 'WWS Contacts' ) )
             ->set_icon( 'dashicons-info' )
             ->add_fields( array(
@@ -43,6 +43,21 @@
                 Field::make( 'text', 'crb_address_sede_legale'),
                 Field::make( 'text', 'crb_partita_iva')
             ) );
+
+
+
+        /*Custom CPT fields
+        -------------------------------------*/
+        Container::make( 'post_meta', 'Custom Data' )
+                ->where( 'post_type', '=', 'service-project' )
+                ->add_fields( array(
+                    Field::make( 'text', 'crb_project_client')
+            ));
+        Container::make( 'post_meta', 'Custom Data' )
+                ->where( 'post_type', '=', 'research-project' )
+                ->add_fields( array(
+                    Field::make( 'text', 'crb_project_client')
+            ));
 
     }
 
@@ -281,4 +296,7 @@
                         <?php
                     } ); //render callback
         }
+
+
+        
 ?>

@@ -113,6 +113,7 @@ require dirname(__FILE__).'/carbon-fields.php';
 
 /*Functions Parts
 ------------------------*/
+require dirname(__FILE__).'/functions-parts/ctp.php';
 require dirname(__FILE__).'/functions-parts/customizer.php';
 require dirname(__FILE__).'/functions-parts/customize-backend.php';
 require dirname(__FILE__).'/functions-parts/customize-gb.php';

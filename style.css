@@ -94,6 +94,31 @@ h1 b, h2 b {
   color: #86868B;
 }
 
+h1.gradient-on-left {
+  white-space: nowrap;
+  position: relative;
+  padding-left: 1.6rem;
+}
+
+h1.gradient-on-left:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 4px;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(10%, #009ee2), color-stop(90%, #e6cd00));
+  background: linear-gradient(180deg, #009ee2 10%, #e6cd00 90%);
+  -webkit-transition: height .6s ease-in-out .4s;
+  transition: height .6s ease-in-out .4s;
+}
+
+@media (min-width: 992px) {
+  h1.gradient-on-left {
+    padding-bottom: 12rem;
+  }
+}
+
 h2 {
   line-height: 130%;
   text-transform: uppercase;
@@ -452,6 +477,16 @@ PADDING
 
 .no-pr {
   padding-right: 0 !important;
+}
+
+.pt-24-r {
+  padding-top: 2.4rem;
+}
+
+@media (min-width: 992px) {
+  .pt-24-r {
+    padding-top: 4.8rem;
+  }
 }
 
 @-webkit-keyframes fix-render {
@@ -1083,7 +1118,13 @@ footer .footer__col-txt p:first-of-type {
   background: linear-gradient(87deg, #009ee2 10%, #e6cd00 90%);
 }
 
-.loop article .loop__img-permalink img {
+.loop article .loop__img-permalink:hover img {
+  -webkit-filter: saturate(0);
+          filter: saturate(0);
+  opacity: .5;
+}
+
+.loop article img {
   width: 100%;
   display: block;
   -o-object-fit: cover;
@@ -1095,16 +1136,10 @@ footer .footer__col-txt p:first-of-type {
 }
 
 @media (min-width: 992px) {
-  .loop article .loop__img-permalink img {
+  .loop article img {
     margin-bottom: 0;
     aspect-ratio: 1/1;
   }
-}
-
-.loop article .loop__img-permalink:hover img {
-  -webkit-filter: saturate(0);
-          filter: saturate(0);
-  opacity: .5;
 }
 
 .loop article .loop__content-container {
@@ -1135,6 +1170,15 @@ footer .footer__col-txt p:first-of-type {
   text-transform: uppercase;
 }
 
+.loop article .loop__content-container .loop__over-content p.project-client {
+  text-transform: uppercase;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
 .loop article .loop__content-container .loop__content h3 {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -1149,11 +1193,19 @@ footer .footer__col-txt p:first-of-type {
 }
 
 .loop article .loop__content-container .loop__content p {
-  line-height: 160%;
+  line-height: 150%;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.loop article .loop__content-container .loop__content p.project-excerpt {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 7;
   -webkit-box-orient: vertical;
 }
 
@@ -1180,6 +1232,33 @@ footer .footer__col-txt p:first-of-type {
 
 .loop article:last-of-type .loop__img-permalink, .loop article:last-of-type img {
   border-radius: 0 0 0 8rem;
+}
+
+.loop .pagination {
+  text-align: right;
+  margin-top: 2.4rem;
+}
+
+.loop .pagination .page-numbers {
+  font-size: 2.4rem;
+  font-family: "Catamaran", sans-serif;
+  font-weight: 600;
+  color: #121212;
+  text-decoration: none;
+  text-transform: uppercase;
+  margin: .8rem;
+}
+
+.loop .pagination .page-numbers.current {
+  color: #86868B;
+}
+
+.loop .pagination .page-numbers.next, .loop .pagination .page-numbers.prev {
+  font-size: 1.6rem;
+}
+
+.loop .pagination a:hover {
+  color: #86868B;
 }
 
 .single h1 strong, .single h2 strong, .single h3 strong, .single h4 strong, .single h5 strong {
@@ -1407,41 +1486,6 @@ footer .footer__col-txt p:first-of-type {
 }
 
 /* ! Hero */
-.hero {
-  padding-top: 2.4rem;
-}
-
-@media (min-width: 992px) {
-  .hero {
-    padding-top: 4.8rem;
-  }
-}
-
-.hero h1 {
-  white-space: nowrap;
-  position: relative;
-  padding-left: 1.6rem;
-}
-
-.hero h1:before {
-  content: '';
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  width: 4px;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(10%, #009ee2), color-stop(90%, #e6cd00));
-  background: linear-gradient(180deg, #009ee2 10%, #e6cd00 90%);
-  -webkit-transition: height .6s ease-in-out .4s;
-  transition: height .6s ease-in-out .4s;
-}
-
-@media (min-width: 992px) {
-  .hero h1 {
-    padding-bottom: 12rem;
-  }
-}
-
 .hero .hero__col-mission p {
   text-align: left;
   margin-bottom: 1.6rem;

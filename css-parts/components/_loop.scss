@@ -7,22 +7,6 @@
             display: block;
             background: $bg-gradient;
 
-
-            img{
-                width: 100%;
-                display: block;
-                object-fit: cover;
-                aspect-ratio: 2/1.2;
-                margin-bottom: 2.4rem;
-                transition: all .35s ease-in-out;
-        
-                @media #{$large}{
-                    margin-bottom: 0;
-                    aspect-ratio: 1/1;
-                
-                }
-            }
-
             &:hover{
                 img{
                     filter: saturate(0);
@@ -30,6 +14,22 @@
                 }
             }
         }
+
+        img{
+            width: 100%;
+            display: block;
+            object-fit: cover;
+            aspect-ratio: 2/1.2;
+            margin-bottom: 2.4rem;
+            transition: all .35s ease-in-out;
+    
+            @media #{$large}{
+                margin-bottom: 0;
+                aspect-ratio: 1/1;
+            }
+        }
+
+        
 
 
     
@@ -49,6 +49,15 @@
                     font-size: 1.6rem;
                     letter-spacing: 2px;
                     text-transform: uppercase;
+
+                    &.project-client{
+                        text-transform: uppercase;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        display: -webkit-box;
+                                -webkit-line-clamp: 1;
+                                -webkit-box-orient: vertical;
+                    }
                 }
             }
             .loop__content{
@@ -66,12 +75,20 @@
                 }
     
                 p{
-                    line-height: 160%;
+                    line-height: $maintext-lineheight;
                     overflow: hidden;
                     text-overflow: ellipsis;
                     display: -webkit-box;
                             -webkit-line-clamp: 3;
                             -webkit-box-orient: vertical;
+
+                    &.project-excerpt{
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        display: -webkit-box;
+                                -webkit-line-clamp: 7;
+                                -webkit-box-orient: vertical;
+                    }
                 }
     
                 .read-more{
@@ -102,6 +119,34 @@
             .loop__img-permalink, img{
                 border-radius: $img-border-radius;
             }
+        }
+    }
+
+
+    .pagination{
+        text-align: right;
+        margin-top: 2.4rem;
+
+        .page-numbers{
+            font-size: 2.4rem;
+            font-family: $font-family-secondary;
+            font-weight: 600;
+            color: $color-txt-primary;
+            text-decoration: none;
+            text-transform: uppercase;
+            margin: .8rem;
+
+            &.current{
+                color: $color-grey;
+            }
+
+            &.next, &.prev{
+                font-size: 1.6rem;
+            }
+        }
+
+        a:hover{
+            color: $color-grey;
         }
     }
 

@@ -127,3 +127,11 @@ PADDING
 .no-p{padding: 0 !important;}
 .no-pl{padding-left: 0 !important;}
 .no-pr{padding-right: 0 !important;}
+
+.pt-24-r{ //hero e sub hero sections
+    padding-top: 2.4rem;
+
+    @media #{$large}{
+        padding-top: 4.8rem;
+    }
+}

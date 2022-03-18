@@ -3,11 +3,11 @@
 <main class="container">
 
     <!--Hero-->
-    <section class="hero mb-240-r">
+    <section class="hero mb-240-r pt-24-r">
         
             <div class="row align-items-end">
                 <div class="col-12 col-lg-4 offset-lg-3 mb-80-r">
-                    <h1>
+                    <h1 class="gradient-on-left">
                         INNOVATIVE
                         <br><b>ENVIRONMENTAL</b> 
                         <br>MODELLING
@@ -156,8 +156,7 @@
                     'post_status'       => 'publish',
                     'orderby'           => 'count',
                     'order'             => 'DESC',
-                    'posts_per_page'    => 3,
-                    'categoria_tag'     =>  $categoria
+                    'posts_per_page'    => 3
                 ) );
                 if ($loop->have_posts()) : while($loop->have_posts()) : $loop->the_post(); ?>
                     <article>

@@ -18,6 +18,29 @@ h1, h2{
         font-weight: 600;
         color: $color-grey;
     }
+
+}
+
+
+h1{
+    &.gradient-on-left{
+        white-space: nowrap;
+        position: relative;
+        padding-left: 1.6rem;
+    
+        &:before{
+            content: '';
+            position: absolute;
+            top: 0; bottom: 0; left: 0;
+            width: 4px;
+            background: linear-gradient(180deg, rgba(0,158,226,1) 10%, rgba(230,205,0,1) 90%);
+            transition: height .6s ease-in-out .4s;
+        }
+    
+        @media #{$large}{
+            padding-bottom: 12rem; 
+        }
+    }
 }
 
 h2{
