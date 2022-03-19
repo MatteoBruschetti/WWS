@@ -128,10 +128,10 @@ PADDING
 .no-pl{padding-left: 0 !important;}
 .no-pr{padding-right: 0 !important;}
 
-.pt-24-r{ //hero e sub hero sections
-    padding-top: 2.4rem;
+.pt-16-r{ //hero e sub hero sections
+    padding-top: 1.6rem;
 
     @media #{$large}{
-        padding-top: 4.8rem;
+        padding-top: 2.4rem;
     }
 }

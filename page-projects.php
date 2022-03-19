@@ -4,7 +4,7 @@
 
 
     <!--Service projects-->
-    <div class="row pt-24-r">
+    <div class="row pt-16-r">
         <div class="col-12 col-lg-9 offset-lg-3 mb-80-r">
             <h1 class="gradient-on-left">
                 <b>SERVICE</b> 

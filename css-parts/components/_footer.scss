@@ -83,7 +83,7 @@
     }
     .partners__linkedin{
         display: inline-block;
-        color: $color-txt-secondary;
+        color: $color-grey;
         text-transform: uppercase;
         letter-spacing: 2px;
         text-decoration: none;
@@ -95,13 +95,13 @@
         svg{
             vertical-align: sub;
             margin-right: 4px;
-            path{fill: $color-txt-secondary;}
+            path{fill: $color-grey;}
         }
 
         &:hover{
-            color: $color-grey;
+            color: $color-txt-secondary;
             svg{
-                path{fill:$color-grey}
+                path{fill:$color-txt-secondary}
             }
         }
     }
