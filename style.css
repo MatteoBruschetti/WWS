@@ -1325,15 +1325,22 @@ footer .footer__col-txt p:first-of-type {
 }
 
 .single ol li::marker, .single ul li::marker {
-  color: #417BC7;
+  color: #86868B;
 }
 
 .single ol li a, .single ul li a {
-  color: #417BC7;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  color: #86868B;
 }
 
 .single ol li a:hover, .single ul li a:hover {
-  opacity: .8;
+  background: linear-gradient(87deg, #009ee2 10%, #e6cd00 90%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
 }
 
 .single .wp-block-gallery .wp-block-image figcaption {
@@ -1534,11 +1541,18 @@ footer .footer__col-txt p:first-of-type {
 }
 
 .two-col-txt p a, .crb-two-col-txt p a {
-  color: #417BC7;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  color: #86868B;
 }
 
 .two-col-txt p a:hover, .crb-two-col-txt p a:hover {
-  opacity: .7;
+  background: linear-gradient(87deg, #009ee2 10%, #e6cd00 90%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
 }
 
 .two-col-txt p span, .crb-two-col-txt p span {
@@ -1546,7 +1560,7 @@ footer .footer__col-txt p:first-of-type {
 }
 
 .two-col-txt hr, .crb-two-col-txt hr {
-  background: #417BC7;
+  background: #86868B;
   height: 3px;
   border: none;
 }
@@ -1776,5 +1790,8 @@ footer .footer__col-txt p:first-of-type {
 }
 
 .crb-youtube iframe {
-  border-left: solid 8px #417BC7;
+  border-left: 4px solid;
+  border-image-slice: 1;
+  border-width: 4px;
+  border-image-source: linear-gradient(180deg, #009ee2 10%, #e6cd00 90%);
 }

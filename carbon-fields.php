@@ -84,19 +84,19 @@
                     ?>
 
                         <section class="crb-two-col-txt">
-                                <div class="row">
-                                    <div class="col-12">
-                                        <h2 class="mb-48-r"><?php echo $fields['heading']; ?></h2>
-                                    </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <h2 class="gradient-on-left i-v mb-48-r"><?php echo $fields['heading']; ?></h2>
                                 </div>
-                                <div class="row">
-                                    <div class="col-12 col-lg-5 offset-lg-1 mb-48-r">
-                                        <?php echo apply_filters( 'the_content', $fields['txt-left'] ); ?>
-                                    </div>
-                                    <div class="col-12 col-lg-5 offset-lg-1 mb-48-r">
-                                        <?php echo apply_filters( 'the_content', $fields['txt-right'] ); ?>
-                                    </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 col-lg-5 offset-lg-1 mb-48-r">
+                                    <?php echo apply_filters( 'the_content', $fields['txt-left'] ); ?>
                                 </div>
+                                <div class="col-12 col-lg-5 offset-lg-1 mb-48-r">
+                                    <?php echo apply_filters( 'the_content', $fields['txt-right'] ); ?>
+                                </div>
+                            </div>
                         </section>
 
                     <?php
@@ -151,7 +151,7 @@
                         <section class="crb-bullet-list">
                             <div class="row">
                                 <div class="col-12">
-                                    <h2 class="mb-48-r"><?php echo $fields['heading']; ?></h2>
+                                    <h2 class="gradient-on-left i-v mb-48-r"><?php echo $fields['heading']; ?></h2>
                                 </div>
                                 <div class="col-12 col-lg-11 offset-lg-1">
                                     <p class="mb-48-r"><?php echo $fields['txt']; ?> </p>
@@ -192,10 +192,13 @@
                 //Logo animation = SINGLE GB BLOCK
                 Block::make( __( 'Logo Animation' ) )
                     ->add_fields( array(
-                        Field::make( 'set', 'bg', __( 'Logo animation background color' ) )
-                        ->add_options( array(
-                            'bg-blue' => __( 'Blue background' ),
-                        ) )
+                        Field::make( 'html', 'crb_description', __( 'Section Description' ) )
+	                        ->set_html( sprintf( 'WWS animated logo' ) )
+                            ,
+                        // Field::make( 'set', 'bg', __( 'Logo animation background color' ) )
+                        // ->add_options( array(
+                        //     'bg-blue' => __( 'Blue background' ),
+                        // ) )
                     ) )
                     ->set_description( __( 'A WWS block for display animated logo' ) )
                     ->set_category( 'customCarbon' )
@@ -204,7 +207,7 @@
                     ->set_render_callback( function ( $fields) {
                         ?>
 
-                            <section class="crb-logo-animation i-v <?php echo $fields['bg'][0]; ?>">
+                            <section class="crb-logo-animation i-v <?php /*echo $fields['bg'][0];*/ ?>">
                                 <div class="svg-wrapper">
                                     <svg width="567" height="218" viewBox="0 0 567 218" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <g class="svg-g__logogram">

@@ -5,9 +5,14 @@
         text-align: left !important;
 
         a{
-            color: $color-primary;
+            text-decoration: underline; text-decoration-thickness: 2px;
+            color: $color-grey;
+
             &:hover{
-                opacity: .7;
+                background: $bg-gradient;
+                    -webkit-background-clip: text; background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    -webkit-box-decoration-break: clone; box-decoration-break: clone;
             }
         }
 
@@ -18,7 +23,7 @@
     }
     
     hr{
-        background: $color-primary;
+        background: $color-grey;
         height: 3px;
         border: none;
     }
