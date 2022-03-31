@@ -39,10 +39,17 @@
             @media #{$large}{
                 margin-bottom: .8rem;
             }
-            &::marker{color: $color-primary;}
+            &::marker{color: $color-grey;}
             a{
-                color: $color-primary;
-                &:hover{opacity: .8;}
+                text-decoration: underline; text-decoration-thickness: 2px;
+                color: $color-grey;
+
+                &:hover{
+                    background: $bg-gradient;
+                        -webkit-background-clip: text; background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        -webkit-box-decoration-break: clone; box-decoration-break: clone;
+                }
             }
         }
     }

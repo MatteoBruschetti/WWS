@@ -15,6 +15,9 @@
                 background-position: 0 0;
             }
             .wp-admin div#ays-quiz-winter-dicount-main div#ays-quiz-dicount-month-main.ays_quiz_dicount_info{display:none}
+
+            /*hide pages*/
+            .wp-admin #adminmenuwrap #menu-pages {display:none !important;}
         </style>';
     }
     add_action('wp_before_admin_bar_render', 'WWS_custom_logo');

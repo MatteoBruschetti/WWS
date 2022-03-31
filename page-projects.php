@@ -2,16 +2,26 @@
 
 <main class="container">
 
-
-    <!--Service projects-->
-    <div class="row pt-16-r">
-        <div class="col-12 col-lg-9 offset-lg-3 mb-80-r">
-            <h1 class="gradient-on-left">
-                <b>SERVICE</b> 
-                <br>PROJECTS
-            </h1>
+    <!--Hero-->
+    <section class="hero mb-240-r pt-24-r">
+        <div class="row align-items-end">
+            <div class="col-12 col-lg-9 offset-lg-3 mb-32-r">
+                <h1 class="gradient-on-left">
+                    <b>SERVICE</b> 
+                    <br>PROJECTS
+                </h1>
+            </div>
         </div>
-    </div>
+        <div class="row">
+            <div class="col-12 col-lg-11 offset-lg-1 hero__col-image">
+                <figure>
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/project/hero-project.png" alt="Weather Water Sand building">
+                </figure>
+            </div>
+        </div>
+    </section>
+
+
     <section class="loop mb-160-r">
         <?php 
             $loop = new WP_Query( array(
