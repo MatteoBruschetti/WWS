@@ -1,10 +1,40 @@
 .single{
 
-    h1, h2, h3, h4, h5{
-        strong{color: $color-primary;}
+    .fix-fixed{
+        margin-top: 20rem;
+    }
+
+    .single-thumbnail{
+        figure{
+            border-radius: $img-border-radius;
+            max-height: 64rem;
+            overflow: hidden;
+            display: flex;
+
+            img{
+                min-width: 100%;
+                display: block;
+                object-fit: cover;
+                animation: infinite-scale 40s linear infinite;
+            }
+        }
+    }
+
+    h1, h2, h3, h4, h5, h6{
+        strong{
+            font-weight: 600;
+            color: $color-grey;
+        }
         a{
-            color: $color-primary;
-            &:hover{opacity: .8;}
+            text-decoration: underline; text-decoration-thickness: 2px;
+            color: $color-grey;
+
+            &:hover{
+                background: $bg-gradient;
+                    -webkit-background-clip: text; background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    -webkit-box-decoration-break: clone; box-decoration-break: clone;
+            }
         }
     }
 
@@ -16,8 +46,15 @@
         }
 
         a{
-            color: $color-primary;
-            &:hover{opacity: .8;}
+            text-decoration: underline; text-decoration-thickness: 2px;
+            color: $color-grey;
+
+            &:hover{
+                background: $bg-gradient;
+                    -webkit-background-clip: text; background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    -webkit-box-decoration-break: clone; box-decoration-break: clone;
+            }
         }
     }
     
@@ -58,7 +95,7 @@
         .wp-block-image{
             figcaption{
                 padding-top: 8px !important;
-                background: linear-gradient(0deg,rgba($color-primary,1),rgba($color-primary,.5) 70%,transparent) !important;
+                background: linear-gradient(0deg,rgba($color-txt-primary,1),rgba($color-txt-primary,.5) 70%,transparent) !important;
                 a{color: $color-white;}
             }
         }
@@ -68,15 +105,16 @@
         a{
             &:first-of-type{
                 font-family: $font-family-secondary;
-                font-weight: 700;
-                color: $color-white-on-primary;
+                font-weight: 600;
+                font-size: 1.8rem;
+                color: $color-white;
                 text-transform: uppercase; text-decoration: none;
                 letter-spacing: 2px; line-height: 100%; white-space: nowrap;
-                font-size: 1.6rem;
+
                 position: relative; z-index: 1;
                 display: inline-block;
                 padding: 1.6rem 2.4rem;
-                background-color: $color-primary;
+                background-color: $color-black;
                 margin-top: -4px;
                 transition: all .3s ease-in-out;
 
@@ -99,6 +137,10 @@
                         transform-origin: center bottom;
                     }
                 }
+
+                @media #{$large}{
+                    margin-top: .4rem;
+                }
             }
 
             &.wp-block-file__button{
@@ -106,15 +148,19 @@
                 font-weight: 700;
                 text-transform: uppercase;
                 letter-spacing: 2px;
-                color: $color-primary;
-                font-size: 1.6rem;
+                color: $color-grey; text-decoration: underline; text-decoration-thickness: 2px;
+                font-size: 1.8rem;
                 background: none;
                 border-radius: 0;
                 transition: all 0.4s cubic-bezier(.25,.8,.25,1);
     
                 &:hover{
-                    opacity: .8;
-                    text-decoration: underline;
+                    &:hover{
+                        background: $bg-gradient;
+                            -webkit-background-clip: text; background-clip: text;
+                            -webkit-text-fill-color: transparent;
+                            -webkit-box-decoration-break: clone; box-decoration-break: clone;
+                    }
                 }
             }
             
@@ -125,19 +171,19 @@
         .wp-block-button:first-of-type{
             a{
                 font-family: $font-family-secondary;
-                font-weight: 700;
-                color: $color-white-on-primary;
+                font-weight: 600;
+                color: $color-white;
                 text-transform: uppercase; text-decoration: none;
                 letter-spacing: 2px; line-height: 100%; white-space: nowrap;
-                font-size: 1.6rem;
-                border-radius: 0;
+
                 position: relative; z-index: 1;
                 display: inline-block;
                 padding: 1.6rem 2.4rem;
-                background-color: $color-primary;
+                background-color: $color-black;
                 margin-top: -4px;
                 transition: all .3s ease-in-out;
-    
+                border-radius: 0;
+
                 &:before{
                     content: "";
                     position: absolute;
@@ -148,33 +194,59 @@
                     background: linear-gradient(90deg, rgba(0,158,226,1) 0%, rgba(230,205,0,1) 100%);
                     transition: transform .2s cubic-bezier(.215,.61,.355,1);
                 }
-    
+
                 &:hover{
                     color: $color-white;
-                    text-decoration: none;
-    
+
                     &:before{
                         transform: scaleY(1);
                         transform-origin: center bottom;
                     }
+                }
+
+                @media #{$large}{
+                    margin-top: .4rem;
                 }
             }
         }
         .wp-block-button{
             a{
                 font-family: $font-family-secondary;
-                font-weight: 700;
-                text-transform: uppercase;
-                letter-spacing: 2px;
-                color: $color-primary;
-                font-size: 1.6rem;
-                background: none;
+                font-weight: 600;
+                color: $color-white;
+                text-transform: uppercase; text-decoration: none;
+                letter-spacing: 2px; line-height: 100%; white-space: nowrap;
+
+                position: relative; z-index: 1;
+                display: inline-block;
+                padding: 1.6rem 2.4rem;
+                background-color: $color-black;
+                margin-top: -4px;
+                transition: all .3s ease-in-out;
                 border-radius: 0;
-                transition: all 0.4s cubic-bezier(.25,.8,.25,1);
-    
+
+                &:before{
+                    content: "";
+                    position: absolute;
+                    inset: 0;
+                    z-index: -1;
+                    transform: scaleY(0);
+                    transform-origin: center top;
+                    background: linear-gradient(90deg, rgba(0,158,226,1) 0%, rgba(230,205,0,1) 100%);
+                    transition: transform .2s cubic-bezier(.215,.61,.355,1);
+                }
+
                 &:hover{
-                    opacity: .8;
-                    text-decoration: underline;
+                    color: $color-white;
+
+                    &:before{
+                        transform: scaleY(1);
+                        transform-origin: center bottom;
+                    }
+                }
+
+                @media #{$large}{
+                    margin-top: .4rem;
                 }
             }
         }

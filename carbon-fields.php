@@ -194,11 +194,6 @@
                     ->add_fields( array(
                         Field::make( 'html', 'crb_description', __( 'Section Description' ) )
 	                        ->set_html( sprintf( 'WWS animated logo' ) )
-                            ,
-                        // Field::make( 'set', 'bg', __( 'Logo animation background color' ) )
-                        // ->add_options( array(
-                        //     'bg-blue' => __( 'Blue background' ),
-                        // ) )
                     ) )
                     ->set_description( __( 'A WWS block for display animated logo' ) )
                     ->set_category( 'customCarbon' )
@@ -207,7 +202,7 @@
                     ->set_render_callback( function ( $fields) {
                         ?>
 
-                            <section class="crb-logo-animation i-v <?php /*echo $fields['bg'][0];*/ ?>">
+                            <section class="crb-logo-animation i-v">
                                 <div class="svg-wrapper">
                                     <svg width="567" height="218" viewBox="0 0 567 218" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <g class="svg-g__logogram">
@@ -286,12 +281,100 @@
                     ->set_render_callback( function ( $fields) {
                         ?>
 
-                            <section class="crb-youtube">
+                            <section class="crb-youtube mb-160-r">
                                 <div class="row">
                                     <div class="col-12">
                                         <div class="embed-container">
-                                            <?php echo $fields['yt'];  ?>
+                                            <?php echo $fields['yt']; ?>
                                         </div>
+                                    </div>
+                                </div>
+                            </section>
+
+                        <?php
+                    } ); //render callback
+
+
+
+                //Full Image = SINGLE GB BLOCK
+                Block::make( __( 'Full Image' ) )
+                    ->add_fields( array(
+                        Field::make( 'image', 'img-url', __( 'Image' ) )
+                            ->set_type( array( 'image' ) )
+                            ->set_value_type( 'url' )
+                    ) )
+                    ->set_description( __( 'A WWS block for display a full row image' ) )
+                    ->set_category( 'customCarbon' )
+                    ->set_icon( 'format-image' )
+                    ->set_mode( 'both' )
+                    ->set_render_callback( function ( $fields) {
+                        ?>
+
+                            <section class="crb-full-image mb-160-r">
+                                <div class="row">
+                                    <div class="col-12 col-lg-11 offset-lg-1">
+                                        <img src="<?php echo $fields['img-url']; ?>" alt="">
+                                    </div>
+                                </div>
+                            </section>
+
+                        <?php
+                    } ); //render callback
+
+
+
+                //Text and Image = SINGLE GB BLOCK
+                Block::make( __( 'Text and Image' ) )
+                    ->add_fields( array(
+                        Field::make( 'select', 'orientation', __( 'Orientation' ) )
+                        ->add_options( array(
+                            'img-right' => __( 'Image on the right — Text on the left' ),
+                            'img-left' => __( 'Image on the left — Text on the right' )
+                        ) ),
+                        Field::make( 'textarea', 'txt', __( 'Text' ) ),
+                        Field::make( 'image', 'img-url', __( 'Image' ) )
+                            ->set_type( array( 'image' ) )
+                            ->set_value_type( 'url' )
+                    ) )
+                    ->set_description( __( 'A WWS block for display a text and image section' ) )
+                    ->set_category( 'customCarbon' )
+                    ->set_icon( 'align-pull-left' )
+                    ->set_mode( 'both' )
+                    ->set_render_callback( function ( $fields) {
+                        ?>
+
+                            <section class="crb-txt-image <?php echo $fields['orientation']; ?> mb-96-r">
+                                <div class="row">
+                                    <div class="col-12 col-lg-5 offset-lg-1 mb-48-r vc-col">
+                                        <p><?php echo $fields['txt']; ?> </p>
+                                    </div>
+                                    <div class="col-12 col-lg-5 offset-lg-1 mb-48-r vc-col">
+                                        <img src="<?php echo $fields['img-url']; ?>" alt="">
+                                    </div>
+                                </div>
+                            </section>
+
+                        <?php
+                    } ); //render callback
+
+
+                
+                //Gradient Title = SINGLE GB BLOCK
+                Block::make( __( 'Gradient Title' ) )
+                    ->add_fields( array(
+                        Field::make( 'text', 'heading', __( 'Title' ) ),
+                    ) )
+                    ->set_description( __( 'A WWS block for display a title with gradient line' ) )
+                    ->set_category( 'customCarbon' )
+                    ->set_icon( 'heading' )
+                    ->set_mode( 'both' )
+                    ->set_render_callback( function ( $fields) {
+                        ?>
+
+                            <section class="crb-two-col-txt">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <h2 class="gradient-on-left i-v mb-48-r"><?php echo $fields['heading']; ?></h2>
                                     </div>
                                 </div>
                             </section>

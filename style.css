@@ -210,7 +210,7 @@ h6 {
   font-size: 1.6rem;
   font-weight: 600;
   line-height: 150%;
-  color: #417BC7;
+  color: #121212;
   text-transform: uppercase;
   letter-spacing: 4px;
 }
@@ -1261,16 +1261,46 @@ footer .footer__col-txt p:first-of-type {
   color: #86868B;
 }
 
-.single h1 strong, .single h2 strong, .single h3 strong, .single h4 strong, .single h5 strong {
-  color: #417BC7;
+.single .fix-fixed {
+  margin-top: 20rem;
 }
 
-.single h1 a, .single h2 a, .single h3 a, .single h4 a, .single h5 a {
-  color: #417BC7;
+.single .single-thumbnail figure {
+  border-radius: 0 0 0 8rem;
+  max-height: 64rem;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-.single h1 a:hover, .single h2 a:hover, .single h3 a:hover, .single h4 a:hover, .single h5 a:hover {
-  opacity: .8;
+.single .single-thumbnail figure img {
+  min-width: 100%;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-animation: infinite-scale 40s linear infinite;
+          animation: infinite-scale 40s linear infinite;
+}
+
+.single h1 strong, .single h2 strong, .single h3 strong, .single h4 strong, .single h5 strong, .single h6 strong {
+  font-weight: 600;
+  color: #86868B;
+}
+
+.single h1 a, .single h2 a, .single h3 a, .single h4 a, .single h5 a, .single h6 a {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  color: #86868B;
+}
+
+.single h1 a:hover, .single h2 a:hover, .single h3 a:hover, .single h4 a:hover, .single h5 a:hover, .single h6 a:hover {
+  background: linear-gradient(87deg, #009ee2 10%, #e6cd00 90%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
 }
 
 .single p {
@@ -1285,11 +1315,18 @@ footer .footer__col-txt p:first-of-type {
 }
 
 .single p a {
-  color: #417BC7;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  color: #86868B;
 }
 
 .single p a:hover {
-  opacity: .8;
+  background: linear-gradient(87deg, #009ee2 10%, #e6cd00 90%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
 }
 
 .single sup {
@@ -1345,8 +1382,8 @@ footer .footer__col-txt p:first-of-type {
 
 .single .wp-block-gallery .wp-block-image figcaption {
   padding-top: 8px !important;
-  background: -webkit-gradient(linear, left bottom, left top, from(#417bc7), color-stop(70%, rgba(65, 123, 199, 0.5)), to(transparent)) !important;
-  background: linear-gradient(0deg, #417bc7, rgba(65, 123, 199, 0.5) 70%, transparent) !important;
+  background: -webkit-gradient(linear, left bottom, left top, from(#121212), color-stop(70%, rgba(18, 18, 18, 0.5)), to(transparent)) !important;
+  background: linear-gradient(0deg, #121212, rgba(18, 18, 18, 0.5) 70%, transparent) !important;
 }
 
 .single .wp-block-gallery .wp-block-image figcaption a {
@@ -1355,19 +1392,19 @@ footer .footer__col-txt p:first-of-type {
 
 .single .wp-block-file a:first-of-type {
   font-family: "Catamaran", sans-serif;
-  font-weight: 700;
-  color: #F3F3F3;
+  font-weight: 600;
+  font-size: 1.8rem;
+  color: #FEFEFE;
   text-transform: uppercase;
   text-decoration: none;
   letter-spacing: 2px;
   line-height: 100%;
   white-space: nowrap;
-  font-size: 1.6rem;
   position: relative;
   z-index: 1;
   display: inline-block;
   padding: 1.6rem 2.4rem;
-  background-color: #417BC7;
+  background-color: #121212;
   margin-top: -4px;
   -webkit-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
@@ -1401,43 +1438,54 @@ footer .footer__col-txt p:first-of-type {
           transform-origin: center bottom;
 }
 
+@media (min-width: 992px) {
+  .single .wp-block-file a:first-of-type {
+    margin-top: .4rem;
+  }
+}
+
 .single .wp-block-file a.wp-block-file__button {
   font-family: "Catamaran", sans-serif;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: #417BC7;
-  font-size: 1.6rem;
+  color: #86868B;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  font-size: 1.8rem;
   background: none;
   border-radius: 0;
   -webkit-transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
   transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
-.single .wp-block-file a.wp-block-file__button:hover {
-  opacity: .8;
-  text-decoration: underline;
+.single .wp-block-file a.wp-block-file__button:hover:hover {
+  background: linear-gradient(87deg, #009ee2 10%, #e6cd00 90%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
 }
 
 .single .wp-block-buttons .wp-block-button:first-of-type a {
   font-family: "Catamaran", sans-serif;
-  font-weight: 700;
-  color: #F3F3F3;
+  font-weight: 600;
+  color: #FEFEFE;
   text-transform: uppercase;
   text-decoration: none;
   letter-spacing: 2px;
   line-height: 100%;
   white-space: nowrap;
-  font-size: 1.6rem;
-  border-radius: 0;
   position: relative;
   z-index: 1;
   display: inline-block;
   padding: 1.6rem 2.4rem;
-  background-color: #417BC7;
+  background-color: #121212;
   margin-top: -4px;
   -webkit-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
+  border-radius: 0;
 }
 
 .single .wp-block-buttons .wp-block-button:first-of-type a:before {
@@ -1459,7 +1507,6 @@ footer .footer__col-txt p:first-of-type {
 
 .single .wp-block-buttons .wp-block-button:first-of-type a:hover {
   color: #FEFEFE;
-  text-decoration: none;
 }
 
 .single .wp-block-buttons .wp-block-button:first-of-type a:hover:before {
@@ -1469,27 +1516,239 @@ footer .footer__col-txt p:first-of-type {
           transform-origin: center bottom;
 }
 
+@media (min-width: 992px) {
+  .single .wp-block-buttons .wp-block-button:first-of-type a {
+    margin-top: .4rem;
+  }
+}
+
 .single .wp-block-buttons .wp-block-button a {
   font-family: "Catamaran", sans-serif;
-  font-weight: 700;
+  font-weight: 600;
+  color: #FEFEFE;
   text-transform: uppercase;
+  text-decoration: none;
   letter-spacing: 2px;
-  color: #417BC7;
-  font-size: 1.6rem;
-  background: none;
+  line-height: 100%;
+  white-space: nowrap;
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  padding: 1.6rem 2.4rem;
+  background-color: #121212;
+  margin-top: -4px;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
   border-radius: 0;
-  -webkit-transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
-  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.single .wp-block-buttons .wp-block-button a:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+  -webkit-transform-origin: center top;
+          transform-origin: center top;
+  background: -webkit-gradient(linear, left top, right top, from(#009ee2), to(#e6cd00));
+  background: linear-gradient(90deg, #009ee2 0%, #e6cd00 100%);
+  -webkit-transition: -webkit-transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: -webkit-transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
 .single .wp-block-buttons .wp-block-button a:hover {
-  opacity: .8;
-  text-decoration: underline;
+  color: #FEFEFE;
+}
+
+.single .wp-block-buttons .wp-block-button a:hover:before {
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
+  -webkit-transform-origin: center bottom;
+          transform-origin: center bottom;
+}
+
+@media (min-width: 992px) {
+  .single .wp-block-buttons .wp-block-button a {
+    margin-top: .4rem;
+  }
 }
 
 .single hr.wp-block-separator {
   margin: 10rem 0;
   opacity: .2;
+}
+
+/*Textarea placeholder*/
+::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: #4F4F4F !important;
+  opacity: 0.8;
+  font-family: "Roboto", sans-serif;
+}
+
+:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #4F4F4F !important;
+  opacity: 0.8;
+  font-family: "Roboto", sans-serif;
+}
+
+::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #4F4F4F !important;
+  opacity: 0.8;
+  font-family: "Roboto", sans-serif;
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: #4F4F4F !important;
+  opacity: 0.8;
+  font-family: "Roboto", sans-serif;
+}
+
+.wpcf7 p:first-of-type {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.wpcf7 p:first-of-type .label-text {
+  position: absolute;
+}
+
+.wpcf7 label {
+  font-size: 1.8rem;
+  display: inline-block;
+  min-width: 100%;
+}
+
+.wpcf7 label .wpcf7-form-control-wrap {
+  display: inline-block;
+  margin: 1.6rem 0 4rem;
+  min-width: 100%;
+}
+
+.wpcf7 label .wpcf7-form-control-wrap .wpcf7-form-control {
+  width: 100%;
+  background-color: #E6E6E6;
+  padding: 1.6rem 2.8rem;
+  border: none;
+  border-radius: 1.2rem;
+  font-size: 1.6rem;
+  color: #121212;
+}
+
+.wpcf7 label .wpcf7-form-control-wrap .wpcf7-form-control:focus-visible {
+  outline-color: #417BC7;
+}
+
+.wpcf7 label .wpcf7-form-control-wrap.your-message {
+  margin: 1.6rem 0 2.4rem;
+}
+
+.wpcf7 label .wpcf7-form-control-wrap.privacy .wpcf7-form-control {
+  margin: 1.6rem 0 4rem;
+  background-color: #FEFEFE;
+  padding: 0;
+}
+
+.wpcf7 label .wpcf7-form-control-wrap.privacy .wpcf7-form-control .wpcf7-list-item {
+  margin-left: 0;
+}
+
+.wpcf7 label .wpcf7-form-control-wrap.privacy .wpcf7-form-control .wpcf7-list-item-label {
+  font-size: 1.6rem;
+  color: #4F4F4F;
+}
+
+.wpcf7 label .wpcf7-form-control-wrap.privacy input[type='checkbox'] {
+  margin: 3px 12px 3px 3px;
+  -webkit-transform: scale(1.4);
+          transform: scale(1.4);
+  accent-color: #417BC7;
+}
+
+.wpcf7 label.label-name {
+  min-width: 50%;
+}
+
+.wpcf7 label.label-name .wpcf7-form-control-wrap {
+  max-width: 100%;
+}
+
+.wpcf7 label.label-name .wpcf7-form-control-wrap .wpcf7-form-control {
+  min-width: auto;
+  max-width: calc(100% - 0.8rem);
+}
+
+.wpcf7 label.label-surname {
+  min-width: 50%;
+  position: relative;
+}
+
+.wpcf7 label.label-surname .wpcf7-form-control-wrap {
+  max-width: 50%;
+  position: absolute;
+  bottom: 0;
+}
+
+.wpcf7 label.label-surname .wpcf7-form-control-wrap .wpcf7-form-control {
+  min-width: auto;
+  max-width: calc(100% - 0.8rem);
+  margin-left: 0.8rem;
+}
+
+.wpcf7 .label-text {
+  color: #417BC7;
+  margin-bottom: 1.2rem;
+}
+
+.wpcf7 input[type='submit'] {
+  margin-top: .8rem;
+  color: #FEFEFE;
+  background: #edecec;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 2px;
+  border: none;
+  border-radius: 100vw;
+  padding: 16px 32px;
+  -webkit-box-shadow: 0;
+          box-shadow: 0;
+  -webkit-transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  /*iOS input height fix*/
+  -webkit-box-sizing: border-box !important;
+          box-sizing: border-box !important;
+  height: 4.9rem !important;
+  border-radius: 2.5rem !important;
+  -webkit-appearance: none !important;
+}
+
+.wpcf7 input[type='submit']:hover {
+  -webkit-box-shadow: 0 1px 3px 0 rgba(60, 64, 67, 0.3), 0 4px 8px 3px rgba(60, 64, 67, 0.15);
+          box-shadow: 0 1px 3px 0 rgba(60, 64, 67, 0.3), 0 4px 8px 3px rgba(60, 64, 67, 0.15);
+  background-color: #417BC7;
+}
+
+.wpcf7 span.wpcf7-not-valid-tip {
+  font-size: 1.6rem;
+  color: #edecec;
+  margin-top: 0.4rem;
+  margin-left: 1.6rem;
+}
+
+.wpcf7 form .wpcf7-response-output, .wpcf7 .wpcf7 form.invalid .wpcf7-response-output, .wpcf7 .wpcf7 form.unaccepted .wpcf7-response-output, .wpcf7 .wpcf7 form.payment-required .wpcf7-response-output {
+  border-color: #FEFEFE;
+  margin: .8rem 0 4rem;
+  color: #4F4F4F;
 }
 
 /* ! Hero */
@@ -1794,4 +2053,28 @@ footer .footer__col-txt p:first-of-type {
   border-image-slice: 1;
   border-width: 4px;
   border-image-source: linear-gradient(180deg, #009ee2 10%, #e6cd00 90%);
+}
+
+.crb-full-image img {
+  border-radius: 0 0 0 8rem;
+}
+
+.crb-txt-image.img-left .row {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.crb-txt-image.img-left img {
+  border-radius: 0 0 0 8rem;
+}
+
+.crb-txt-image .vc-col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }

@@ -6,17 +6,19 @@
 
     <!--Loop Content-->
 
-    <article>
+    <article class="mb-160-r">
 
-        
-        <h1> <?php the_title( ); ?> </h1>
+        <p class="mb-8-r"> <?php the_date(); ?> </p>
+        <h1 class="mb-32-r"> <?php the_title(); ?> </h1>
+        <div class="row mb-160-r">
+            <div class="col-12 col-lg-11 offset-lg-1 single-thumbnail">
+                <figure>
+                    <?php the_post_thumbnail( 'full' ); ?>
+                </figure>
+            </div>
+        </div>
 
-        <p> <?php the_time( 'j M , Y' ); ?> </p>
-
-            <?php the_post_thumbnail( 'medium', array('class' => 'img-res', 'alt' => get_the_title())); ?>
-
-
-            <?php the_content(); ?>
+        <?php the_content(); ?>
         
     </article>
 

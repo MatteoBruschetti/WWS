@@ -28,8 +28,8 @@
 
         <section>
             <div class="row">
-                <div class="col-12 col-lg-6">
-                    <div class="row">
+                <div class="col-12 col-lg-6 mb-160-r">
+                    <div class="row mb-48-r">
                         <div class="col-2">
                             <img src="<?php echo carbon_get_theme_option( 'crb_icon_address' ); ?>" alt="">
                         </div>
@@ -37,7 +37,7 @@
                             <p><?php echo carbon_get_theme_option( 'crb_text_address' ); ?></p>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row mb-48-r">
                         <div class="col-2">
                             <img src="<?php echo carbon_get_theme_option( 'crb_icon_email' ); ?>" alt="">
                         </div>
@@ -45,7 +45,7 @@
                             <p><?php echo carbon_get_theme_option( 'crb_text_email' ); ?></p>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row mb-48-r">
                         <div class="col-2">
                             <img src="<?php echo carbon_get_theme_option( 'crb_icon_phone' ); ?>" alt="">
                         </div>
@@ -53,6 +53,9 @@
                             <p><?php echo carbon_get_theme_option( 'crb_text_phone' ); ?></p>
                         </div>
                     </div>
+                </div>
+                <div class="co-16 col-lg-6">
+                    <?php echo do_shortcode( '[contact-form-7 id="301" title="Contact form"]' ); ?>
                 </div>
             </div>
         </section>

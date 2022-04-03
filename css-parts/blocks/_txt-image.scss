@@ -1,0 +1,19 @@
+.crb-txt-image{
+
+    &.img-left{
+
+        .row{
+            flex-direction: row-reverse;
+        }
+
+        img{
+            border-radius: $img-border-radius;
+        }
+    }
+
+    .vc-col{
+        display: flex;
+        align-items: center;
+    }
+
+}
