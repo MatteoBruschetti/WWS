@@ -111,6 +111,13 @@
                 </h2>
             </div>
         </div>
+        <div class="row">
+            <div class="col-12 col-lg-11 offset-lg-1">
+                <h5 class="mb-48">
+                    We are a team of professional experts in numerical modelling of natural flows, weather forecasts, geologic hazards and sediment transport with many years of experience in both academia and industry.
+                </h5>
+            </div>
+        </div>
         <div class="loop mb-160-r">
             <?php 
                 $loooop = new WP_Query( array(
