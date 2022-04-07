@@ -35,9 +35,11 @@
                     Our modelling solutions result from experience developed through research activities by the different partners during their academic and industrial careers.
                 </h5>  
 
-                <h5 class="blu mb-64">
-                    Our areas of expertise include:
-                </h5>
+                <section class="txt-highlight">
+                    <p class="mb-64">
+                        Our areas of expertise include:
+                    </p>
+                </section>
             </div>
 
             <div class="col-12 col-lg-5 offset-lg-1">
@@ -66,7 +68,7 @@
     <section class="loop mb-160-r">
     <?php 
             $loop = new WP_Query( array( 
-                'post_type'         => 'post',
+                'post_type'         => 'about service',
                 'post_status'       => 'publish',
                 'orderby'           => 'count',
                 'order'             => 'DESC',
@@ -121,7 +123,7 @@
         <div class="loop mb-160-r">
             <?php 
                 $loooop = new WP_Query( array(
-                    'post_type'         => 'research-project',
+                    'post_type'         => 'who we are',
                     'post_status'       => 'publish',
                     'orderby'           => 'count',
                     'order'             => 'DESC',
