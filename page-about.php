@@ -68,7 +68,7 @@
     <section class="loop mb-160-r">
     <?php 
             $loop = new WP_Query( array( 
-                'post_type'         => 'about service',
+                'post_type'         => 'about-service',
                 'post_status'       => 'publish',
                 'orderby'           => 'count',
                 'order'             => 'DESC',
@@ -123,7 +123,7 @@
         <div class="loop mb-160-r">
             <?php 
                 $loooop = new WP_Query( array(
-                    'post_type'         => 'who we are',
+                    'post_type'         => 'who-we-are',
                     'post_status'       => 'publish',
                     'orderby'           => 'count',
                     'order'             => 'DESC',

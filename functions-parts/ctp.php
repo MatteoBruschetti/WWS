@@ -54,7 +54,7 @@
             array(
                 'labels'                =>          array(
                     'name'              =>          'About Service', //nome principale nella sidebar
-                    'singular_name'     =>          'about service',
+                    'singular_name'     =>          'About service',
                     'all_items'         =>          'All', //nome link per visualizzare tutti i post
                     'add_new'           =>          'Add project', //nome link per aggiungere nuovo post
                     'add_new_item'      =>          'Add project', //titolo della pagina di aggiunta di un nuovo post
@@ -141,7 +141,7 @@
                 array(
                     'labels'                =>          array(
                         'name'              =>          'Who we are', //nome principale nella sidebar
-                        'singular_name'     =>          'who we are',
+                        'singular_name'     =>          'Who we are',
                         'all_items'         =>          'All', //nome link per visualizzare tutti i post
                         'add_new'           =>          'Add project', //nome link per aggiungere nuovo post
                         'add_new_item'      =>          'Add project', //titolo della pagina di aggiunta di un nuovo post
