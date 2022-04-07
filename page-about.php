@@ -85,9 +85,6 @@
                             </div>
                             <div class="col-12 col-lg-8">
                                 <div class="loop__content-container">
-                                    <div class="loop__over-content">
-                                        <p class="mb-8-r"><?php echo get_the_date(); ?></p>
-                                    </div>
                                     <div class="loop__content">                                 
                                         <h3 class="mb-16-r"><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h3>
                                         <p class="mb-16-r"><?php echo get_the_excerpt(); ?></p>
