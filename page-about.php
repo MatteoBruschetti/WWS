@@ -66,7 +66,7 @@
 
     <!-- What we do post -->
     <section class="loop mb-160-r">
-    <?php 
+        <?php 
             $loop = new WP_Query( array( 
                 'post_type'         => 'about-service',
                 'post_status'       => 'publish',

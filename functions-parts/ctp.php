@@ -143,11 +143,11 @@
                         'name'              =>          'Who we are', //nome principale nella sidebar
                         'singular_name'     =>          'Who we are',
                         'all_items'         =>          'All', //nome link per visualizzare tutti i post
-                        'add_new'           =>          'Add project', //nome link per aggiungere nuovo post
-                        'add_new_item'      =>          'Add project', //titolo della pagina di aggiunta di un nuovo post
-                        'edit_item'         =>          'Edit project', //titolo della pagina di aggiunta di un nuovo post
-                        'new_item'          =>          'New project',
-                        'view_item'         =>          'See project',
+                        'add_new'           =>          'Add presentation', //nome link per aggiungere nuovo post
+                        'add_new_item'      =>          'Add presentation', //titolo della pagina di aggiunta di un nuovo post
+                        'edit_item'         =>          'Edit presentation', //titolo della pagina di aggiunta di un nuovo post
+                        'new_item'          =>          'New presentation',
+                        'view_item'         =>          'See presentation',
                         'search_items'      =>          'Search', //testo nel pulsante di ricerca
                         'not_found'         =>          'Nessun elemento trovato',
                         'not_found_in_trash'=>          'Nessun elemento nel cestino',
