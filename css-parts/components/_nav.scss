@@ -128,7 +128,7 @@ header {
         .header__logo--title {
             font-family: $font-family-secondary;
             font-size: 2rem;
-            color: $color-primary;
+            color: $color-txt-primary;
             text-decoration: none;
             text-transform: uppercase;
             font-weight: 700;
@@ -197,7 +197,7 @@ header {
                 align-items: flex-start;
 
                 li {
-                    padding-bottom: 4.8rem;
+                    padding-bottom: 3.2rem;
                     margin: 0;
                     font-size: 3.2rem;
 
@@ -240,7 +240,6 @@ header {
 
     .container.open {
         border: 0;
-        border-radius: $img-border-radius;
         box-shadow: 0px 28vh 50px 0px rgba(0,0,0,0.12);
         
         .header__menu {

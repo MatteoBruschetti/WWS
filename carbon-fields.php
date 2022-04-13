@@ -58,7 +58,13 @@
                 ->add_fields( array(
                     Field::make( 'text', 'crb_project_client')
             ));
-
+            
+        Container::make( 'post_meta', 'Custom Data' )
+                ->where( 'post_type', '=', 'who-we-are' )
+                ->add_fields( array(
+                    Field::make( 'text', 'crb_role'),
+                    Field::make( 'text', 'crb_email')
+            ));
     }
 
 

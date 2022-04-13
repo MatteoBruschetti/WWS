@@ -21,27 +21,33 @@
         </div>
     </section>
 
+
     <!-- What we do -->
-    <section class="bullet-list mb-80">
+    <section class="">
         <div class="row">
             <div class="col-12">
                 <h2 class="gradient-on-left i-v mb-48-r">
-                    What we do
+                   <b>What</b> we do
                 </h2>
             </div>
-
-            <div class="col-12 col-lg-8 offset-lg-1">
-                <h5 class="mb-48-r">
+            <div class="col-12 col-lg-11 offset-lg-1">
+                <p class="max-ch mb-48-r">
                     Our modelling solutions result from experience developed through research activities by the different partners during their academic and industrial careers.
-                </h5>  
-
-                <section class="txt-highlight">
-                    <p class="mb-64">
-                        Our areas of expertise include:
-                    </p>
-                </section>
+                </p>
             </div>
-
+        </div>
+    </section>
+    <section class="txt-highlight">
+        <div class="row">
+            <div class="col-12 col-lg-11 offset-lg-1">
+                <p class="mb-48-r">
+                    Our areas of expertise include:
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="bullet-list mb-48-r">
+        <div class="row">
             <div class="col-12 col-lg-5 offset-lg-1">
                 <ul>
                     <li>Detailed atmospheric forecasting for the planning, construction and maintenance of new industrial installations for the exploitation of renewable energies</li>
@@ -49,30 +55,33 @@
                     <li>Assessment of the submarine geo-hazards associated with ocean currents for the design of deep-water engineering infrastructures, such as pipelines for the exploitation of oil and gas as well as electrical and telecommunication cable networks</li>
                 </ul>
             </div>
-
             <div class="col-12 col-lg-5 offset-lg-1">
                 <ul>
                     <li>The quantitative characterization of dispersion from sediment plumes associated with offshore operations such as dredging and dumping.</li>
                     <li>The quantitative modelling of sediment flows and associated deposits for the characterization of oil and gas reservoirs, the description of which is important both for the economic exploitation of hydrocarbons and for the storage and sequestration of CO2 in depleted reservoirs</li>
                 </ul>
             </div>
-
-            <h5 class="col-12 pt-16-r">
-                Our team is ready to develop specific solutions tailored to address client needs using software developed in-house and in the open market.
-            </h5>
         </div>
-
+    </section>
+    <section class="txt-highlight mb-16-r">
+        <div class="row">
+            <div class="col-12 col-lg-11 offset-lg-1">
+                <p class="mb-96-r">
+                    Our team is ready to develop specific solutions tailored to address client needs using software developed in-house and in the open market.
+                </p>
+            </div>
+        </div>
     </section>
 
     <!-- What we do post -->
     <section class="loop mb-160-r">
         <?php 
             $loop = new WP_Query( array( 
-                'post_type'         => 'about-service',
+                'post_type'         => 'what-we-do',
                 'post_status'       => 'publish',
                 'orderby'           => 'count',
-                'order'             => 'DESC',
-                'posts_per_page'    => 4
+                'order'             => 'ASC',
+                'posts_per_page'    => -1
             ) );
             if ($loop->have_posts()) : while($loop->have_posts()) : $loop->the_post(); ?>
                 <article>
@@ -105,33 +114,32 @@
     </section>
 
     <!--Who we are-->
-    <section>
+    <section class="mb-240-r">
         <div class="row">
             <div class="col-12">
                 <h2 class="gradient-on-left i-v mb-48-r">
-                    <b>Who</b> We Are
+                    <b>Who</b> we are
                 </h2>
             </div>
-        </div>
-        <div class="row">
             <div class="col-12 col-lg-11 offset-lg-1">
-                <h5 class="mb-48">
-                    We are a team of professional experts in numerical modelling of natural flows, weather forecasts, geologic hazards and sediment transport with many years of experience in both academia and industry.
-                </h5>
+                <p class="max-ch mb-96-r">
+                    We are a team of professional experts in numerical modelling of natural flows, weather forecasts, geologic hazards and sediment transport with many years of
+                    experience in both academia and industry.
+                </p>
             </div>
         </div>
         <div class="loop mb-160-r">
             <?php 
-                $loooop = new WP_Query( array(
+                $loooooop = new WP_Query( array(
                     'post_type'         => 'who-we-are',
                     'post_status'       => 'publish',
                     'orderby'           => 'count',
                     'order'             => 'DESC',
-                    'posts_per_page'    => 6,
+                    'posts_per_page'    => -1,
                     'paged' => get_query_var('paged') ? get_query_var('paged') : 1) 
                 ); 
                 
-                while ($loooop -> have_posts()) : $loooop -> the_post(); ?>
+                while ($loooooop -> have_posts()) : $loooooop -> the_post(); ?>
                     <article>
                         <div class="row">
                             <div class="col-12 order-lg-2 col-lg-4">
@@ -140,18 +148,18 @@
                             <div class="col-12 col-lg-8">
                                 <div class="loop__content-container">
                                     <div class="loop__over-content">
-                                        <p class="project-client mb-8-r"><?php echo carbon_get_post_meta( get_the_ID(), 'crb_project_client' ); ?></p>
+                                        <h3 class="mb-8-r"><?php the_title(); ?></h3>
+                                        <p class="who-role mb-16-r"><?php echo carbon_get_post_meta( get_the_ID(), 'crb_role' ); ?></p>                              
                                     </div>
-                                    <div class="loop__content">                                 
-                                        <h3 class="mb-16-r"><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h3>
-                                        <p class="project-excerpt mb-16-r"><?php echo get_the_excerpt(); ?></p>
+                                    <div class="loop__content">   
+                                        <p class="long-excerpt mb-8-r"><?php echo get_the_excerpt(); ?></p>
+                                        <a href="mailto:<?php echo carbon_get_post_meta( get_the_ID(), 'crb_email' ); ?>" target="_blank" class="who-email mb-16-r"><?php echo carbon_get_post_meta( get_the_ID(), 'crb_email' ); ?></a>
                                     </div>
                                 </div>
                             </div>
                         </div>        
                     </article>
                 <?php endwhile; ?>
-
         </div>
     </section>
 

@@ -135,3 +135,11 @@ PADDING
         padding-top: 2.4rem;
     }
 }
+
+.no-pl-r{ //contact icon list
+    padding-left: 0;
+
+    @media #{$xsmall}{
+        padding-left: 15px;
+    }
+}

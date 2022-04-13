@@ -110,8 +110,8 @@
                                         <p class="project-client mb-8-r"><?php echo carbon_get_post_meta( get_the_ID(), 'crb_project_client' ); ?></p>
                                     </div>
                                     <div class="loop__content">                                 
-                                        <h3 class="mb-16-r"><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h3>
-                                        <p class="project-excerpt mb-16-r"><?php echo get_the_excerpt(); ?></p>
+                                        <h3 class="mb-16-r"><?php the_title(); ?></h3>
+                                        <p class="long-excerpt mb-16-r"><?php echo get_the_excerpt(); ?></p>
                                     </div>
                                 </div>
                             </div>

@@ -23,33 +23,30 @@
 
     <div class="container">
 
-
-
-
-        <section>
+        <section class="mb-160-r">
             <div class="row">
                 <div class="col-12 col-lg-6 mb-160-r">
                     <div class="row mb-48-r">
-                        <div class="col-2">
+                        <div class="col-3 col-sm-2">
                             <img src="<?php echo carbon_get_theme_option( 'crb_icon_address' ); ?>" alt="">
                         </div>
-                        <div class="col-10">
+                        <div class="col-9 col-sm-10 no-pl-r">
                             <p><?php echo carbon_get_theme_option( 'crb_text_address' ); ?></p>
                         </div>
                     </div>
                     <div class="row mb-48-r">
-                        <div class="col-2">
+                        <div class="col-3 col-sm-2">
                             <img src="<?php echo carbon_get_theme_option( 'crb_icon_email' ); ?>" alt="">
                         </div>
-                        <div class="col-10">
+                        <div class="col-9 col-sm-10 no-pl-r">
                             <p><?php echo carbon_get_theme_option( 'crb_text_email' ); ?></p>
                         </div>
                     </div>
                     <div class="row mb-48-r">
-                        <div class="col-2">
+                        <div class="col-3 col-sm-2">
                             <img src="<?php echo carbon_get_theme_option( 'crb_icon_phone' ); ?>" alt="">
                         </div>
-                        <div class="col-10">
+                        <div class="col-9 col-sm-10 no-pl-r">
                             <p><?php echo carbon_get_theme_option( 'crb_text_phone' ); ?></p>
                         </div>
                     </div>

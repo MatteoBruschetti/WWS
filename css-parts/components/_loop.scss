@@ -59,6 +59,8 @@
                                 -webkit-box-orient: vertical;
                     }
                 }
+
+            
             }
             .loop__content{
     
@@ -82,12 +84,17 @@
                             -webkit-line-clamp: 3;
                             -webkit-box-orient: vertical;
 
-                    &.project-excerpt{
+                    &.long-excerpt{
                         overflow: hidden;
                         text-overflow: ellipsis;
                         display: -webkit-box;
-                                -webkit-line-clamp: 7;
+                                -webkit-line-clamp: 24;
                                 -webkit-box-orient: vertical;
+
+                        @media #{$large}{
+                            display: -webkit-box;
+                                -webkit-line-clamp: 6;
+                        }
                     }
                 }
     
@@ -106,6 +113,15 @@
                     
                     &:hover{
                         opacity: .56;
+                    }
+                }
+
+                .who-email{
+                    font-size: 1.6rem;
+                    color: $color-txt-secondary;
+
+                    &:hover{
+                        color: $color-txt-primary;
                     }
                 }
             }

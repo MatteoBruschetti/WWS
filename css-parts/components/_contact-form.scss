@@ -23,14 +23,9 @@
 
 .wpcf7{
 
-    p:first-of-type{
-        display: flex;
-
-        .label-text{position: absolute;}
-    }
-
     label{
         font-size: 1.8rem;
+        color: $color-txt-primary;
         display: inline-block;
         min-width: 100%;
 
@@ -41,25 +36,27 @@
 
             .wpcf7-form-control{
                 width: 100%;
-                background-color: #E6E6E6;
                 padding: 1.6rem 2.8rem;
-                border: none;
-                border-radius: 1.2rem;
+                border: $border-light-grey;
                 font-size: 1.6rem;
                 color: $color-txt-primary;
 
                 &:focus-visible{
-                    outline-color: $color-primary;
+                    outline: none;
+                    border: $border-dark-grey;
+                    background-color: rgba(0,0,0,0.04);
                 }
 
             }
+
             &.your-message{
                 margin: 1.6rem 0 2.4rem;
             }
 
-
             &.privacy{
+                
                 .wpcf7-form-control{
+                    border: none;
                     margin: 1.6rem 0 4rem;
                     background-color: $color-white;
                     padding: 0;
@@ -77,77 +74,43 @@
                 input[type='checkbox']{
                     margin: 3px 12px 3px 3px;
                     transform: scale(1.4);
-                    accent-color: $color-primary;
                 }
 
             }
         }
-
-        &.label-name{
-            min-width: 50%;
-
-            .wpcf7-form-control-wrap{
-                max-width: 100%;
-                .wpcf7-form-control{
-                    min-width: auto;
-                    max-width: calc(100% - 0.8rem);
-                }
-            }
-        }
-        &.label-surname{
-            min-width: 50%;
-            position: relative;
-
-            .wpcf7-form-control-wrap{
-                max-width: 50%;
-                position: absolute;
-                bottom: 0;
-                .wpcf7-form-control{
-                    min-width: auto;
-                    max-width: calc(100% - 0.8rem);
-                    margin-left: 0.8rem;
-                }
-            }
-        }
-    }
-
-    .label-text{
-        color: $color-primary;
-        margin-bottom: 1.2rem;
     }
 
     input[type='submit']{
-        margin-top: .8rem;
+        font-family: $font-family-secondary;
+        font-size: 1.6rem;
+        font-weight: 600;
         color: $color-white;
-        background: #edecec;
-        font-family: $font-family-primary;
-        font-size: 1.4rem;
         text-transform: uppercase; text-decoration: none;
-        font-weight: 700; letter-spacing: 2px;
+        letter-spacing: 2px; line-height: 100%; white-space: nowrap;
         border: none;
-        border-radius: 100vw;
-        padding: 16px 32px;
-        box-shadow: 0;
-        transition: all 0.4s cubic-bezier(.25,.8,.25,1);
+        background-color: $color-black;
+        padding: 1.6rem 2.4rem;
+        cursor: pointer;
+        transition: all .3s ease-in-out;
+
         /*iOS input height fix*/
-        box-sizing: border-box !important; height: 4.9rem !important; border-radius: 2.5rem !important; -webkit-appearance: none !important;
-        
-        &:hover {
-            box-shadow: 0 1px 3px 0 rgba(60,64,67,0.30), 0 4px 8px 3px rgba(60,64,67,0.15);
-            background-color: $color-primary;
+        box-sizing: border-box !important; height: 4.8rem !important; border-radius: 0 !important; -webkit-appearance: none !important;
+
+        &:hover{
+            color: $color-txt-primary;
+            background-color: rgba(0,0,0,0.04);
         }
     }
 
     span.wpcf7-not-valid-tip{
         font-size: 1.6rem;
-        color: #edecec;
-        margin-top: 0.4rem;
-        margin-left: 1.6rem;
+        color: #e05252;
+        margin-top: 0.8rem;
     }
 
     form .wpcf7-response-output, .wpcf7 form.invalid .wpcf7-response-output, .wpcf7 form.unaccepted .wpcf7-response-output, .wpcf7 form.payment-required .wpcf7-response-output{
         border-color: $color-white;
-        margin: .8rem 0 4rem;
+        margin: 1.6rem 0 4rem;
         color: $color-txt-secondary;
     }
 }
