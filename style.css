@@ -69,7 +69,6 @@ POI ELIMINIAMO I PESI CHE NON UTILIZZIAMO
   /* Legacy iOS */
 }
 
-/*da cancellare*/
 body {
   font-family: "Roboto", sans-serif;
 }
@@ -503,40 +502,6 @@ p.max-ch {
   max-width: 80ch;
 }
 
-@-webkit-keyframes fix-render {
-  0% {
-    -webkit-clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
-            clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
-  }
-  90% {
-    background-color: #417BC7;
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-  }
-  100% {
-    background-color: transparent;
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-  }
-}
-
-@keyframes fix-render {
-  0% {
-    -webkit-clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
-            clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
-  }
-  90% {
-    background-color: #417BC7;
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-  }
-  100% {
-    background-color: transparent;
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-  }
-}
-
 /*--------------------------------------------------
 RESET CSS
 --------------------------------------------------*/
@@ -590,6 +555,27 @@ img {
 /*--------------------------------------------------
 BOOTSTRAP MEDIA-QUERIES 2021
 ----------------------------------------------------*/
+body.single-what-we-do #menu-item-77 a {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  -webkit-text-decoration-color: #86868B;
+          text-decoration-color: #86868B;
+}
+
+body.single-service-project #menu-item-76 a {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  -webkit-text-decoration-color: #86868B;
+          text-decoration-color: #86868B;
+}
+
+body.single-post #menu-item-78 a {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  -webkit-text-decoration-color: #86868B;
+          text-decoration-color: #86868B;
+}
+
 header {
   position: fixed;
   top: 0;
@@ -775,8 +761,14 @@ header .header__logo .header__logo--img {
 }
 
 header .header__logo .header__logo--img img {
-  max-height: 7rem;
+  max-height: 4.8rem;
   width: auto;
+}
+
+@media (min-width: 992px) {
+  header .header__logo .header__logo--img img {
+    max-height: 7rem;
+  }
 }
 
 header .header__logo .header__logo--img:hover {
@@ -820,6 +812,8 @@ header .header__menu .main-menu li a:hover {
 header .header__menu .main-menu li.current-menu-item a {
   text-decoration: underline;
   text-decoration-thickness: 2px;
+  -webkit-text-decoration-color: #86868B;
+          text-decoration-color: #86868B;
 }
 
 @media (max-width: 991px) {
@@ -851,7 +845,7 @@ header .header__menu .main-menu li.current-menu-item a {
   }
   header .header__menu .main-menu li a:focus-visible,
   header .header__menu .main-menu li button:focus-visible {
-    outline: #417BC7 2px solid;
+    outline: #86868B 2px solid;
   }
   header .header__menu .main-menu li:nth-child(1):before {
     content: '01';
@@ -1709,6 +1703,7 @@ footer .footer__col-txt p:first-of-type {
   margin: 3px 12px 3px 3px;
   -webkit-transform: scale(1.4);
           transform: scale(1.4);
+  accent-color: #86868B;
 }
 
 .wpcf7 input[type='submit'] {
@@ -1752,6 +1747,10 @@ footer .footer__col-txt p:first-of-type {
   color: #4F4F4F;
 }
 
+input[type="text"], input[type="email"], textarea {
+  -webkit-appearance: none;
+}
+
 /* ! Hero */
 .hero .hero__col-mission p {
   text-align: left;
@@ -1768,6 +1767,8 @@ footer .footer__col-txt p:first-of-type {
 .hero .hero__col-image figure {
   border-radius: 0 0 0 8rem;
   overflow: hidden;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
 }
 
 .hero .hero__col-image figure img {
@@ -1776,6 +1777,7 @@ footer .footer__col-txt p:first-of-type {
      object-fit: cover;
   -webkit-animation: infinite-scale 40s linear infinite;
           animation: infinite-scale 40s linear infinite;
+  min-height: 32rem;
 }
 
 @-webkit-keyframes infinite-scale {
@@ -1989,36 +1991,6 @@ footer .footer__col-txt p:first-of-type {
   opacity: 1;
   -webkit-transform: translateY(0);
           transform: translateY(0);
-}
-
-.crb-logo-animation.bg-blue {
-  position: relative;
-}
-
-.crb-logo-animation.bg-blue:before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  left: -80vw;
-  right: -80vw;
-  background-color: #417BC7;
-  z-index: -1;
-}
-
-.crb-logo-animation.bg-blue .svg-wrapper .svg-g__pittogram .pittogram__square {
-  fill: #417BC7;
-}
-
-.crb-logo-animation.bg-blue .svg-wrapper .svg-g__pittogram .pittogram__txt {
-  fill: #FEFEFE;
-}
-
-.crb-logo-animation.bg-blue .svg-wrapper .svg-g__logogram .logogram__square {
-  fill: #417BC7;
-}
-
-.crb-logo-animation.bg-blue .svg-wrapper .svg-g__logogram .logogram__txt {
-  fill: #FEFEFE;
 }
 
 @-webkit-keyframes dash {

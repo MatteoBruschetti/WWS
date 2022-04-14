@@ -15,15 +15,15 @@
 
     .hero__col-image{
         figure{
-                -webkit-border-radius: $img-border-radius;
-                -moz-border-radius: $img-border-radius;
             border-radius: $img-border-radius;
             overflow: hidden;
+            transform: translateZ(0); //fix ios shit
 
             img{
                 display: block;
                 object-fit: cover;
                 animation: infinite-scale 40s linear infinite;
+                min-height: 32rem;
             }
         }
     }

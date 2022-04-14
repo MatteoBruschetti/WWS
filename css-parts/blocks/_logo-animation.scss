@@ -77,31 +77,6 @@
         }
         
     }
-
-
-    &.bg-blue{
-        position: relative;
-
-        &:before{
-            content: '';
-            position: absolute;
-            inset: 0;
-            left: -80vw; right: -80vw;
-            background-color: $color-primary;
-            z-index: -1;
-        }
-
-        .svg-wrapper{
-            .svg-g__pittogram{
-                .pittogram__square{fill: $color-primary;}
-                .pittogram__txt{fill: $color-white;}
-            }
-            .svg-g__logogram{
-                .logogram__square{fill: $color-primary}
-                .logogram__txt{fill: $color-white;}
-            }
-        }
-    }
 }
 
 @keyframes dash {

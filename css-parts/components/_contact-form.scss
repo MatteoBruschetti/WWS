@@ -74,6 +74,7 @@
                 input[type='checkbox']{
                     margin: 3px 12px 3px 3px;
                     transform: scale(1.4);
+                    accent-color: $color-grey;
                 }
 
             }
@@ -113,4 +114,9 @@
         margin: 1.6rem 0 4rem;
         color: $color-txt-secondary;
     }
+}
+
+//ios fix shit
+input[type="text"], input[type="email"], textarea {
+    -webkit-appearance: none;
 }

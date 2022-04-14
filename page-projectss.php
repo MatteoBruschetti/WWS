@@ -2,8 +2,8 @@
 
 <main class="container">
 
-<!--Hero-->
-<section class="hero mb-240-r pt-24-r">
+    <!--Hero-->
+    <section class="hero mb-240-r pt-24-r">
         <div class="row align-items-end">
             <div class="col-12 col-lg-9 offset-lg-3 mb-32-r">
                 <h1 class="gradient-on-left">
@@ -23,21 +23,15 @@
 
 
     <section class="loop mb-160-r">
-        <?php
-
-            //double pagination on the same page
-            $paged1 = isset( $_GET['paged1'] ) ? (int) $_GET['paged1'] : 1;
-            $paged2 = isset( $_GET['paged2'] ) ? (int) $_GET['paged2'] : 1;
-
-
+        <?php 
             $loop = new WP_Query( array(
                 'post_type'         => 'service-project',
                 'post_status'       => 'publish',
                 'orderby'           => 'count',
                 'order'             => 'DESC',
                 'posts_per_page'    => 3,
-                'paged'             => $paged1
-            )); 
+                'paged' => get_query_var('paged') ? get_query_var('paged') : 1) 
+            ); 
             
             while ($loop -> have_posts()) : $loop -> the_post(); ?>
                 <article>
@@ -63,21 +57,20 @@
                 </article>
             <?php endwhile; ?>
 
-            <div class="pagination">
-                <?php
-                    //double pagination on the same page
-                    $pag_args1 = array(
-                        'format'  => '?paged1=%#%',
-                        'current' => $paged1,
-                        'total'   => $loop->max_num_pages,
-                        'add_args' => array( 'paged2' => $paged2 )
-                    );
-                    echo paginate_links( $pag_args1 );
-                ?>
-            </div>
+        <div class="pagination">
+            <?php
+                $big = 999999999; // need an unlikely integer
+                echo paginate_links( array(
+                    'base' => str_replace( $big, '%#%', get_pagenum_link( $big ) ),
+                    'format' => '?paged=%#%',
+                    'current' => max( 1, get_query_var('paged') ),
+                    'total' => $loop->max_num_pages
+                ) );
+                wp_reset_postdata();
+            ?>
+        </div>
 
     </section>
-
 
 
     <!--Research projects-->
@@ -88,6 +81,11 @@
                     <b>Research</b> Projects
                 </h2>
             </div>
+            <!-- <div class="col-12 col-lg-11 offset-lg-1">
+                <p class="mb-48-r">
+                    Contribute to this section with articles and research projects
+                </p>
+            </div> -->
         </div>
         <div class="loop mb-160-r">
             <?php 
@@ -97,8 +95,8 @@
                     'orderby'           => 'count',
                     'order'             => 'DESC',
                     'posts_per_page'    => 3,
-                    'paged'          => $paged2
-                )); 
+                    'paged' => get_query_var('paged') ? get_query_var('paged') : 1) 
+                ); 
                 
                 while ($loooop -> have_posts()) : $loooop -> the_post(); ?>
                     <article>
@@ -123,13 +121,14 @@
 
             <div class="pagination">
                 <?php
-                    $pag_args2 = array(
-                        'format'  => '?paged2=%#%',
-                        'current' => $paged2,
-                        'total'   => $loooop->max_num_pages,
-                        'add_args' => array( 'paged1' => $paged1 )
-                    );
-                    echo paginate_links( $pag_args2 );
+                    $big = 999999999; // need an unlikely integer
+                    echo paginate_links( array(
+                        'base' => str_replace( $big, '%#%', get_pagenum_link( $big ) ),
+                        'format' => '?paged=%#%',
+                        'current' => max( 1, get_query_var('paged') ),
+                        'total' => $loooop->max_num_pages
+                    ) );
+                    wp_reset_postdata();
                 ?>
             </div>
 

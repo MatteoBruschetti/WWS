@@ -1,20 +1,23 @@
-// body{
-//     &.single-course{
-//         #menu-item-353 { //local=menu-item-160 //sergio=menu-item-353
-//             a{color: $color-grey;}
-//         }
-//     }
-//     &.single-post{
-//         #menu-item-350 { //local=menu-item-157 //sergio=menu-item-350
-//             a{color: $color-grey;}
-//         }
-//     }
-//     &.single-teacher{
-//         #menu-item-349 { //local=menu-item-156 //sergio=menu-item-349
-//             a{color: $color-grey;}
-//         }
-//     }
-// }
+body{
+
+    &.single-what-we-do{
+        #menu-item-77 { //local=menu-item-77 //sergio=menu-item-106
+            a{text-decoration: underline; text-decoration-thickness: 2px; text-decoration-color: $color-grey;}
+        }
+    }
+
+    &.single-service-project{
+        #menu-item-76 { //local=menu-item-76 //sergio=menu-item-76
+            a{text-decoration: underline; text-decoration-thickness: 2px; text-decoration-color: $color-grey;}
+        }
+    }
+    
+    &.single-post{
+        #menu-item-78 { //local=menu-item-78 //sergio=menu-item-78
+            a{text-decoration: underline; text-decoration-thickness: 2px; text-decoration-color: $color-grey;}
+        }
+    }
+}
 
 header {
     position: fixed;
@@ -138,8 +141,12 @@ header {
             display: inline-block;
             
             img {
-                max-height: 7rem;
+                max-height: 4.8rem;
                 width: auto;
+
+                @media #{$large}{
+                    max-height: 7rem;
+                }
             }
 
             &:hover{
@@ -179,6 +186,7 @@ header {
                     a{
                         text-decoration: underline;
                         text-decoration-thickness: 2px;
+                        text-decoration-color: $color-grey;
                     }
                 }
                 
@@ -204,7 +212,7 @@ header {
                     a,
                     button {
                         &:focus-visible {
-                            outline: $color-primary 2px solid;
+                            outline: $color-grey 2px solid;
                         }
                     }
 
