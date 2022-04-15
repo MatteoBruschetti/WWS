@@ -118,5 +118,6 @@
 
 //ios fix shit
 input[type="text"], input[type="email"], textarea {
+    border-radius: 0 !important;
     -webkit-appearance: none;
 }
