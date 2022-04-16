@@ -17,7 +17,7 @@
         <div class="container">
             <div class="row align-items-end mb-80-r">
                 <div class="col-12 col-lg-8 mb-48-r">
-                    <h2 class="gradient-on-left i-v">
+                    <h2>
                         Partners & Clients
                     </h2>
                 </div>
