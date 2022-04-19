@@ -80,7 +80,7 @@ h1, h2 {
   font-weight: 600;
   font-size: clamp(3.2rem, 6vw, 4.8rem);
   letter-spacing: -.5px;
-  line-height: 120%;
+  line-height: 100%;
   color: #121212;
 }
 
@@ -110,7 +110,7 @@ h1.gradient-on-left:before {
 
 @media (min-width: 992px) {
   h1.gradient-on-left {
-    padding-bottom: 12rem;
+    padding-bottom: 8rem;
   }
 }
 
@@ -121,7 +121,7 @@ h2 {
 
 h2.gradient-on-left {
   position: relative;
-  padding-top: 12rem;
+  padding-top: 8rem;
   padding-left: 1.6rem;
 }
 
@@ -1829,7 +1829,7 @@ input[type="text"], input[type="email"], textarea {
   font-size: clamp(2rem, 3vw, 3.2rem);
   font-family: "Catamaran", sans-serif;
   font-weight: 600;
-  line-height: 150%;
+  line-height: 120%;
 }
 
 .images-row .images-row__col {
@@ -1886,7 +1886,7 @@ input[type="text"], input[type="email"], textarea {
   list-style: none;
   margin-bottom: 3.2rem;
   padding-left: 1.6rem;
-  border-left: solid 4px rgba(134, 134, 139, 0.56);
+  border-left: solid 2px rgba(134, 134, 139, 0.56);
 }
 
 .crb-logo-animation {
