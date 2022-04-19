@@ -41,7 +41,8 @@
                 ,
                 Field::make( 'text', 'crb_ragione_sociale'),
                 Field::make( 'text', 'crb_address_sede_legale'),
-                Field::make( 'text', 'crb_partita_iva')
+                Field::make( 'text', 'crb_partita_iva'),
+                Field::make( 'text', 'crb_linkedin_url'),
             ) );
 
 

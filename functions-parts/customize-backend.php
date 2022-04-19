@@ -17,7 +17,13 @@
             .wp-admin div#ays-quiz-winter-dicount-main div#ays-quiz-dicount-month-main.ays_quiz_dicount_info{display:none}
 
             /*hide pages*/
-            /*.wp-admin #adminmenuwrap #menu-pages {display:none !important;}*/
+            .wp-admin #adminmenuwrap #menu-pages {display:none !important;}
+
+            /*hide customizer*/
+            .wp-admin #adminmenuwrap #adminmenu .wp-submenu li.hide-if-no-customize {display:none !important;}
+            /*hide theme editor*/
+            .wp-admin #adminmenuwrap #adminmenu .wp-submenu li a[href="theme-editor.php"] {display:none !important;}
+
         </style>';
     }
     add_action('wp_before_admin_bar_render', 'WWS_custom_logo');
