@@ -24,6 +24,9 @@
             /*hide theme editor*/
             .wp-admin #adminmenuwrap #adminmenu .wp-submenu li a[href="theme-editor.php"] {display:none !important;}
 
+            /*hide plugin*/
+            .wp-admin #adminmenuwrap #menu-plugins {display:none !important;}
+
         </style>';
     }
     add_action('wp_before_admin_bar_render', 'WWS_custom_logo');

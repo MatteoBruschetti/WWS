@@ -890,7 +890,7 @@ header .container.open .header__menu {
 }
 
 .cta .container {
-  padding: 12rem 0;
+  padding: 8rem 0;
   border: 4px solid;
   border-image-slice: 1;
   border-width: 4px;
@@ -1237,7 +1237,7 @@ footer .footer__col-txt p:first-of-type {
 .loop article .loop__content-container .loop__content .read-more {
   font-size: 2rem;
   font-family: "Catamaran", sans-serif;
-  font-weight: 800;
+  font-weight: 600;
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 2px;
