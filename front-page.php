@@ -60,7 +60,7 @@
         <div class="row">
             <div class="col-12 col-lg-11 offset-lg-1">
                 <p class="mb-96-r">
-                    Our experts use advanced atmospheric, hydraulic and sediment transport models with applications to.
+                    Our experts use advanced atmospheric, hydraulic and sediment transport models with applications to:
                 </p>
             </div>
         </div>

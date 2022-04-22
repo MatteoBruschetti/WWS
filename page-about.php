@@ -41,7 +41,7 @@
         <div class="row">
             <div class="col-12 col-lg-11 offset-lg-1">
                 <p class="mb-48-r">
-                    Our areas of expertise include:
+                    Areas of expertise:
                 </p>
             </div>
         </div>
@@ -57,8 +57,8 @@
             </div>
             <div class="col-12 col-lg-5 offset-lg-1">
                 <ul>
-                    <li>The quantitative characterization of dispersion from sediment plumes associated with offshore operations such as dredging and dumping.</li>
-                    <li>The quantitative modelling of sediment flows and associated deposits for the characterization of oil and gas reservoirs, the description of which is important both for the economic exploitation of hydrocarbons and for the storage and sequestration of CO2 in depleted reservoirs</li>
+                    <li>Quantitative characterization of dispersion from sediment plumes associated with offshore operations such as dredging and dumping.</li>
+                    <li>Quantitative modelling of sediment flows and associated deposits for the characterization of oil and gas reservoirs, the description of which is important both for the economic exploitation of hydrocarbons and for the storage and sequestration of CO2 in depleted reservoirs</li>
                 </ul>
             </div>
         </div>
