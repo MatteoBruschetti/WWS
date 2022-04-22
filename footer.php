@@ -32,17 +32,17 @@
             </div>
             <div class="row">
                 <div class="col-4 partners__img-col">
-                    <a href="" target="_blank">
+                    <a href="http://www.pm10-ambiente.com/" target="_blank">
                         <img src="<?php echo get_template_directory_uri(); ?>/img/footer/pm_ten.png" alt="">
                     </a>
                 </div>
                 <div class="col-4 partners__img-col">
-                    <a href="" target="_blank">
+                    <a href="http://www.wolfdynamics.com/" target="_blank">
                         <img src="<?php echo get_template_directory_uri(); ?>/img/footer/wolfdynamics.png" alt="">
                     </a>
                 </div>
                 <div class="col-4 partners__img-col">
-                    <a href="" target="_blank">
+                    <a href="https://www.rina.org/it" target="_blank">
                         <img src="<?php echo get_template_directory_uri(); ?>/img/footer/rina.png" alt="">
                     </a>
                 </div>
