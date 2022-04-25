@@ -15,7 +15,7 @@
         <div class="row">
             <div class="col-12 col-lg-11 offset-lg-1 hero__col-image">
                 <figure>
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/about/hero-about.png" alt="Weather Water Sand team on a table">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/about/hero-about.jpg" alt="Weather Water Sand team on a table">
                 </figure>
             </div>
         </div>

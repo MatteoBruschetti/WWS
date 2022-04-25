@@ -19,7 +19,7 @@
         <div class="row">
             <div class="col-12 col-lg-11 offset-lg-1 hero__col-image">
                 <figure>
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/home/sand-hero.png" alt="Desert sand">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/home/sand-hero.jpg" alt="Desert sand and water">
                 </figure>
             </div>
         </div>
@@ -71,15 +71,15 @@
                 <div class="row mb-240-r">
                     <div class="col-12 col-lg-4 images-row__col">
                         <p class="images-row__caption mb-24-r">Risk quantification associated with geologic hazards.</p>
-                        <img class="images-row__img" src="<?php echo get_template_directory_uri(); ?>/img/home/wind-grain.png" alt="">
+                        <img class="images-row__img" src="<?php echo get_template_directory_uri(); ?>/img/home/wind-grain.jpg" alt="">
                     </div>
                     <div class="col-12 col-lg-4 images-row__col">
                         <p class="images-row__caption mb-24-r">High resolution geologic models for oil and gas and carbon sequestration reservoirs.</p>
-                        <img class="images-row__img" src="<?php echo get_template_directory_uri(); ?>/img/home/water-sunset-ocean.png" alt="">
+                        <img class="images-row__img" src="<?php echo get_template_directory_uri(); ?>/img/home/water-sunset-ocean.jpg" alt="">
                     </div>
                     <div class="col-12 col-lg-4 images-row__col">
                         <p class="images-row__caption mb-24-r">Advanced weather forecasts for renewable energy projects.</p>
-                        <img class="images-row__img" src="<?php echo get_template_directory_uri(); ?>/img/home/sand-desert.png" alt="">
+                        <img class="images-row__img" src="<?php echo get_template_directory_uri(); ?>/img/home/sand-desert.jpg" alt="">
                     </div>
                 </div>
             </div>

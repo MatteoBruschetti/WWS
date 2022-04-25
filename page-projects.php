@@ -7,75 +7,86 @@
         <div class="row align-items-end">
             <div class="col-12 col-lg-9 offset-lg-3 mb-32-r">
                 <h1 class="gradient-on-left">
-                    <b>SERVICE</b> 
-                    <br>PROJECTS
+                    PROJECTS
+                    <br> <br>
                 </h1>
             </div>
         </div>
         <div class="row">
             <div class="col-12 col-lg-11 offset-lg-1 hero__col-image">
                 <figure>
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/project/hero-project.png" alt="Weather Water Sand building">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/project/hero-project.jpg" alt="Weather Water Sand building">
                 </figure>
             </div>
         </div>
     </section>
 
 
-    <section class="loop mb-160-r">
-        <?php
+    <!-- Service Projects -->
+    <section>
+        <div class="row">
+            <div class="col-12">
+                <h2 class="gradient-on-left i-v mb-48-r">
+                    <b>Service</b> Projects
+                </h2>
+            </div>
+        </div>
 
-            //double pagination on the same page
-            $paged1 = isset( $_GET['paged1'] ) ? (int) $_GET['paged1'] : 1;
-            $paged2 = isset( $_GET['paged2'] ) ? (int) $_GET['paged2'] : 1;
+        <div class="loop mb-160-r">
+            <?php
+
+                //double pagination on the same page
+                $paged1 = isset( $_GET['paged1'] ) ? (int) $_GET['paged1'] : 1;
+                $paged2 = isset( $_GET['paged2'] ) ? (int) $_GET['paged2'] : 1;
 
 
-            $loop = new WP_Query( array(
-                'post_type'         => 'service-project',
-                'post_status'       => 'publish',
-                'orderby'           => 'count',
-                'order'             => 'DESC',
-                'posts_per_page'    => 3,
-                'paged'             => $paged1
-            )); 
-            
-            while ($loop -> have_posts()) : $loop -> the_post(); ?>
-                <article>
-                    <div class="row">
-                        <div class="col-12 order-lg-2 col-lg-4">
-                            <a href="<?php the_permalink();?>" class="loop__img-permalink">
-                                <img src="<?php echo get_the_post_thumbnail_url();?>" alt="<?php echo $thumbnail_alt ?>">
-                            </a>
-                        </div>
-                        <div class="col-12 col-lg-8">
-                            <div class="loop__content-container">
-                                <div class="loop__over-content">
-                                    <p class="project-client mb-8-r"><?php echo carbon_get_post_meta( get_the_ID(), 'crb_project_client' ); ?></p>
-                                </div>
-                                <div class="loop__content">                                 
-                                    <h3 class="mb-16-r"><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h3>
-                                    <p class="mb-16-r"><?php echo get_the_excerpt(); ?></p>
-                                    <a class="read-more" href="<?php the_permalink();?>">Read more</a>
+                $loop = new WP_Query( array(
+                    'post_type'         => 'service-project',
+                    'post_status'       => 'publish',
+                    'orderby'           => 'count',
+                    'order'             => 'DESC',
+                    'posts_per_page'    => 3,
+                    'paged'             => $paged1
+                )); 
+                
+                while ($loop -> have_posts()) : $loop -> the_post(); ?>
+                    <article>
+                        <div class="row">
+                            <div class="col-12 order-lg-2 col-lg-4">
+                                <a href="<?php the_permalink();?>" class="loop__img-permalink">
+                                    <img src="<?php echo get_the_post_thumbnail_url();?>" alt="<?php echo $thumbnail_alt ?>">
+                                </a>
+                            </div>
+                            <div class="col-12 col-lg-8">
+                                <div class="loop__content-container">
+                                    <div class="loop__over-content">
+                                        <p class="project-client mb-8-r"><?php echo carbon_get_post_meta( get_the_ID(), 'crb_project_client' ); ?></p>
+                                    </div>
+                                    <div class="loop__content">                                 
+                                        <h3 class="mb-16-r"><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h3>
+                                        <p class="mb-16-r"><?php echo get_the_excerpt(); ?></p>
+                                        <a class="read-more" href="<?php the_permalink();?>">Read more</a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>        
-                </article>
-            <?php endwhile; ?>
+                        </div>        
+                    </article>
+                <?php endwhile; ?>
 
-            <div class="pagination">
-                <?php
-                    //double pagination on the same page
-                    $pag_args1 = array(
-                        'format'  => '?paged1=%#%',
-                        'current' => $paged1,
-                        'total'   => $loop->max_num_pages,
-                        'add_args' => array( 'paged2' => $paged2 )
-                    );
-                    echo paginate_links( $pag_args1 );
-                ?>
-            </div>
+                <div class="pagination">
+                    <?php
+                        //double pagination on the same page
+                        $pag_args1 = array(
+                            'format'  => '?paged1=%#%',
+                            'current' => $paged1,
+                            'total'   => $loop->max_num_pages,
+                            'add_args' => array( 'paged2' => $paged2 )
+                        );
+                        echo paginate_links( $pag_args1 );
+                    ?>
+                </div>
 
+        </div>
     </section>
 
 

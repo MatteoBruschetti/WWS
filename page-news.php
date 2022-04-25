@@ -15,7 +15,7 @@
         <div class="row d-none d-lg-flex">
             <div class="col-12 col-lg-11 offset-lg-1 hero__col-image">
                 <figure>
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/news/hero-news.png" alt="Genova weather water and wind">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/news/hero-news.jpg" alt="Genova weather water and wind">
                 </figure>
             </div>
         </div>
