@@ -67,8 +67,26 @@ function WWS_custom_fullscreeneditor_logo(){
             }
             .components-panel .components-button-group[aria-label="Button width"]{
                 display:none;
-            }
-            
+            } 
+    </style>';
+
+    //HIDE unwanted options on wysiwyg visual editor
+    echo '<style>
+        .cf-rich-text .cf-field__body .wp-media-buttons{ /*media-buttons*/
+            display:none;
+        }
+        .cf-rich-text .cf-field__body .wp-editor-container .mce-btn.mce-listbox{ /*paragraph*/
+            display:none;
+        }
+        .cf-rich-text .cf-field__body .wp-editor-container .mce-btn:nth-of-type(6){ /*quote*/
+            display:none;
+        }
+        .cf-rich-text .cf-field__body .wp-editor-container .mce-btn:nth-of-type(7), .cf-rich-text .cf-field__body .wp-editor-container .mce-btn:nth-of-type(8), .cf-rich-text .cf-field__body .wp-editor-container .mce-btn:nth-of-type(9){ /*text align*/
+            display:none;
+        }
+        .cf-rich-text .cf-field__body .wp-editor-container .mce-btn:nth-of-type(11), .cf-rich-text .cf-field__body .wp-editor-container .mce-btn:nth-of-type(12), .cf-rich-text .cf-field__body .wp-editor-container .mce-btn:nth-of-type(13){ /*strange stuff*/
+            display:none;
+        }
     </style>';
 }
 add_action( 'admin_head', 'WWS_custom_fullscreeneditor_logo' );
