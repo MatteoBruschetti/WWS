@@ -3,7 +3,7 @@
 <main class="container">
 
     <!--Hero-->
-    <section class="hero mb-240-r pt-24-r">
+    <section class="hero mb-120-r pt-24-r">
         <div class="row align-items-end">
             <div class="col-12 col-lg-9 offset-lg-3 mb-32-r">
                 <h1 class="gradient-on-left">
@@ -74,7 +74,7 @@
     </section>
 
     <!-- What we do post -->
-    <section class="loop mb-160-r">
+    <section class="loop mb-120-r">
         <?php 
             $loop = new WP_Query( array( 
                 'post_type'         => 'what-we-do',

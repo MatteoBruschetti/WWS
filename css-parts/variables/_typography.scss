@@ -49,7 +49,7 @@ h2{
 
     &.gradient-on-left{
         position: relative;
-        padding-top: 8rem; padding-left: 1.6rem;
+        padding-top: 10rem; padding-left: 1.6rem;
 
         &:before{
             content: '';
@@ -160,10 +160,11 @@ CORRECTIONS
     text-align: right;
 }
 
+.uppercase{text-transform: uppercase;}
 .lowercase{text-transform: lowercase;}
 .capitalize{text-transform: capitalize;}
 
-
+.grey{color: $color-grey;}
 
 
 

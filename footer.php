@@ -17,9 +17,9 @@
         <div class="container">
             <div class="row align-items-end mb-80-r">
                 <div class="col-12 col-lg-8 mb-48-r">
-                    <h2>
-                        Partners & Clients
-                    </h2>
+                    <h3 class="uppercase">
+                        <span class="grey">Partners</span> & Clients
+                    </h3>
                 </div>
                 <div class="d-none d-lg-block col-lg-4 mb-48-r t-left">
                     <a class="partners__linkedin" href="<?php echo carbon_get_theme_option( 'crb_linkedin_url' ); ?>" target="_blank">

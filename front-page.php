@@ -3,7 +3,7 @@
 <main class="container">
 
     <!--Hero-->
-    <section class="hero mb-240-r pt-16-r">
+    <section class="hero mb-120-r pt-16-r">
         <div class="row align-items-end">
             <div class="col-12 col-lg-4 offset-lg-3 mb-32-r">
                 <h1 class="gradient-on-left">
@@ -33,7 +33,7 @@
             <div class="col-12">
                 <h2 class="gradient-on-left i-v mb-48-r">
                     <a href="<?php echo get_permalink( get_page_by_path( 'about' ) ); ?>">
-                        Who we are
+                       <span class="grey"> Who </span> we are 
                         <svg width='49' height='28' viewBox='0 0 49 28' fill='none' xmlns='http://www.w3.org/2000/svg'>
                             <path d='M4 16.3333L40.0633 16.3333L31.71 24.71L35 28L49 14L35 0L31.71 3.29L40.0633 11.6667L0 11.6667L4 16.3333Z'/>
                         </svg>
@@ -68,7 +68,7 @@
     <section class="images-row">
         <div class="row">
             <div class="col-12 col-lg-11 offset-lg-1">
-                <div class="row mb-240-r">
+                <div class="row mb-120-r">
                     <div class="col-12 col-lg-4 images-row__col">
                         <p class="images-row__caption mb-24-r">Risk quantification associated with geologic hazards.</p>
                         <img class="images-row__img" src="<?php echo get_template_directory_uri(); ?>/img/home/wind-grain.jpg" alt="">
@@ -89,12 +89,12 @@
 
 
     <!-- Our Services -->
-    <section class="bullet-list mb-240-r">
+    <section class="bullet-list mb-120-r">
         <div class="row">
             <div class="col-12">
                 <h2 class="gradient-on-left i-v mb-48-r">
                     <a href="<?php echo get_permalink( get_page_by_path( 'projects' ) ); ?>">
-                        Our Services
+                    <span class="grey"> Our </span> Services
                         <svg width='49' height='28' viewBox='0 0 49 28' fill='none' xmlns='http://www.w3.org/2000/svg'>
                             <path d='M4 16.3333L40.0633 16.3333L31.71 24.71L35 28L49 14L35 0L31.71 3.29L40.0633 11.6667L0 11.6667L4 16.3333Z'/>
                         </svg>
@@ -132,7 +132,7 @@
             <div class="col-12">
                 <h2 class="gradient-on-left i-v mb-48-r">
                     <a href="<?php echo get_permalink( get_page_by_path( 'news' ) ); ?>">
-                        Latest News
+                    <span class="grey"> Latest </span> News
                         <svg width='49' height='28' viewBox='0 0 49 28' fill='none' xmlns='http://www.w3.org/2000/svg'>
                             <path d='M4 16.3333L40.0633 16.3333L31.71 24.71L35 28L49 14L35 0L31.71 3.29L40.0633 11.6667L0 11.6667L4 16.3333Z'/>
                         </svg>
