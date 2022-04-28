@@ -1134,9 +1134,18 @@ footer .footer__col-txt p:first-of-type {
   color: #121212;
 }
 
+.greyline {
+  border-top: 2px solid rgba(0, 0, 0, 0.08);
+  padding-top: 8rem;
+}
+
 .loop article {
   border-bottom: 2px solid rgba(0, 0, 0, 0.08);
   padding: 4rem 0;
+}
+
+.loop article:first-of-type {
+  border-top: 2px solid rgba(0, 0, 0, 0.08);
 }
 
 .loop article .loop__img-permalink {

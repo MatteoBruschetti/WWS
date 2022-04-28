@@ -1,5 +1,5 @@
     <!--CTA-->
-    <section class="cta mb-160-r">
+    <section class="cta mb-96-r">
         <div class="container">
             <div class="row">
                 <div class="col-10 offset-1 col-lg-8">
@@ -14,7 +14,7 @@
 
     <!--Partners-->
     <section class="partners mb-160-r">
-        <div class="container">
+        <div class="container greyline">
             <div class="row align-items-end mb-80-r">
                 <div class="col-12 col-lg-8 mb-48-r">
                     <h3 class="uppercase">

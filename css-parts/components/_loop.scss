@@ -2,6 +2,10 @@
 
     article{
 
+        &:first-of-type{
+            border-top: $border-light-grey;        
+        } 
+
         
         .loop__img-permalink{
             display: block;
@@ -30,9 +34,6 @@
         }
 
         
-
-
-    
         .loop__content-container{
             display: flex; flex-direction: column;
             justify-content: space-between;
@@ -137,6 +138,8 @@
             }
         }
     }
+
+
 
 
     .pagination{
