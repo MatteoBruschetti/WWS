@@ -31,18 +31,6 @@ POI ELIMINIAMO I PESI CHE NON UTILIZZIAMO
   /* Legacy iOS */
 }
 
-/* catamaran-800 - latin */
-@font-face {
-  font-family: 'Catamaran';
-  font-style: normal;
-  font-weight: 800;
-  src: url("fonts/catamaran-v14-latin-800.eot");
-  /* IE9 Compat Modes */
-  src: local(""), url("fonts/catamaran-v14-latin-800.eot?#iefix") format("embedded-opentype"), url("fonts/catamaran-v14-latin-800.woff2") format("woff2"), url("fonts/catamaran-v14-latin-800.woff") format("woff"), url("fonts/catamaran-v14-latin-800.ttf") format("truetype"), url("fonts/catamaran-v14-latin-800.svg#Catamaran") format("svg");
-  /* Legacy iOS */
-}
-
-/* catamaran-700 - latin */
 /* roboto-regular - latin */
 @font-face {
   font-family: 'Roboto';
@@ -559,7 +547,7 @@ img {
 /*--------------------------------------------------
 BOOTSTRAP MEDIA-QUERIES 2021
 ----------------------------------------------------*/
-body.single-what-we-do #menu-item-77 a {
+body.single-what-we-do #menu-item-106 a {
   text-decoration: underline;
   text-decoration-thickness: 2px;
   -webkit-text-decoration-color: #86868B;

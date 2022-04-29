@@ -26,7 +26,12 @@
 
             /*hide plugin*/
             .wp-admin #adminmenuwrap #menu-plugins {display:none !important;}
+            
+            /*hide all in one*/
+            .wp-admin #adminmenuwrap .toplevel_page_ai1wm_export {display:none !important;}
 
+            /*hide writing settings*/
+            .wp-admin #adminmenuwrap #menu-settings ul li:nth-of-type(3) {display:none !important;}
         </style>';
     }
     add_action('wp_before_admin_bar_render', 'WWS_custom_logo');
