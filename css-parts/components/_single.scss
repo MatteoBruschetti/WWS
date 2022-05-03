@@ -7,7 +7,7 @@
     .single-thumbnail{
         figure{
             border-radius: $img-border-radius;
-            max-height: 64rem;
+            max-height: 56rem;
             overflow: hidden;
             display: flex;
 
@@ -15,7 +15,7 @@
                 min-width: 100%;
                 display: block;
                 object-fit: cover;
-                animation: infinite-scale 40s linear infinite;
+                // animation: infinite-scale 40s linear infinite;
             }
         }
     }

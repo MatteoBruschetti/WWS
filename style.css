@@ -1306,7 +1306,7 @@ footer .footer__col-txt p:first-of-type {
 
 .single .single-thumbnail figure {
   border-radius: 0 0 0 8rem;
-  max-height: 64rem;
+  max-height: 56rem;
   overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1318,8 +1318,6 @@ footer .footer__col-txt p:first-of-type {
   display: block;
   -o-object-fit: cover;
      object-fit: cover;
-  -webkit-animation: infinite-scale 40s linear infinite;
-          animation: infinite-scale 40s linear infinite;
 }
 
 .single h1 strong, .single h2 strong, .single h3 strong, .single h4 strong, .single h5 strong, .single h6 strong {
