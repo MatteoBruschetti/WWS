@@ -89,13 +89,14 @@
                         overflow: hidden;
                         text-overflow: ellipsis;
                         display: -webkit-box;
-                                -webkit-line-clamp: 24;
+                                // -webkit-line-clamp: 24;
+                                -webkit-line-clamp: 400;
                                 -webkit-box-orient: vertical;
 
-                        @media #{$large}{
-                            display: -webkit-box;
-                                -webkit-line-clamp: 6;
-                        }
+                        // @media #{$large}{
+                        //     display: -webkit-box;
+                        //         -webkit-line-clamp: 6;
+                        // }
                     }
                 }
     

@@ -7,15 +7,14 @@
     .single-thumbnail{
         figure{
             border-radius: $img-border-radius;
-            max-height: 56rem;
+            max-height: 64rem;
             overflow: hidden;
             display: flex;
 
             img{
                 min-width: 100%;
                 display: block;
-                object-fit: cover;
-                // animation: infinite-scale 40s linear infinite;
+                object-fit: cover; object-position: center; height: auto;
             }
         }
     }

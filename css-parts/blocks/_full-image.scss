@@ -3,4 +3,10 @@
     img{
         border-radius: $img-border-radius;
     }
+
+    &.br-1{
+        img{
+            border-radius: 0;
+        }
+    }
 }

@@ -979,6 +979,16 @@ header .container.open .header__menu {
   display: none;
 }
 
+.partners {
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+.partners .container {
+  border-top: 2px solid rgba(0, 0, 0, 0.08);
+  padding-top: 8rem;
+}
+
 @media (min-width: 992px) {
   .partners .t-left {
     text-align: right;
@@ -1122,11 +1132,6 @@ footer .footer__col-txt p:first-of-type {
   color: #121212;
 }
 
-.greyline {
-  border-top: 2px solid rgba(0, 0, 0, 0.08);
-  padding-top: 8rem;
-}
-
 .loop article {
   border-bottom: 2px solid rgba(0, 0, 0, 0.08);
   padding: 4rem 0;
@@ -1228,15 +1233,8 @@ footer .footer__col-txt p:first-of-type {
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
-  -webkit-line-clamp: 24;
+  -webkit-line-clamp: 400;
   -webkit-box-orient: vertical;
-}
-
-@media (min-width: 992px) {
-  .loop article .loop__content-container .loop__content p.long-excerpt {
-    display: -webkit-box;
-    -webkit-line-clamp: 6;
-  }
 }
 
 .loop article .loop__content-container .loop__content .read-more {
@@ -1306,7 +1304,7 @@ footer .footer__col-txt p:first-of-type {
 
 .single .single-thumbnail figure {
   border-radius: 0 0 0 8rem;
-  max-height: 56rem;
+  max-height: 64rem;
   overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1318,6 +1316,9 @@ footer .footer__col-txt p:first-of-type {
   display: block;
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  height: auto;
 }
 
 .single h1 strong, .single h2 strong, .single h3 strong, .single h4 strong, .single h5 strong, .single h6 strong {
@@ -1835,6 +1836,10 @@ input[type="text"], input[type="email"], textarea {
   line-height: 120%;
 }
 
+.txt-highlight p strong, .crb-txt-highlight p strong {
+  color: #4F4F4F;
+}
+
 .images-row .images-row__col {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1879,6 +1884,13 @@ input[type="text"], input[type="email"], textarea {
 
 .bullet-list p, .crb-bullet-list p {
   max-width: 80ch;
+  margin-bottom: 2.4rem;
+}
+
+@media (min-width: 992px) {
+  .bullet-list p, .crb-bullet-list p {
+    margin-bottom: 4.8rem;
+  }
 }
 
 .bullet-list ul, .crb-bullet-list ul {
@@ -2032,6 +2044,10 @@ input[type="text"], input[type="email"], textarea {
   border-radius: 0 0 0 8rem;
 }
 
+.crb-full-image.br-1 img {
+  border-radius: 0;
+}
+
 .crb-txt-image.img-left .row {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
@@ -2041,6 +2057,10 @@ input[type="text"], input[type="email"], textarea {
 
 .crb-txt-image.img-left img {
   border-radius: 0 0 0 8rem;
+}
+
+.crb-txt-image.br-1 img {
+  border-radius: 0;
 }
 
 .crb-txt-image .vc-col {

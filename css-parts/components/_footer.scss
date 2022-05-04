@@ -82,6 +82,13 @@
 
 
 .partners{
+    margin-left: 16px;
+    margin-right: 16px;
+
+    .container{
+        border-top: $border-light-grey;
+        padding-top: 8rem;
+    }
 
 
     .t-left{
@@ -188,9 +195,4 @@ footer{
 
 
     }
-}
-
-.greyline{
-    border-top: $border-light-grey;
-    padding-top: 8rem;
 }

@@ -113,7 +113,7 @@
             //Txt highlight = STATIC BLOCK + SINGLE GB BLOCK
             Block::make( __( 'Text highlight' ) )
                 ->add_fields( array(
-                    Field::make( 'textarea', 'txt', __( 'Text' ) ),
+                    Field::make( 'rich_text', 'txt', __( 'Text' ) ),
                 ) )
                 ->set_description( __( 'A WWS block for display big text highlighted in blue' ) )
                 ->set_category( 'customCarbon' )
@@ -138,14 +138,14 @@
             Block::make( __( 'Bullet list' ) )
                 ->add_fields( array(
                     Field::make( 'text', 'heading', __( 'Title' ) ),
-                    Field::make( 'textarea', 'txt', __( 'Text' ) ),
+                    Field::make( 'rich_text', 'txt', __( 'Text' ) ),
                     Field::make( 'complex', 'list_left', __( 'List on the left' ) )
                         ->add_fields( array(
-                            Field::make( 'textarea', 'li_left', __( 'List Item' ) ),
+                            Field::make( 'rich_text', 'li_left', __( 'List Item' ) ),
                         ) ),
                     Field::make( 'complex', 'list_right', __( 'List on the right' ) )
                         ->add_fields( array(
-                            Field::make( 'textarea', 'li_right', __( 'List Item' ) ),
+                            Field::make( 'rich_text', 'li_right', __( 'List Item' ) ),
                         ) )
                 ) )
                 ->set_description( __( 'A WWS block for display a list of keypoints' ) )
@@ -308,7 +308,8 @@
                     ->add_fields( array(
                         Field::make( 'image', 'img-url', __( 'Image' ) )
                             ->set_type( array( 'image' ) )
-                            ->set_value_type( 'url' )
+                            ->set_value_type( 'url' ),
+                        Field::make( 'checkbox', 'remove', 'Remove image rounded corner' )
                     ) )
                     ->set_description( __( 'A WWS block for display a full row image' ) )
                     ->set_category( 'customCarbon' )
@@ -317,7 +318,7 @@
                     ->set_render_callback( function ( $fields) {
                         ?>
 
-                            <section class="crb-full-image mb-160-r">
+                            <section class="crb-full-image br-<?php echo $fields['remove']?> mb-160-r">
                                 <div class="row">
                                     <div class="col-12 col-lg-11 offset-lg-1">
                                         <img src="<?php echo $fields['img-url']; ?>" alt="">
@@ -338,7 +339,8 @@
                             'img-right' => __( 'Image on the right — Text on the left' ),
                             'img-left' => __( 'Image on the left — Text on the right' )
                         ) ),
-                        Field::make( 'textarea', 'txt', __( 'Text' ) ),
+                        Field::make( 'checkbox', 'remove', 'Remove image rounded corner' ),
+                        Field::make( 'rich_text', 'txt', __( 'Text' ) ),
                         Field::make( 'image', 'img-url', __( 'Image' ) )
                             ->set_type( array( 'image' ) )
                             ->set_value_type( 'url' )
@@ -350,10 +352,12 @@
                     ->set_render_callback( function ( $fields) {
                         ?>
 
-                            <section class="crb-txt-image <?php echo $fields['orientation']; ?> mb-96-r">
+                            <section class="crb-txt-image <?php echo $fields['orientation']; ?> br-<?php echo $fields['remove']?> mb-96-r">
                                 <div class="row">
                                     <div class="col-12 col-lg-5 offset-lg-1 mb-48-r vc-col">
-                                        <p><?php echo $fields['txt']; ?> </p>
+                                        <div class="wrapper">
+                                            <p><?php echo $fields['txt']; ?> </p>
+                                        </div>
                                     </div>
                                     <div class="col-12 col-lg-5 offset-lg-1 mb-48-r vc-col">
                                         <img src="<?php echo $fields['img-url']; ?>" alt="">
