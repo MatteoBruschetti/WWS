@@ -148,7 +148,7 @@
 
                         <section class="crb-txt-highlight">
                                 <div class="row">
-                                    <div class="col-12 col-lg-11 offset-lg-1 mb-80-r">
+                                    <div class="col-12 col-lg-11 offset-lg-1 mb-48-r">
                                         <?php echo apply_filters( 'the_content', $fields['txt'] ); ?>
                                     </div>
                                 </div>
