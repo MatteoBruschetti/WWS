@@ -1298,6 +1298,10 @@ footer .footer__col-txt p:first-of-type {
   color: #86868B;
 }
 
+.single {
+  /*hide date on NOT news single*/
+}
+
 .single .fix-fixed {
   margin-top: 20rem;
 }
@@ -1617,6 +1621,10 @@ footer .footer__col-txt p:first-of-type {
 .single hr.wp-block-separator {
   margin: 10rem 0;
   opacity: .2;
+}
+
+.single.single-what-we-do #single-date, .single.single-service-project #single-date {
+  display: none;
 }
 
 .error404 .cta, .error404 .partners {

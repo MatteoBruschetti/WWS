@@ -261,4 +261,11 @@
 
 
 
+    /*hide date on NOT news single*/
+    &.single-what-we-do, &.single-service-project{
+        #single-date{
+            display: none;
+        }
+    }
 }
+

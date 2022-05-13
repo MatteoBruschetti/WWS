@@ -16,6 +16,9 @@
             }
             .wp-admin div#ays-quiz-winter-dicount-main div#ays-quiz-dicount-month-main.ays_quiz_dicount_info{display:none}
 
+            /*hide dashboard*/
+            .wp-admin #adminmenuwrap #menu-dashboard {display:none !important;}
+
             /*hide pages*/
             .wp-admin #adminmenuwrap #menu-pages {display:none !important;}
 
@@ -26,6 +29,8 @@
 
             /*hide plugin*/
             .wp-admin #adminmenuwrap #menu-plugins {display:none !important;}
+            .wp-admin #wpadminbar #wp-toolbar #wp-admin-bar-updates {display:none !important;}
+
             
             /*hide all in one*/
             .wp-admin #adminmenuwrap .toplevel_page_ai1wm_export {display:none !important;}

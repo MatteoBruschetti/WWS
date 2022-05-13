@@ -76,14 +76,38 @@
     add_action( 'carbon_fields_register_fields', 'crb_attach_gb_blocks' );
     function crb_attach_gb_blocks() {
             
+            //Txt on one col = SINGLE GB BLOCK
+            Block::make( __( 'Paragraph' ) )
+                ->add_fields( array(
+                    Field::make( 'rich_text', 'one-txt', __( 'Text' ) ),
+                ) )
+                ->set_description( __( 'A WWS block for display a text paragraph' ) )
+                ->set_category( 'customCarbon' )
+                ->set_icon( 'editor-ltr' )
+                ->set_mode( 'both' )
+                ->set_render_callback( function ( $fields) {
+                    ?>
+
+                        <section class="crb-two-col-txt">
+                            <div class="row">
+                                <div class="col-12 col-lg-11 offset-lg-1 mb-48-r">
+                                    <?php echo apply_filters( 'the_content', $fields['one-txt'] ); ?>
+                                </div>
+                            </div>
+                        </section>
+
+                    <?php
+                } ); //render callback
+
+
             //Txt on two col = STATIC BLOCK + SINGLE GB BLOCK
             Block::make( __( 'Title and Text on two columns' ) )
                 ->add_fields( array(
-                    Field::make( 'text', 'heading', __( 'Title' ) ),
+                    // Field::make( 'text', 'heading', __( 'Title' ) ),
                     Field::make( 'rich_text', 'txt-left', __( 'Text on the left' ) ),
                     Field::make( 'rich_text', 'txt-right', __( 'Text on the right' ) ),
                 ) )
-                ->set_description( __( 'A WWS block for display h2 title and text paragraph on two columns' ) )
+                ->set_description( __( 'A WWS block for display text paragraph on two columns' ) )
                 ->set_category( 'customCarbon' )
                 ->set_icon( 'editor-table' )
                 ->set_mode( 'both' )
@@ -91,11 +115,11 @@
                     ?>
 
                         <section class="crb-two-col-txt">
-                            <div class="row">
+                            <!-- <div class="row">
                                 <div class="col-12">
                                     <h2 class="gradient-on-left i-v mb-48-r"><?php echo $fields['heading']; ?></h2>
                                 </div>
-                            </div>
+                            </div> -->
                             <div class="row">
                                 <div class="col-12 col-lg-5 offset-lg-1 mb-48-r">
                                     <?php echo apply_filters( 'the_content', $fields['txt-left'] ); ?>
@@ -318,7 +342,7 @@
                     ->set_render_callback( function ( $fields) {
                         ?>
 
-                            <section class="crb-full-image br-<?php echo $fields['remove']?> mb-160-r">
+                            <section class="crb-full-image br-<?php echo $fields['remove']?> mb-80-r">
                                 <div class="row">
                                     <div class="col-12 col-lg-11 offset-lg-1">
                                         <img src="<?php echo $fields['img-url']; ?>" alt="">
