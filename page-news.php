@@ -44,7 +44,7 @@
                         <div class="col-12 col-lg-8">
                             <div class="loop__content-container">
                                 <div class="loop__over-content">
-                                    <p class="project-client mb-8-r"><?php echo carbon_get_post_meta( get_the_ID(), 'crb_project_client' ); ?></p>
+                                    <p class="mb-8-r"><?php echo get_the_date(); ?></p>
                                 </div>
                                 <div class="loop__content">                                 
                                     <h3 class="mb-16-r"><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h3>
