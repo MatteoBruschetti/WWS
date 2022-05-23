@@ -117,7 +117,7 @@
                         <section class="crb-two-col-txt">
                             <!-- <div class="row">
                                 <div class="col-12">
-                                    <h2 class="gradient-on-left i-v mb-48-r"><?php echo $fields['heading']; ?></h2>
+                                    <h2 class="gradient-on-left i-v mb-48-r"><?php //echo $fields['heading']; ?></h2>
                                 </div>
                             </div> -->
                             <div class="row">
