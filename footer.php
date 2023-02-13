@@ -30,7 +30,12 @@
                     </a> 
                 </div>
             </div>
-            <div class="row">
+            <div class="row align-items-center justify-content-between">
+                <div class="col-4 partners__img-col">
+                    <a href="https://dicca.unige.it/" target="_blank">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/footer/dicca.png" alt="">
+                    </a>
+                </div>
                 <div class="col-4 partners__img-col">
                     <a href="http://www.pm10-ambiente.com/" target="_blank">
                         <img src="<?php echo get_template_directory_uri(); ?>/img/footer/pm_ten.png" alt="">
@@ -42,8 +47,18 @@
                     </a>
                 </div>
                 <div class="col-4 partners__img-col">
+                    <a href="https://www.gruppolercari.com/" target="_blank">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/footer/Lercari_Group.png" alt="">
+                    </a>
+                </div>
+                <div class="col-4 partners__img-col">
                     <a href="https://www.rina.org/it" target="_blank">
                         <img src="<?php echo get_template_directory_uri(); ?>/img/footer/rina.png" alt="">
+                    </a>
+                </div>
+                <div class="col-4 partners__img-col">
+                    <a href="https://meteocean.science/" target="_blank">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/footer/mete_ocean.png" alt="">
                     </a>
                 </div>
             </div>

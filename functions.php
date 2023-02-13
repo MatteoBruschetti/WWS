@@ -18,7 +18,7 @@ function WWS_styles() {
     /* Bootstrap */
     wp_enqueue_style("WWS-grid", get_template_directory_uri().'/css-parts/bootstrap-grid.min.css');
     /*My CSS */
-    wp_enqueue_style( "WWS-styles", get_template_directory_uri( ).'/style_v1.0.min.css');
+    wp_enqueue_style( "WWS-styles", get_template_directory_uri( ).'/style.min.css');
 }
 add_action( 'wp_enqueue_scripts', 'WWS_styles' );
 
