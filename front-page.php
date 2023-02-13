@@ -1,16 +1,11 @@
 <?php get_header(); ?>
 
-<div class="container-fluid bando">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-6 offset-lg-6 col-12">
-                <img src="<?php echo get_template_directory_uri() . '/img/home/Marchio_bando.png'; ?>" alt="Marchio Bando">
-            </div>
+<main class="container bando">
+    <div class="row">
+        <div class="col-lg-6 offset-lg-6 col-12">
+            <img src="<?php echo get_template_directory_uri() . '/img/home/Marchio_bando.png'; ?>" alt="Marchio Bando">
         </div>
     </div>
-</div>
-
-<main class="container">
     <!--Hero-->
     <section class="hero mb-120-r pt-16-r">
         <div class="row align-items-end">
