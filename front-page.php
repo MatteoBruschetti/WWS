@@ -2,7 +2,7 @@
 
 <main class="container">
     <div class="row bando">
-        <div class="col-lg-9 offset-lg-3 col-12">
+        <div class="col-lg-7 offset-lg-5 col-12">
             <img src="<?php echo get_template_directory_uri() . '/img/home/Marchio_bando.png'; ?>" alt="Marchio Bando">
         </div>
     </div>
