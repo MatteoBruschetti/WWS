@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <main class="container">
-    <div class="row bando">
+    <div class="row bando mb-3">
         <div class="col-lg-6 offset-lg-6 col-12">
             <img src="<?php echo get_template_directory_uri() . '/img/home/Marchio_bando.png'; ?>" alt="Marchio Bando">
         </div>
