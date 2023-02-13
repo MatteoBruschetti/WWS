@@ -1567,7 +1567,8 @@ input[type=text], input[type=email], textarea {
 
 /* ! Hero */
 .bando {
-  margin-top: -3rem;
+  margin-top: -6rem;
+  margin-bottom: 2rem;
 }
 .bando img {
   width: 100%;
