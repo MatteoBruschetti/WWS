@@ -61,6 +61,11 @@
                         <img src="<?php echo get_template_directory_uri(); ?>/img/footer/mete_ocean.png" alt="">
                     </a>
                 </div>
+                <div class="col-12 partners__img-col">
+                    <a href="https://www.cmre.nato.int/" target="_blank">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/footer/Nato.png" alt="">
+                    </a>
+                </div>
             </div>
         </div>
     </section>
